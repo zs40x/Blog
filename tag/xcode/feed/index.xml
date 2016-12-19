@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>XCode &#8211; Stefan Mehnert</title>
+	<atom:link href="/tag/xcode/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>#DevLife</description>
+	<lastBuildDate>Thu, 20 Oct 2016 19:00:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.7</generator>
+	<item>
+		<title>From idea to Apple App Store</title>
+		<link>/2016/10/20/from-an-idea-to-the-apple-app-store/</link>
+		<pubDate>Thu, 20 Oct 2016 18:55:06 +0000</pubDate>
+		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
+				<category><![CDATA[iOS Development]]></category>
+		<category><![CDATA[Swift]]></category>
+		<category><![CDATA[DevLive]]></category>
+		<category><![CDATA[iOS]]></category>
+		<category><![CDATA[XCode]]></category>
+
+		<guid isPermaLink="false">/?p=383</guid>
+		<description><![CDATA[I think it&#8217;s important as a developer to constantly challenge yourself. This means jumping in cold water and learn new languages and developing on other platforms. I was interested in iOS development since a long time, but I did&#8217;t like objective C. Because swift was just released when I started playing around with app development, I &#8230; <a href="/2016/10/20/from-an-idea-to-the-apple-app-store/" class="more-link">Continue reading<span class="screen-reader-text"> "From idea to Apple App Store"</span></a>]]></description>
+				<content:encoded><![CDATA[<p>I think it&#8217;s important as a developer to constantly challenge yourself. This means jumping in cold water and learn new languages and developing on other platforms.<br />
+I was interested in iOS development since a long time, but I did&#8217;t like objective C. Because swift was just released when I started playing around with app development, I concentrated my learning on swift. It&#8217;s a modern language and constantly evolving.</p>
+<p>After doodling around with <a href="/2015/12/03/xcode-playground-part-1-diagrams/">playgrounds</a> and building <a href="/2016/02/02/xcode-playground-part-iv-spritekit-2d-game-engine/">SpriteKit 2D games </a>from tutorials I decided to learn more about app development. My goal is to build a &#8220;Personal productivity&#8221; app, which helps to records, measure and optimise my time. I started developing the app in the mid of June 2016 with many question signs above my head. CoreData and especially AutoLayout were absolutely new to me and it took some time and effort get proficient skills.</p>
+<h4>A parallel project</h4>
+<p>One month after starting the personal productivity app tried to &#8220;Shh&#8230;&#8221; my baby to sleep. So I thought there must be an app for that. I downloaded  it, but it just played about 15 minutes without a (expensive) in-app-purchase. Because I had some first experience with audio from the SpriteKit development I spontaneously decided to build a simple app for myself. A simple app thats plays continuously a &#8220;Shhh&#8230;&#8221; sound.</p>
+<p>A simple prototype with continuous playback was done in about half an hour. But I continued to add features like a more sophisticated UICollectionView layout (and an internal playlist for it), a configureable playback duration, a recording function, and so on.<br />
+Because I had to join the Apple developer program to use shared containers for the other app I decided to deliver this app to the app store on the beginning of October.</p>
+<h4>What I&#8217;ve learned</h4>
+<p>During the development phase which was primarily from the end of August to the begin of October I hit many walls. When you&#8217;ve experience and a good skill set for multiple years in another platform you forget this feeling. Getting started is always hard, but if you push the walls again and again you get moving and reach your goals.</p>
+<p>I learned a much about AutoLayout and StackViews. When I just started out  I used &#8220;git checkout -f&#8221; many, many times because I totally ruined the layout with bad constraints or randomly changed &#8220;hugging priorities&#8221; &amp; &#8220;compression resistance&#8221;. But after a while things things started to make sense. I&#8217;m far off being a AutoLayout expert but I&#8217;m quite used to it and will get a working layout without hours of fiddling around.<br />
+I <a href="/2016/07/14/ios-stack-views/" target="_blank">heavily used StackViews</a>, which made things much easier &#8211; I&#8217;m glad I started AppDevelopment after they were available.</p>
+<p>Because I store static sounds and recorded sounds in the AppContainer together with 2 pList files (static &amp; recorded sounds) I learned how iOS stores data.</p>
+<p>I used Xcode Unit-Testing (XcTest) for the playlist logic and also the BackgoundAudioPlayer. This parts of the app contain much of logic, so It&#8217;s good to have a safety net around them. The ViewControllers are not covered with test&#8217;s, this may be something to learn at a later point of time.<br />
+The PPA app contains a coded <a href="/2016/08/06/xcode-ios-ui-testing/" target="_blank">UI test</a>, which were not easy to develop. <a href="/2016/08/21/record-ui-tests-in-xcode/" target="_blank">I used the recording function</a> to learn how to control the ui. They are very brittle, but give a good overall feedback. They take about 2 minutes to run, I usually prefer shorter feedback cycles.</p>
+<p>The most exiting part was the audio API &#8220;AV Audio&#8221; itself. Playing a sound is very simple, but playing background audio for a configureable time and recording audio requires a a deeper understanding of the API. For a overall good user experience iOS manages audio playback in sessions. With audio sessions you configure wether you playback and / or record audio, in foreground, background or mixing in with other concurrent playing sounds.</p>
+<p>What&#8217;s very different to what I&#8217;ve worked before was muli-threading in iOS. As many other API&#8217;s &#8220;Grand Central Dispatch&#8221; was a very C like API but very powerful. Performance is very important in mobile apps, I early encountered performance problems while scrolling the UI ViewController. When I started working with async queues I learned more about &#8220;<a href="https://www.raywenderlich.com/134411/arc-memory-management-swift" target="_blank">ARC and memory management</a>&#8221; to prevent memory leaks.</p>
+<h4>Migration to Swift 3</h4>
+<p>During development I downloaded a few times an XCode 8 beta version and tried the swift 3 migration. As soon as I had the golden master version (the last before production) I migrated the coding to swift 3.</p>
+<p>As apple promised the conversion assistant touch nearly every file. There were also many manual changes necessary. Due tue the &#8220;<a href="/2016/06/30/swift-api-design-guidelines/">Swift API Design Guidlines</a>&#8221; the coding looked really beautiful. As a developer that has not really developed with objective C many API&#8217;s usage and names were very C like and horrible to use or read before (NS*, CoreGraphics, GCD, &#8230;).</p>
+<p>Luckily my codebase wasn&#8217;t that huge, because a swift 3 migration requires a lot of work &#8211; and can break things.</p>
+<h4>Handoff to applE &#8211; The Review</h4>
+<p>Every app that is in the apple app store listed, is previously reviewed by apple. They have many guidelines about how apps should be developed and what&#8217;s allowed or not. After many testing and reading the guidelines and checklists I submitted the app for an external testing (testflight) review and in about 24h I was allowed to release the app for external testflight testers.</p>
+<p>I didn&#8217;t expected it, but the final App Store review was successful on the first submit again in about 24h the app was &#8220;ready for sale&#8221;, after a few hours it was available on the app store. I was sure that I missed something small that would lead to a rejection. A re-review after a minimal app and description change took again about 24h.</p>
+<h4>What the git!</h4>
+<p>As a side effect I heavily used git as version control system (which is <a href="https://github.com/zs40x/SleepBabySleep" target="_blank">available at GitHub</a>). I used it already before, but not that much. For this project I tried to commit small changes and for larger I used branches. It worked very well and I finally got some deeper understanding of merging and rebasing. And I learned that it&#8217;s quite painful if you wait to long until you merge branches again <img src="https://s.w.org/images/core/emoji/2.2.1/72x72/1f609.png" alt="😉" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>I&#8217;m still learning more about more advanced topic&#8217;s. I worked with SVN and Microsoft Team Foundation Server before, but git is my absolute favourite. It&#8217;s so simple and lightweight, but can solve really complex problems.</p>
+<p>I recommend reading the free online available book &#8220;<a href="https://git-scm.com/book/en/v2" target="_blank">Pro Git</a>&#8220;.</p>
+<h4>And now?</h4>
+<p>It started with many problems that lead to more problems. But by the time  it became fun to develop with Xcode and swift. <a href="https://www.raywenderlich.com/" target="_blank">Raywenderlich.com</a> tutorials, videos and sample code were a great help that saved my a lot time reading all the apple documentations.</p>
+<p>After playing around with the analysis tools I found a situation that could lead to a race condition. This alone wasn&#8217;t worth a re-review and update.  I&#8217;ll wait a few weeks for crash reports or any feedback and then submit an update for a review.</p>
+<p>In the meantime I continue the development of the initial project. I added a widget (today extension), that can access the app&#8217;s core data database, which is now in a <a href="https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html" target="_blank">shared container</a>. To use the app myself in the near future I&#8217;m working currently on a &#8220;CloudKit&#8221; sync (to prevent data loss).</p>
+<p>I&#8217;ll definitively continue developing iOS apps. Not to become a 1€ app or in-app purchase millionaire, just for fun.<br />
+The fact that <a href="http://www.apple.com/pr/library/2016/05/05Apple-and-SAP-Partner-to-Revolutionize-Work-on-iPhone-and-iPad.html" target="_blank">Apple and SAP have a partnership</a> shows that there is a market for native enterprise applications &#8211; even if SAP has a modern powerful web UI technology. Looks like SAP developments becomes more and more technically interesting with modern ABAP, JavaScript and Swift <img src="https://s.w.org/images/core/emoji/2.2.1/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<h4>The iOS Projects on Github</h4>
+<p>Apple App Store &#8211; <a href="https://itunes.apple.com/us/app/baby-shhh...-play-record-sleep/id1155116600?ls=1&amp;mt=8">Baby Shhh&#8230; (US App Store)</a></p>
+<p>Git &#8211; <a href="https://github.com/zs40x/SleepBabySleep" target="_blank">SleepBabySleep / Baby Shh&#8230;</a></p>
+<p>Git &#8211; <a href="https://github.com/zs40x/PersonalProductivityAssistant" target="_blank">PersonalProductivityAssistant / PPA</a></p>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F10%2F20%2Ffrom-an-idea-to-the-apple-app-store%2F" class="twitter-share-button">Tweet</a></div>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Record UI tests in Xcode</title>
+		<link>/2016/08/21/record-ui-tests-in-xcode/</link>
+		<pubDate>Sun, 21 Aug 2016 05:09:36 +0000</pubDate>
+		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
+				<category><![CDATA[iOS Development]]></category>
+		<category><![CDATA[iOS]]></category>
+		<category><![CDATA[Swift]]></category>
+		<category><![CDATA[Testing]]></category>
+		<category><![CDATA[XCode]]></category>
+
+		<guid isPermaLink="false">/?p=358</guid>
+		<description><![CDATA[In a previous article I gave a short introduction into UI testing with Xcode. It works fine, but sometimes it&#8217;s a bit complicated to learn how to interact with the ui elements. This video shows by example how the recording feature helps with this problem. Demo: Record UI interaction How to record UI tests To start the ui test &#8230; <a href="/2016/08/21/record-ui-tests-in-xcode/" class="more-link">Continue reading<span class="screen-reader-text"> "Record UI tests in Xcode"</span></a>]]></description>
+				<content:encoded><![CDATA[<p>In a previous article I gave a short introduction into <a href="/2016/08/06/xcode-ios-ui-testing/">UI testing with Xcode</a>. It works fine, but sometimes it&#8217;s a bit complicated to learn how to interact with the ui elements. This video shows by example how the recording feature helps with this problem.</p>
+<h3>Demo: Record UI interaction</h3>
+<p><div style="width: 840px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
+<video class="wp-video-shortcode" id="video-358-1" width="840" height="525" preload="metadata" controls="controls"><source type="video/mp4" src="/wp-content/uploads/2016/08/Record_UI_tests_in_XCode.mp4?_=1" /><a href="/wp-content/uploads/2016/08/Record_UI_tests_in_XCode.mp4">/wp-content/uploads/2016/08/Record_UI_tests_in_XCode.mp4</a></video></div><br />
+<span id="more-358"></span></p>
+<h3>How to record UI tests</h3>
+<p>To start the ui test recording press the red button in the toolbar below the editor. The app starts and every interaction will be added as code into the current function.</p>
+<p><img class="alignnone wp-image-361 size-full" src="/wp-content/uploads/2016/08/Button.png" alt="Button" width="438" height="140" srcset="/wp-content/uploads/2016/08/Button.png 438w, /wp-content/uploads/2016/08/Button-300x96.png 300w" sizes="(max-width: 438px) 85vw, 438px" /></p>
+<p><img class="alignnone wp-image-360 size-full" src="/wp-content/uploads/2016/08/Stop_Recording.png" alt="Stop_Recording" width="841" height="293" srcset="/wp-content/uploads/2016/08/Stop_Recording.png 841w, /wp-content/uploads/2016/08/Stop_Recording-300x105.png 300w, /wp-content/uploads/2016/08/Stop_Recording-768x268.png 768w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" /></p>
+<p>The generated code should be refactored and cleaned up. Test code, especially ui test code must stay maintainable, because it will break on ui changes that will occur. Remove duplication and make it more readable just like your production code.</p>
+<p>Be aware, that the recording does not detect all interactions correctly. So it&#8217;s better to record in small steps and see if the generated code does what you expect.<br />
+If not it&#8217;s usually easier to modify the generated code than searching how to access (a more complex) element without a starting point. I haven&#8217;t found an official documentation, but there&#8217;s  a good <a href="http://masilotti.com/xctest-documentation/" target="_blank">reference</a> and <a href="http://masilotti.com/ui-testing-cheat-sheet/" target="_blank">cheat sheet</a> on masilotti.com that can help.</p>
+<h3>Conclusion</h3>
+<p>The recording feature is not a wizard, that does all the work for you &#8211; It&#8217;s just an assistant. The generated code is a good starting point for a coded UI test, to understand how to get a value or a state of an element.</p>
+<p>See more: <a href="/2016/08/06/xcode-ios-ui-testing/">Xcode iOS UI testing</a>.</p>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F08%2F21%2Frecord-ui-tests-in-xcode%2F" class="twitter-share-button">Tweet</a></div>
+]]></content:encoded>
+	<enclosure url="/wp-content/uploads/2016/08/Record_UI_tests_in_XCode.mp4" length="54143405" type="video/mp4" />
+		</item>
+		<item>
+		<title>XCode iOS UI testing</title>
+		<link>/2016/08/06/xcode-ios-ui-testing/</link>
+		<pubDate>Sat, 06 Aug 2016 11:40:47 +0000</pubDate>
+		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
+				<category><![CDATA[iOS Development]]></category>
+		<category><![CDATA[Swift]]></category>
+		<category><![CDATA[iOS]]></category>
+		<category><![CDATA[Testing]]></category>
+		<category><![CDATA[XCode]]></category>
+
+		<guid isPermaLink="false">/?p=312</guid>
+		<description><![CDATA[As Martin Flowler described in his article TestPyramid, the UI should be the highest (and not the only) layer of the tests.  They are a safety net and errors detected on this layer can point to missing test&#8217;s on a lower layer. Automated UI test&#8217;s tend to be brittle, because every change in the UI can result in failing &#8230; <a href="/2016/08/06/xcode-ios-ui-testing/" class="more-link">Continue reading<span class="screen-reader-text"> "XCode iOS UI testing"</span></a>]]></description>
+				<content:encoded><![CDATA[<p>As Martin Flowler described in his article <a href="http://martinfowler.com/bliki/TestPyramid.html" target="_blank">TestPyramid</a>, the UI should be the highest (and not the only) layer of the tests.  They are a safety net and errors detected on this layer can point to missing test&#8217;s on a lower layer. Automated UI test&#8217;s tend to be brittle, because every change in the UI can result in failing test&#8217;s.</p>
+<p>Since version 7 XCode supports UI tests, with test classes deriving from XCTestCase:</p>
+<ul>
+<li>Control the device (rotate, press hardware buttons) &#8211; <a href="http://masilotti.com/xctest-documentation/Classes/XCUIDevice.html" target="_blank">XCUIDevice</a></li>
+<li>Control start / stop the app &#8211; <a href="http://masilotti.com/xctest-documentation/Classes/XCUIApplication.html" target="_blank">XCUIAppication</a></li>
+<li>Query elements &#8211; <a href="http://masilotti.com/xctest-documentation/Classes/XCUIElementQuery.html" target="_blank">XCUIElementQuery</a></li>
+<li>Interact with elements / verify state &#8211; <a href="http://masilotti.com/xctest-documentation/Classes/XCUIElement.html" target="_blank">XCUIElement</a></li>
+<li>Simulate a remote &#8211; <a href="http://masilotti.com/xctest-documentation/Classes/XCUIRemote.html" target="_blank">XCUIRemote</a></li>
+<li>Interact by coordinates &#8211; <a href="http://masilotti.com/xctest-documentation/Classes/XCUICoordinate.html" target="_blank">XCUICoordinate</a></li>
+</ul>
+<p>Here&#8217;s an example test:</p>
+<pre class="prettyprint lang-swift" data-start-line="1" data-visibility="visible" data-highlight="" data-caption="">class PersonalProductivityAssistantUITests : XCTestCase {
+    
+    var app = XCUIApplication()
+    var toolbarAddActivityButton: XCUIElement?
+    var activityInputField: XCUIElement?
+    //...
+    var timeLogSaveButton: XCUIElement?
+    
+    override func setUp() {
+    	super.setUp()
+    	
+    	continueAfterFailure = false
+     
+    	app.launch()
+    
+    	activityInputField = app.textFields["textEditActivity"]
+    	toolbarAddActivityButton = app.toolbars.buttons["Log Time"]
+        // ...
+    	timeLogSaveButton = app.navigationBars["Time Log"].buttons["Save"]
+    }
+    
+    override func tearDown() {
+    	super.tearDown()
+    	
+    	app.terminate()
+    }
+}</pre>
+<pre class="prettyprint lang-swift" data-start-line="1" data-visibility="visible" data-highlight="" data-caption="">func testCanAddAndEditAndDeleteActivityFromTable() {
+    //
+    // Add
+    //
+    // Open the add time log view
+    waitForElementToAppear(toolbarAddActivityButton!)
+    toolbarAddActivityButton!.tap()
+    toolbarAddActivityButton!.tap()
+    
+    // Type new time log informations
+    waitForElementToAppear(activityInputField!)
+    let initialActivityName = getActivityNameWithDateTime()
+    typeActivityName(initialActivityName)
+    labelActivity?.tap()
+    
+    buttonPickDateTimeFrom?.tap()
+    setDatePickerValues(monthAndDay: "Aug 1", hour: "10", minute: "30", amPm: "AM")
+    setDateTimeFromButton?.tap()
+    
+    buttonPickDateTimeUntil?.tap()
+    setDatePickerValues(monthAndDay: "Aug 1", hour: "11", minute: "15", amPm: "AM")
+    setDateTimeUntilButton?.tap()
+    
+    timeLogSaveButton?.tap()
+    
+    // Verify element has been added
+    XCTAssert(getTableStaticTextElement(initialActivityName).exists)
+    
+    //
+    // Edit
+    //
+    // tap the actiity to open the add/edit segue
+    getTableStaticTextElement(initialActivityName).tap()
+    
+    let changedActivityName = "\(getActivityNameWithDateTime()) #test"
+    waitForElementToAppear(activityInputField!)
+    clearAndTypeActivityName(changedActivityName)
+    
+    timeLogSaveButton?.tap()
+    
+    // Verify element has been modifed
+    XCTAssert(getTableStaticTextElement(changedActivityName).exists)
+    
+    //
+    // Delete
+    //
+    // Swipe up until the new element ist visible
+    doSwipeUpUntilTableStaticTextIsHittable(changedActivityName)
+    // Swipe left and push delete button
+    doDeleteTableRow(changedActivityName)
+    
+    // Verify the element has been deleted
+    XCTAssert(!getTableStaticTextElement(changedActivityName).exists)
+}</pre>
+<p>This is how it looks like, when it runs in the debugger:</p>
+<div style="width: 376px;" class="wp-video"><video class="wp-video-shortcode" id="video-312-2" width="376" height="689" preload="metadata" controls="controls"><source type="video/mp4" src="/wp-content/uploads/2016/08/2016-08-06_13-31-33.mp4?_=2" /><a href="/wp-content/uploads/2016/08/2016-08-06_13-31-33.mp4">/wp-content/uploads/2016/08/2016-08-06_13-31-33.mp4</a></video></div>
+<p>You can find the full test in the latest version of my learning app PersonalProductivityAssistant <a href="https://github.com/zs40x/PersonalProductivityAssistant/blob/master/PersonalProductivityAssistantUITests/PersonalProductivityAssistantUITests.swift" target="_blank">@github</a>.</p>
+<p>Learn more about <a href="/2016/08/21/record-ui-tests-in-xcode/">recording UI tests</a>.</p>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F08%2F06%2Fxcode-ios-ui-testing%2F" class="twitter-share-button">Tweet</a></div>
+]]></content:encoded>
+	<enclosure url="/wp-content/uploads/2016/08/2016-08-06_13-31-33.mp4" length="2642349" type="video/mp4" />
+		</item>
+		<item>
+		<title>XCode Playground Part IV: SpriteKit (2D game engine)</title>
+		<link>/2016/02/02/xcode-playground-part-iv-spritekit-2d-game-engine/</link>
+		<pubDate>Tue, 02 Feb 2016 16:47:36 +0000</pubDate>
+		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
+				<category><![CDATA[iOS Development]]></category>
+		<category><![CDATA[iOS]]></category>
+		<category><![CDATA[Playground]]></category>
+		<category><![CDATA[Swift]]></category>
+		<category><![CDATA[XCode]]></category>
+
+		<guid isPermaLink="false">/?p=95</guid>
+		<description><![CDATA[In the last part of the XCode Playground Series I demonstrate how use it with SpriteKit. It&#8217;s very simple to test animations and physics outside of your project. But as mentioned in the last Part, the performance isn&#8217;t very good. Adding too much nodes or complex physics will lower the FPS rate extremly. But let&#8217;s have a look how &#8230; <a href="/2016/02/02/xcode-playground-part-iv-spritekit-2d-game-engine/" class="more-link">Continue reading<span class="screen-reader-text"> "XCode Playground Part IV: SpriteKit (2D game engine)"</span></a>]]></description>
+				<content:encoded><![CDATA[<p>In the last part of the XCode Playground Series I demonstrate how use it with SpriteKit. It&#8217;s very simple to test animations and physics outside of your project.</p>
+<p>But as mentioned in <a href="/2016/01/26/xcode-playground-part-iii-behind-the-scenes/">the last Part</a>, the performance isn&#8217;t very good. Adding too much nodes or complex physics will lower the FPS rate extremly.</p>
+<p>But let&#8217;s have a look how you can use it:</p>
+<div style="width: 840px;" class="wp-video"><video class="wp-video-shortcode" id="video-95-3" width="840" height="525" preload="metadata" controls="controls"><source type="video/mp4" src="/wp-content/uploads/2016/02/demo_spritekit_in_playground.mp4?_=3" /><a href="/wp-content/uploads/2016/02/demo_spritekit_in_playground.mp4">/wp-content/uploads/2016/02/demo_spritekit_in_playground.mp4</a></video></div>
+<p>You find the source code here: <a href="https://github.com/zs40x/XCodePlayground_BlogSeries/blob/master/Part_IV.playground/Contents.swift" target="_blank">https://github.com/zs40x/XCodePlayground_BlogSeries/blob/master/Part_IV.playground/Contents.swift</a></p>
+<p>If you have a Mac, install Xcode and give it a try!</p>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F02%2F02%2Fxcode-playground-part-iv-spritekit-2d-game-engine%2F" class="twitter-share-button">Tweet</a></div>
+]]></content:encoded>
+	<enclosure url="/wp-content/uploads/2016/02/demo_spritekit_in_playground.mp4" length="11852894" type="video/mp4" />
+		</item>
+	</channel>
+</rss>

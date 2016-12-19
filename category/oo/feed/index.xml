@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>OO &#8211; Stefan Mehnert</title>
+	<atom:link href="/category/oo/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>#DevLife</description>
+	<lastBuildDate>Thu, 20 Oct 2016 19:00:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.7</generator>
+	<item>
+		<title>Open-Closed Principle</title>
+		<link>/2016/05/03/open-closed-principle/</link>
+		<pubDate>Tue, 03 May 2016 04:14:48 +0000</pubDate>
+		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
+				<category><![CDATA[C#]]></category>
+		<category><![CDATA[OO]]></category>
+		<category><![CDATA[OO_Principles]]></category>
+		<category><![CDATA[SOLID]]></category>
+		<category><![CDATA[SolidAsARock]]></category>
+
+		<guid isPermaLink="false">/?p=269</guid>
+		<description><![CDATA[Your company sells temperature sensors and software for it for many years. For the last 5 years there we produced only indoor sensors. Yesterday your boss came around and told you, that you&#8217;ll now sell also outdoor sensors. There is a class that feeds the gui with the average temperature of multiple sensors. You&#8217;re assigned the extend &#8230; <a href="/2016/05/03/open-closed-principle/" class="more-link">Continue reading<span class="screen-reader-text"> "Open-Closed Principle"</span></a>]]></description>
+				<content:encoded><![CDATA[<p>Your company sells temperature sensors and software for it for many years. For the last 5 years there we produced only indoor sensors.<br />
+Yesterday your boss came around and told you, that you&#8217;ll now sell also outdoor sensors.<br />
+There is a class that feeds the gui with the average temperature of multiple sensors. You&#8217;re assigned the extend the average temperature class, which look quite messy after your change:</p>
+<script src="https://gist.github.com/zs40x/82e7d2cb920c654178f29cfab8982e76.js"></script>
+<p>Before your change it simply took a List&lt;IndoorTemperatureSensor&gt; and it had only one for loop. But look at this &#8211; feels like we&#8217;re missing something&#8230;..<span id="more-269"></span></p>
+<h4>Make it Open OCP conform</h4>
+<p>Suddenly you remember the open closed principle:</p>
+<blockquote>
+<div class="page" title="Page 1">
+<div class="layoutArea">
+<div class="column">
+<p>SOFTWARE ENTITIES (CLASSES, MODULES, FUNCTIONS, ETC.) SHOULD BE OPEN FOR EXTENSION, BUT CLOSED FOR MODIFICATION.</p>
+</div>
+</div>
+</div>
+<pre>(<em><a href="https://web.archive.org/web/20060813130703/http://www.objectmentor.com/resources/articles/ocp.pdf">The Open-Closed Principle</a>, Robert C. Martin, The C++ Report</em><span class="reference-text"><cite class="citation book">)</cite></span></pre>
+</blockquote>
+<p>That sounds odd, how can we build something that is closed for modification, but open for extension?</p>
+<p>Abstraction is the key!</p>
+<p>Because the AvgTemperatureReader is wired against the implementation &#8220;IndoorTemperatueSensor&#8221; we had to modify it to make work with our new outdoor sensor implementation.</p>
+<p><a href="/wp-content/uploads/2016/04/valid_uml.png"><img class="alignnone size-large wp-image-275" src="/wp-content/uploads/2016/04/valid_uml-1024x670.png" alt="OCP Valid Example UML" width="840" height="550" srcset="/wp-content/uploads/2016/04/valid_uml-1024x670.png 1024w, /wp-content/uploads/2016/04/valid_uml-300x196.png 300w, /wp-content/uploads/2016/04/valid_uml-768x503.png 768w, /wp-content/uploads/2016/04/valid_uml.png 1146w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" /></a></p>
+<p>The refactored solution uses an interface that provides access to the last read temperature. The abstract class removes code that would be duplicated in both sensor classes.</p>
+<p>Look how simple the implementation of the AvgTemperatureReader looks like again:<br />
+<script src="https://gist.github.com/zs40x/dbf24f4ec547a7c91e6bac824ffad724.js"></script></p>
+<h4>conclusion</h4>
+<p>The OCP is in my opinion a key concept of object oriented design. Applied correctly it supports building software where changes don&#8217;t cascade through large parts of your codebase. This is not easy, but deep knowledge of the domain and can help to build in the necessary abstractions.</p>
+<p>The full example is avaible in <a href="https://github.com/zs40x/Open_Closed_Principle" target="_blank">my GitHub repository</a>.</p>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F05%2F03%2Fopen-closed-principle%2F" class="twitter-share-button">Tweet</a></div>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Interface Segregation Principle</title>
+		<link>/2016/03/06/interface-segregation-principle/</link>
+		<pubDate>Sun, 06 Mar 2016 08:46:52 +0000</pubDate>
+		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
+				<category><![CDATA[C#]]></category>
+		<category><![CDATA[OO]]></category>
+		<category><![CDATA[OO_Principles]]></category>
+		<category><![CDATA[SOLID]]></category>
+		<category><![CDATA[SolidAsARock]]></category>
+
+		<guid isPermaLink="false">/?p=175</guid>
+		<description><![CDATA[The ISP was &#8220;invented&#8221; by Robert C. Martin while consulting for Xerox: “The interface-segregation principle (ISP) states that no client should be forced to depend on methods it does not use.”* I&#8217;ll explain this with an example, let&#8217;s assume we have an Interface SensorDevice that provides a lot of functions: So what&#8217;s the problem with fat &#8230; <a href="/2016/03/06/interface-segregation-principle/" class="more-link">Continue reading<span class="screen-reader-text"> "Interface Segregation Principle"</span></a>]]></description>
+				<content:encoded><![CDATA[<p>The ISP was &#8220;invented&#8221; by Robert C. Martin while consulting for Xerox: <strong>“The interface-segregation principle (ISP) states that no client should be forced to depend on methods it does not use.”*</strong></p>
+<p>I&#8217;ll explain this with an example, let&#8217;s assume we have an Interface SensorDevice that provides a lot of functions:<br />
+<script src="https://gist.github.com/zs40x/bdf0839e083cf6544a2f.js"></script></p>
+<h5><strong>So what&#8217;s the problem with fat interfaces like in the example coding?</strong></h5>
+<p>If clients use interface with methods they don&#8217;t need, they know details that they don&#8217;t care about.<br />
+In the sensor device example you will have code that controls maybe hundreds of different sensors and on the other hand there&#8217;ll be code that reads and handles the readings.<br />
+Device State, control and reading methods are tightly coupled togehter. If there&#8217;s a change in a method signature for example, all &#8220;clients&#8221; are eventually affected by the change &#8211; which is unnecessary.</p>
+<h5>Applying the interface segregation principle</h5>
+<p>To understand the ISP you must understand the difference between the (class-)interface and the object interface. Depending on the language a class can inherit from one or more classes and implement multiple interfaces</p>
+<p>An object that implements multiple interfaces exposes all methods. But you also can access the object with the interface it implement, like IDisposable.<br />
+This allows a very specific access to a subset of the object interface, so that it can be treated in different ways without caring about its details.</p>
+<p>Especially on higher levels of abstraction you will have objects with many methods, but you can group them using interfaces:</p>
+<p><a href="/wp-content/uploads/2016/03/2016-03-06_09-14-35.png" rel="attachment wp-att-182"><img class="alignnone size-full wp-image-182" src="/wp-content/uploads/2016/03/2016-03-06_09-14-35.png" alt="Class diagram - interface segregation principle" width="578" height="288" srcset="/wp-content/uploads/2016/03/2016-03-06_09-14-35.png 578w, /wp-content/uploads/2016/03/2016-03-06_09-14-35-300x149.png 300w" sizes="(max-width: 578px) 85vw, 578px" /></a></p>
+<p>Now you can access the different methods by client-concern using the interfaces:<br />
+<script src="https://gist.github.com/zs40x/78311faa64760daebe4a.js"></script></p>
+<p><code class="dobdev-code-inline"><strong>Console-Output<br />
+06.03.2016 07:17:37 ConsoleLogFakeSensor: enable()<br />
+06.03.2016 07:17:37 ConsoleLogFakeSensor: isEnabledSince()<br />
+06.03.2016 07:17:37 ConsoleLogFakeSensor: disable()<br />
+06.03.2016 07:17:37 ConsoleLogFakeSensor: powerOff()<br />
+Press any key to continue&#8230;<br />
+</strong></code></p>
+<p>This will also be very handy if you want to disable dozens of different devices of different types using the generic interface &#8220;DeviceState&#8221; &#8211; without knowing which type of Device it is.</p>
+<p>The example project is in <a href="https://github.com/zs40x/InterfaceSegregationPrinciple/tree/master" target="_blank">this GitHub repository.</a></p>
+<h5>Conclusion</h5>
+<p>Splitting fat interfaces by client concerns is a powerful tool to build cohesive interfaces. Due to the reduced dependencies the scope of changes is minimised and the loose coupling will payoff in the long term when it comes to extending and maintaining the project. Smaller specific interfaces may also help to communication your intentions.</p>
+<h5>Sources</h5>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Interface_segregation_principle" target="_blank">Wikipedia / Interface Segregation Principle</a></li>
+<li>* Robert C. Martin, Agile Software Development &#8211; Principles Patterns and Practices, Pearson 2014</li>
+</ul>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F03%2F06%2Finterface-segregation-principle%2F" class="twitter-share-button">Tweet</a></div>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Dependency Inversion Principle</title>
+		<link>/2016/02/15/dependency-inversion-principe/</link>
+		<pubDate>Mon, 15 Feb 2016 19:24:32 +0000</pubDate>
+		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
+				<category><![CDATA[C#]]></category>
+		<category><![CDATA[OO]]></category>
+		<category><![CDATA[OO_Principles]]></category>
+		<category><![CDATA[SOLID]]></category>
+		<category><![CDATA[SolidAsARock]]></category>
+
+		<guid isPermaLink="false">/?p=140</guid>
+		<description><![CDATA[The dependency inversion principle states: &#8220;High level modules should not depend upon low level modules. Both should depend upon abstractions.&#8221; &#8220;Abstractions should not depend upon details. Details should depend upon abstractions.&#8221; See Principles of Object Oriented Class Design by Robert C. Martin (2000) for further details. An example Application The application sends e-mail notifications to users. The message text &#8230; <a href="/2016/02/15/dependency-inversion-principe/" class="more-link">Continue reading<span class="screen-reader-text"> "Dependency Inversion Principle"</span></a>]]></description>
+				<content:encoded><![CDATA[<p>The dependency inversion principle states:</p>
+<ul>
+<li>&#8220;High level modules should not depend upon low level modules. Both should depend upon abstractions.&#8221;</li>
+<li>&#8220;Abstractions should not depend upon details. Details should depend upon abstractions.&#8221;</li>
+</ul>
+<p>See <a href="http://mil-oss.org/resources/objectmentor_design-principles-and-design-patterns.pdf" target="_blank">Principles of Object Oriented Class Design</a> by Robert C. Martin (2000) for further details.</p>
+<p><strong>An example Application</strong><br />
+The application sends e-mail notifications to users. The message text is different for regular and premium users.<br />
+The &#8220;BL&#8221; sub-package contains the business logic, it knows how to generate the email (address, subject and message) and how to call the SMTP client.<span id="more-140"></span></p>
+<p>This design is maybe the easiest possible way, but it has also disadvantages:</p>
+<ul>
+<li>Re-using the business logic is not possible because it&#8217;s internally wired directly to the STMPClient</li>
+<li>This also makes it hard to unit-test, the dependency is hidden in the implementation</li>
+<li>To replace the low-level STMPClient you have to change it&#8217;s depending class SMTPNotificationSender directly</li>
+</ul>
+<p>That may not be a big deal in a small application like this example, but growing applications and changing requirements require flexible designs.</p>
+<p><a href="/wp-content/uploads/2016/02/uml_before.png" rel="attachment wp-att-148"><img class="alignnone size-full wp-image-148" src="/wp-content/uploads/2016/02/uml_before.png" alt="UML - before refactoring" width="800" height="429" srcset="/wp-content/uploads/2016/02/uml_before.png 800w, /wp-content/uploads/2016/02/uml_before-300x161.png 300w, /wp-content/uploads/2016/02/uml_before-768x412.png 768w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 61vw, (max-width: 1362px) 45vw, 600px" /></a> <script src="https://gist.github.com/zs40x/9a521f3b9b8ec226c639.js"></script><br />
+<script src="https://gist.github.com/zs40x/c5ff11613690c6331330.js"></script><!--more--></p>
+<p><strong>Refactor towards the dependency inversion principle</strong><br />
+To solve the coupling problem we have to <em>invert the dependencies</em>: The business-logic provides an interface (abstraction), that is implemented in the low-level infrastructure package.<br />
+<a href="/wp-content/uploads/2016/02/uml_dip.png" rel="attachment wp-att-149"><img class="alignnone size-full wp-image-149" src="/wp-content/uploads/2016/02/uml_dip.png" alt="UML - after refactoring towards the DIP" width="1792" height="786" srcset="/wp-content/uploads/2016/02/uml_dip.png 1792w, /wp-content/uploads/2016/02/uml_dip-300x132.png 300w, /wp-content/uploads/2016/02/uml_dip-768x337.png 768w, /wp-content/uploads/2016/02/uml_dip-1024x449.png 1024w, /wp-content/uploads/2016/02/uml_dip-1200x526.png 1200w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" /></a><br />
+I moved the business-logic (core) and the infrastructure into separate class-libraries. As you see, the core library has no dependencies!</p>
+<p>The &#8220;SMTPNotificationSender&#8221; is now called &#8220;NotificationService&#8221; and receives an instance of the interface SendMail by constructor-injection. This decouples it from the low-level E-Mail sending implementation and makes to business-logic easy to test.<br />
+<script src="https://gist.github.com/zs40x/2a5ea6da505ac7c96100.js"></script><br />
+<script src="https://gist.github.com/zs40x/bca142a9cafe7cf1dbd4.js"></script></p>
+<p>The &#8220;Main&#8221; routine is now responsible for wiring up the classes at startup.<br />
+<script src="https://gist.github.com/zs40x/b55c6a8b9bcf1018cad4.js"></script></p>
+<p>And finally here&#8217;s an example for 2 test-cases using <a href="http://www.telerik.com/products/mocking.aspx" target="_blank">Telerik&#8217;s JustMock</a>:<br />
+<script src="https://gist.github.com/zs40x/5b8e5e88524d8f2812db.js"></script></p>
+<p>You find the full project in my <a href="https://github.com/zs40x/DependencyInversionPrinciple" target="_blank">GitHub Repository</a> and also a <a href="https://github.com/zs40x/DependencyInversionPrinciple/commit/3b5e72130e4038661d0d202f385ea8fb0c5ae040#diff-84ba5fa839759db9fae3773b6ff575a0" target="_blank">diff between the original and the refactored version</a>.</p>
+<p><strong>Summary</strong><br />
+The dependency inversion principle is very useful to build maintainable and testable code. The instantiation (wiring up the classes) is not cluttered all over the project. The actual implementation classes can be reused and easily replaced. A DI Framework / IoC Container wich I&#8217;ll explain in the next blog post can make this even easier.</p>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F02%2F15%2Fdependency-inversion-principe%2F" class="twitter-share-button">Tweet</a></div>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Do(&#8216;nt) use the Singleton Design Pattern!?</title>
+		<link>/2016/02/09/dont-use-the-singleton-design-pattern/</link>
+		<pubDate>Tue, 09 Feb 2016 16:00:09 +0000</pubDate>
+		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
+				<category><![CDATA[DesignPatterns]]></category>
+		<category><![CDATA[OO]]></category>
+		<category><![CDATA[Singleton]]></category>
+
+		<guid isPermaLink="false">/?p=99</guid>
+		<description><![CDATA[What is the singleton design pattern and how does it work? The Singleton Design Pattern is described in the legendary book &#8220;Design Patterns&#8221; by the Gang of Four. A Singleton takes itself care of  t&#8217;s instantiation and life cycle. Because the constructor is not public, it is not possible to create an object outside of the class. Therefore it &#8230; <a href="/2016/02/09/dont-use-the-singleton-design-pattern/" class="more-link">Continue reading<span class="screen-reader-text"> "Do(&#8216;nt) use the Singleton Design Pattern!?"</span></a>]]></description>
+				<content:encoded><![CDATA[<p><strong>What is the singleton design pattern and how does it work?</strong><br />
+The Singleton Design Pattern is described in the legendary book <a href="https://en.wikipedia.org/wiki/Design_Patterns" target="_blank">&#8220;Design Patterns&#8221; by the Gang of Four</a>.</p>
+<p>A Singleton takes itself care of  t&#8217;s instantiation and life cycle. Because the constructor is not public, it is not possible to create an object outside of the class.<br />
+Therefore it has a static method (i.e. getInstance) as global access point. It has also a private static attribute of itself, that is only instantiated one time. This way the instance method returns always the same instance.</p>
+<p><strong>When or why could you apply this Design Patterns?<br />
+</strong> A Singleton is used, when you want to make sure, that there’s only one Instance of a class.<span id="more-99"></span></p>
+<p>For example you have a class that communicates with a serial port (COM). A serial port can only be opened once a a time. That means you can only have on Instance of the class that’s controlling the port.</p>
+<p>It’s also used for database or API-access classes to prevent multiple connections or instantiations of the external libraries. Logging, caching or configuration are also possible candidates.</p>
+<p><strong>That sounds fine, but what’s the catch?<br />
+</strong> First of all: It uses a global variable. And as we all learned the hard way, global variables can make the behavior of your code unpredictable. Global state can lead to complex problems, as it can be modified anywhere in your code.</p>
+<p>Also this violates the Single Responsibility Principle: “There should never be more than one reason for a class to change.” – Robert C. Martin<br />
+Instantiation is in my opinion a responsibility, and in medium or large scale code bases a critical.</p>
+<p>Another drawback is tight coupling. Calling the singleton::getInstance() anywhere in your code couples it directly the singleton class.<br />
+Loose coupling is a good practice to develop maintainable and testable code.<br />
+Loose coupling and clear dependencies passed to new instances, for example by using constructor injection, allow the composition of reuse able modules at run time.</p>
+<p>A class using the singleton is hard to test in isolation. And testing in general and also testing a module in isolation is essential for maintainable code.</p>
+<p>To test a class which access the singleton in a method, you must find a way to replace the normally hidden instance with a stub, mock, etc.</p>
+<p>To do this, the singleton class may have a public setInstanceForTesting method, which may not be a good idea.<br />
+Another possibility is creating a subclass with a static set method, that overrides the static instance variable (if it is protected).</p>
+<p>The global state can also become a nightmare when testing your code. Tests fail and you have no idea why, or tests pass that should fail because the implementation is not complete yet.<br />
+You have to be careful when you test code using singletons, that the state of the previous test is removed.<br />
+If you don&#8217;t replace the singleton instance by dependency injection at least clear the static instance or reset it to an initial state &#8211; <em>before and after</em> every test run (setup / tearDown).</p>
+<p><strong>So is the Singleton really so bad, should i never, ever use it?<br />
+</strong>Probably no other design pattern is / was adopted, loved, discussed and hated as much as the singleton.</p>
+<p>No piece of software is the same, and there may be situations when a singleton may be the way to go. See the further reading link collections for more details and example patterns.</p>
+<p><strong>But</strong> &#8211; you must consider all the drawbacks and weigh if it&#8217;s worth to live with them!</p>
+<hr />
+<p>&nbsp;</p>
+<p><strong>Further Reading</strong></p>
+<ul>
+<li><a href="https://sourcemaking.com/design_patterns/singleton" target="_blank">Singleton Design Pattern, SourceMaking.com</a></li>
+<li><a href="http://xunitpatterns.com/Test-Specific%20Subclass.html" target="_blank">Test-Specific Subclass, XUnitPatterns.com</a></li>
+<li><a href="http://xunitpatterns.com/Dependency%20Lookup.html" target="_blank">Dependency Lookup, XUnitPatterns.com</a></li>
+<li><a href="https://sourcemaking.com/design_patterns/null_object" target="_blank">Null Object, SourceMaking.com</a></li>
+<li><a href="http://martinfowler.com/eaaCatalog/registry.html" target="_blank">Registry, MartinFowler.com</a></li>
+</ul>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F02%2F09%2Fdont-use-the-singleton-design-pattern%2F" class="twitter-share-button">Tweet</a></div>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

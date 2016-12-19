@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Productivity &#8211; Stefan Mehnert</title>
+	<atom:link href="/category/productivity/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>#DevLife</description>
+	<lastBuildDate>Thu, 20 Oct 2016 19:00:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.7</generator>
+	<item>
+		<title>They don&#8217;t know what they want!</title>
+		<link>/2016/10/11/they-dont-know-what-they-want/</link>
+		<pubDate>Tue, 11 Oct 2016 19:17:24 +0000</pubDate>
+		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
+				<category><![CDATA[Productivity]]></category>
+		<category><![CDATA[Agile]]></category>
+
+		<guid isPermaLink="false">/?p=372</guid>
+		<description><![CDATA[Developing software can be frustrating. In a recent discussion with a junior developer she said, that it&#8217;s not easy to develop software. In long hours of hard work the result is built as previously discussed and it works. But the customer says, that&#8217;s good, but not exactly what we need. I remember that feeling, It&#8217;s disappointing. Short before &#8230; <a href="/2016/10/11/they-dont-know-what-they-want/" class="more-link">Continue reading<span class="screen-reader-text"> "They don&#8217;t know what they want!"</span></a>]]></description>
+				<content:encoded><![CDATA[<p>Developing software can be frustrating. In a recent discussion with a junior developer she said, that it&#8217;s not easy to develop software. In long hours of hard work the result is built as previously discussed and it works. But the customer says, that&#8217;s good, but not exactly what we need.</p>
+<p>I remember that feeling, It&#8217;s disappointing. Short before the deadline the customer want&#8217;s something different. Often huge changes to the codebase are necessary to meet the new requirements. The codebase you were so proud of before starts to rot and more and more bugs sneak into the code.</p>
+<p>Why haven&#8217;t they said upfront what they really want?</p>
+<p>Maybe they said what want but you didn&#8217;t understand it well enough. Or maybe they just learned what they really need after seeing your product the first time. Many problems are so complex, that&#8217;s not easy to plan and communicate everything upfront. And also, life goes on &#8211; markets and requirements change.</p>
+<p>Your cannot change the facts above. As hard as you try and the more you plan upfront, you&#8217;ll need more time for a solution and it will have the same problems.</p>
+<p>Try to start small and involve your customers as early as possible. Try to provide value as soon as possible. Start with a small subset of all the features that the customer wants. Show him the result, and in many cases they are happy to have an incomplete solution early than waiting a long time to get a (maybe) complete one.</p>
+<p>This way, by involving your customer, you&#8217;ll get early feedback. Early changes are easier and cheaper. You&#8217;ll also discuss the details of the feature that should be developed next and the customer can re-prioritise continuously. There will by features the customer said &#8220;we&#8217;ll need this later, I&#8217;m sure&#8221;, but then skipped over and over again &#8211; or dropped.</p>
+<p>The customer want&#8217;s working software, as soon as possible. It&#8217;s our job to deliver it. This requires planning, effective communication and high-quality (tested) code. Design for change, but build only what&#8217;s necessary.</p>
+<p>You don&#8217;t have to use scrum to be agile, learn about the agile principles &amp; patterns. Change your perspective on the current development process.</p>
+<p>Have a look at the &#8220;<a href="http://agilemanifesto.org/principles.html" target="_blank">Principles of the agile manifesto</a>&#8220;.</p>
+<p>&#8220;Agile&#8221; software development is not the solution for all your problems. But the insights you&#8217;ll gain will lead you to a better process. Don&#8217;t be the slave of a process, use a continuously reviewed process as a tool.</p>
+<p>&nbsp;</p>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F10%2F11%2Fthey-dont-know-what-they-want%2F" class="twitter-share-button">Tweet</a></div>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Are you a developer or do you just write code?</title>
+		<link>/2016/08/11/are-you-a-developer-or-do-you-just-write-code/</link>
+		<pubDate>Thu, 11 Aug 2016 18:09:47 +0000</pubDate>
+		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
+				<category><![CDATA[Productivity]]></category>
+		<category><![CDATA[DevLive]]></category>
+		<category><![CDATA[Testing]]></category>
+
+		<guid isPermaLink="false">/?p=337</guid>
+		<description><![CDATA[I am now about 10 years as self taught developer in business, and over the last years I learned the one thing: A good developer must know much more then just how write code! When you just start out, the technology and the code itself are the most important thing. Learning a programming language and really master it &#8230; <a href="/2016/08/11/are-you-a-developer-or-do-you-just-write-code/" class="more-link">Continue reading<span class="screen-reader-text"> "Are you a developer or do you just write code?"</span></a>]]></description>
+				<content:encoded><![CDATA[<p>I am now about 10 years as self taught developer in business, and over the last years I learned the one thing: A good developer must know much more then just how write code!</p>
+<p>When you just start out, the technology and the code itself are the most important thing. Learning a programming language and really master it by understanding complex concepts is really hard.<br />
+As a beginner, you know the frustration of compiler errors, crashing applications and weird problems of all kind. So often you stood before a mountain of problems and after some time and many tries &#8211; you will reach the top of the mountain. You jump up from your chair dancing and shouting Yes! Yes! finally! I got it!<br />
+This is a rewarding and motivates you to go on. In the best case you continue reading technical books and try to learn another language. You go on and solve more and more and more complex problems and projects. You hack the hell out of your editor and work long, long hours &#8211; you&#8217;re on the way to become an intermediate programmer. Some developers stop here. They don&#8217;t learn new things &#8211; only if they have to, and some even can&#8217;t program a fizz buzz game without google.</p>
+<p>No matter of what kind you are, something strange happens with your projects &#8211; over and over again: A shiny new project begins on a green field with blue sky. As the development continues it start&#8217;s to rain and the ground becomes a bit muddy &#8211; no problem. Things just slow down a bit.<br />
+But then, yeah, then comes the day. The day of the meeting with the customer when you demonstrate the application and he says ok &#8211; this is good, but not that, what we exactly need! We would like things to go better this way, and by the way we also need this, and that&#8230; and you start to become stressed and angry. Why have they changed their mind? A few weeks and month ago we agreed on doing things as we&#8217;ve implemented them? Life goes on, requirements (and the business) change.<br />
+The time is running up and the way I developed the application, it will become extremely complicated to change it the meet the new requirements&#8230;<br />
+Time&#8217;s ticking and you start to hack around. The muddy field has become a stormy desert with lava rivers. You just want to survive.  After long days, nights and maybe weekends you feel burned out and are just happy that the project is over. Every requested additional feature is blocked &#8220;because changes are too complex&#8221; or &#8220;too dangerous&#8221;. Ongoing bugfixes and happy hours in the debugger are normal.</p>
+<p>And again, some developers just accept this as the way it is. It&#8217;s always been like this in software development &#8211; so what. But others, especially those who continue to read and learn may become sceptical. This can&#8217;t be the way how software is developed!</p>
+<p>So you&#8217;ll learn how to test the code. This is again a very, very hard thing. It sound&#8217;s simple, but testing your software and in best case adopting test driven development is hard, really hard. To test your code you have to make it testable. You are forced to learn how you decouple classes and how to apply the <a href="/category/solid/" target="_blank">SOLID principles</a>. Writing good test&#8217;s that don&#8217;t act like a house of cards and getting a feeling of how to test what &#8211; and what not &#8211; requires experience which you&#8217;ll gain only be doing it over and over again.</p>
+<p>Also at some point you may stumble over agile software development. When you&#8217;ll try to adopt it, you&#8217;ll see that software development is not just about us &#8211; the developers. The agile way of development is absolutely different then the way you&#8217;ve done it before. Maybe you started with none or some conception or weeks / months of requirement capturing and planning.<br />
+As an agile developer the development lifecycle becomes faster. You strive to get working, high quality software to your customer. Good code quality and a safety net of test&#8217;s allow you to add features, that the customer wants in a steady pace. You&#8217;ll see the debugger only occasionally and yes, there are bugs, but much less. You automate what&#8217;s possible and build short feedback loops (<a href="https://www.amazon.de/gp/product/0321336380/ref=as_li_tl?ie=UTF8&amp;camp=1638&amp;creative=6742&amp;creativeASIN=0321336380&amp;linkCode=as2&amp;tag=stefanmehnert-21" rel="nofollow">Continuous Integration: Improving Software Quality and Reducing Risk (Martin Fowler Signature Books)</a><img style="border: none !important; margin: 0px !important;" src="http://ir-de.amazon-adsystem.com/e/ir?t=stefanmehnert-21&amp;l=as2&amp;o=3&amp;a=0321336380" alt="" width="1" height="1" border="0" /><br />
+and <a href="https://www.amazon.de/gp/product/0321601912/ref=as_li_tl?ie=UTF8&amp;camp=1638&amp;creative=6742&amp;creativeASIN=0321601912&amp;linkCode=as2&amp;tag=stefanmehnert-21" rel="nofollow">Continuous Delivery: Reliable Software Releases Through Build, Test, and Deployment Automation (Addison-Wesley Signature)</a><img style="border: none !important; margin: 0px !important;" src="http://ir-de.amazon-adsystem.com/e/ir?t=stefanmehnert-21&amp;l=as2&amp;o=3&amp;a=0321601912" alt="" width="1" height="1" border="0" />).</p>
+<p>When you work agile another thing is also changing: You talk much more often with your project team, the stakeholder and / or the customer. Instead of reading large specification documents you learn what and why to implement something by talking with the customer. You have to learn to be come an effective communicator.</p>
+<p>And also you&#8217;ll notice that you need to organise your work. Different types of work like business projects, internal projects, operational change and unplanned work. Phone-Calls, Mails, IM&#8217;s and other distractions all over the day.  Learn to manage your <a href="/2015/10/19/stop-multitasking/">time</a>, energy and the work. I personally use the <a href="/2015/10/19/stop-multitasking/">Pomodoro Technique and Kanban</a>.</p>
+<p>Another thing you have to learn about is yourself: How your brain works and how you learn effectively. Andy Hunt wrote a great book about it: <a href="https://www.amazon.de/gp/product/1934356050/ref=as_li_tl?ie=UTF8&amp;camp=1638&amp;creative=6742&amp;creativeASIN=1934356050&amp;linkCode=as2&amp;tag=stefanmehnert-21" rel="nofollow">Pragmatic Thinking and Learning: Refactor Your Wetware (Pragmatic Programmers)</a><img style="border: none !important; margin: 0px !important;" src="http://ir-de.amazon-adsystem.com/e/ir?t=stefanmehnert-21&amp;l=as2&amp;o=3&amp;a=1934356050" alt="" width="1" height="1" border="0" /></p>
+<p>Our business is changing so fast, that everybody who don&#8217;t do this on a frequent base is falling behind and is risking to become totally outdated.<br />
+Don&#8217;t stick only to your everyday business, read and learn also about other languages and technologies.</p>
+<p>A professional developer is curious and always learning. He is used to uncertainty and fear and comes over it by breaking tasks into small pieces just starts working in them. He makes changes also in very small steps. He knows about procrastination and about the imposter syndrome. He is aware, that clean and tested code is extremely important, because it makes software maintainable. And maintainability is in my opinion the most important aspect, more important then performance.</p>
+<p>Those are some of the things, that I would say to myself if I could travel back in time. That would have made many things easier&#8230;. because this is not possible I&#8217;ll have to continue to learn from my failures. I want to stay a passionate developer!</p>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F08%2F11%2Fare-you-a-developer-or-do-you-just-write-code%2F" class="twitter-share-button">Tweet</a></div>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Stop Multitasking!</title>
+		<link>/2015/10/19/stop-multitasking/</link>
+		<pubDate>Mon, 19 Oct 2015 19:00:39 +0000</pubDate>
+		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
+				<category><![CDATA[Productivity]]></category>
+
+		<guid isPermaLink="false">/?p=22</guid>
+		<description><![CDATA[A day in Life of a Software Developer 09:00: Check E-Mails, answer some of them, flag some as unread or important. 09:30: Start Working on Project A 09:45: E-Mail from Colleague,  interrupt Work immediately interrupt working to read it &#38; answer it. 09:55: Working on Project A 10:10: A Colleague comes to your Desk and &#8230; <a href="/2015/10/19/stop-multitasking/" class="more-link">Continue reading<span class="screen-reader-text"> "Stop Multitasking!"</span></a>]]></description>
+				<content:encoded><![CDATA[<p><b>A day in Life of a Software Developer<br />
+</b>09:00: Check E-Mails, answer some of them, flag some as unread or important.<br />
+09:30: Start Working on Project A<br />
+09:45: E-Mail from Colleague,  interrupt Work immediately interrupt working to read it &amp; answer it.<br />
+09:55: Working on Project A<br />
+10:10: A Colleague comes to your Desk and has a question<br />
+10:20: Back to Project A…<br />
+10:40: Phone Rings, another Colleague has a Questing to another Project<br />
+10:45: Back to Project A…<br />
+11:00: Meeting<br />
+12:30: Lunch<br />
+….</p>
+<p>Do you know Days when you get Home after several Hours of work and ask yourself what you really have archived? Or you feel guilty because you have the feeling that you should have get more done that day? Laying in Bed, thinking about your next days Tasks?</p>
+<p><b>What’s the Problem with Distractions, and Multitasking?<br />
+</b>Software Development is a quite complex Task that requires Focus. It takes some Time to get into the Project Environment and to really understand what the Task or the Problem is. Maybe you know Situations where you were think hard about a Problem, and then BANG the phone rings and the bubble over your head bursted. After a 2 Minute call you try to remember of what you thought before and it takes a lot of time to get back into it.</p>
+<p>Even if multitasking let’s us feel good &#8211; our <a href="https://blog.bufferapp.com/what-multitasking-does-to-our-brains" target="_blank">Brain isn’t very good at it</a>. Usually Multitasking takes more Time to get things done then doing one after another!</p>
+<p>If you focus on one Task you can use your full Brain-Power to get into it and to get it done. When you really focus on a Task you feel how you get in a Zone where you work productively and make progress.</p>
+<p>Every time when a Distraction occurs your Brain has to switch Focus. This costs Power and takes time. Over the Day you feel more and more exhausted and focussing on a Tasks gets harder.</p>
+<p><b>The big Task Mountain<br />
+</b>Do you know this Situation: You are assigned to a big and complex Task, you start working on it but again and again you drift off the another Task that seems more important?</p>
+<p>In this Situations our Brain tends to Procrastinate: <a href="http://webstandardssherpa.com/reviews/breaking-the-perfectionism-procrastination-infinite-loop/">http://webstandardssherpa.com/reviews/breaking-the-perfectionism-procrastination-infinite-loop/</a></p>
+<p>If we decompose a big Task into smaller ones it becomes much easier to get an Overview and to get started. You can set smaller goals, see faster results and often the Task doesn&#8217;t seem to be as complex anymore.</p>
+<p><b>Kanban to the Rescue</b></p>
+<figure id="attachment_24" style="width: 300px" class="wp-caption alignright"><a href="/wp-content/uploads/2015/10/Simple-kanban-board-.jpg"><img class=" wp-image-24" src="/wp-content/uploads/2015/10/Simple-kanban-board--300x179.jpg" alt="(c() Jeff.lasovski" width="300" height="179" srcset="/wp-content/uploads/2015/10/Simple-kanban-board--300x179.jpg 300w, /wp-content/uploads/2015/10/Simple-kanban-board--1024x611.jpg 1024w, /wp-content/uploads/2015/10/Simple-kanban-board-.jpg 1600w" sizes="(max-width: 300px) 85vw, 300px" /></a><figcaption class="wp-caption-text">(c) <a href="https://commons.wikimedia.org/wiki/File:Simple-kanban-board-.jpg" target="_blank">Jeff.lasovski</a></figcaption></figure>
+<p>As we’ve seen &#8211; Multitasking may not be as efficient as we think. Much Work in progress (WiP) forces you also to switch Context more often, but how to Manage all those smaller Task’s?</p>
+<p>Kanban is a Part of <a href="https://en.wikipedia.org/wiki/Lean_software_development" target="_blank">Lean Software Development</a>. Kanban is a tool to reduce Work in Progress and to visualise you Workflow.</p>
+<p>Here’s an Article of Kanban in action: <a href="http://scn.sap.com/community/data-warehousing/bw/blog/2012/02/17/how-our-sap-bw-team-uses-kanban" target="_blank">http://scn.sap.com/community/data-warehousing/bw/blog/2012/02/17/how-our-sap-bw-team-uses-kanban</a></p>
+<p>Kanban is simple to understand and all you need are Post-It’s, a Whiteboard or Online-Tools like Jira Agile or KanbanFlow.</p>
+<p><b>Tomato, help me focussing<br />
+</b>Focus is the key to efficiency &#8211; but how can I get focussed? Try this: Disable your Mail &amp; Phone notifications, select a Task to Work on and set a Timer for 25 Minutes. After 5 Minutes you start your next 25 Iteration. After you completed 4x 25 Minutes Blocks take a longer break. Sounds crazy? Maybe, but the<a href="http://www.52weeksofhabits.com/2013/08/20/pomodoro-the-ultimate-work-habit/" target="_blank"> Pomodoro technique works.</a></p>
+<p>You can track how many Pomodoro’s you complete per day / week and measure how much of focussed work you’ve done. Don’t worry if you have 5 or less Pomodoro’s / day at the beginning. It takes some discipline to resist all the Things with that your brain will come up to prevent you from focussing like checking you Mobile, Facebook, WhatsApp or whatever. But when you get trough this you will see soon results on how much more Stuff get’s done!</p>
+<p>Try yourself how many Pomodoro you can complete per day / week without felling to exhausted. It seems like our brain is like a muscle &#8211; if it’s overused it will end up in a hangover.</p>
+<p>But hey, i don&#8217;t have an office &#8211; I get interrupted all the time by my colleagues!? Talk to your colleagues and explain them how they help theirselves be reducing the distractions. Ask your colleagues to send E-Mails instead and check regularly for important Task. You don’t have to read &amp; answers all you Mails immediately, often it’s more effectively to batch E-Mail reading / answering. Respond only to urgent Mails immediately.<br />
+Your colleagues will be exited about how much more value you can deliver!</p>
+<p><b>Conclusion<br />
+</b>Smaller Tasks, Kanban and the Pomodoro technique are just 3 of multiple tools &amp; techniques that help me to get stuff done more effectively and to keep work &amp; life balanced. I use <a href="http://www.kanbanflow.com/" target="_blank">kanbanflow.com</a>, because it’s simple to use an has  a builtin Pomodoro Timer.</p>
+<p>I would love to hear which tools &amp; techniques you use to work effectively and focussed!</p>
+<p>This Article <a href="http://scn.sap.com/community/career-center/blog/2015/10/19/stop-multitasking" target="_blank">@SAP Community Network</a></p>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2015%2F10%2F19%2Fstop-multitasking%2F" class="twitter-share-button">Tweet</a></div>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Type less &#8211; SE80 Editor Code Templates</title>
+		<link>/2015/10/17/type-less-se80-editor-code-templates/</link>
+		<pubDate>Sat, 17 Oct 2015 19:37:41 +0000</pubDate>
+		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
+				<category><![CDATA[Productivity]]></category>
+		<category><![CDATA[#ABAP]]></category>
+		<category><![CDATA[#SE80]]></category>
+
+		<guid isPermaLink="false">/?p=11</guid>
+		<description><![CDATA[The &#8220;new&#8221; Editor has a few nice features that make it a bit less painful to use. I use them to prevent unnecessary typing of repetitively used Code-Blocks and to generate local Classes (Test, Exception and so on). You can find a Collection of my Templates in a GitHub Repository. Over the time I&#8217;ll add further, so if you &#8230; <a href="/2015/10/17/type-less-se80-editor-code-templates/" class="more-link">Continue reading<span class="screen-reader-text"> "Type less &#8211; SE80 Editor Code Templates"</span></a>]]></description>
+				<content:encoded><![CDATA[<p>The &#8220;new&#8221; Editor has a few nice features that make it a bit less painful to use. I use them to prevent unnecessary typing of repetitively used Code-Blocks and to generate local Classes (Test, Exception and so on).</p>
+<p>You can find a Collection of my Templates in a <span class="mceItemHiddenSpellWord">GitHub</span> Repository. Over the time I&#8217;ll add further, so if you are interested, you may watch that Repository.</p>
+<p><a href="https://github.com/zs40x/se80_templates" target="_blank"><img class="wp-image-16 alignleft" src="/wp-content/uploads/2015/10/code-300x264.png" alt="SE80 Code Template" width="236" height="208" srcset="/wp-content/uploads/2015/10/code-300x264.png 300w, /wp-content/uploads/2015/10/code.png 802w" sizes="(max-width: 236px) 85vw, 236px" /></a>I you like to contribute please feel free to send a pull request!</p>
+<p>Here&#8217;s the Repository: <a href="https://github.com/zs40x/se80_templates"><span class="mceItemHidden"><span class="mceItemHiddenSpellWord">https</span>://<span class="mceItemHiddenSpellWord">github</span>.com/zs40x/se80_templates</span></a></p>
+<p>This article @<a href="http://scn.sap.com/community/abap/blog/2015/10/17/type-less--se80-editor-code-templates">SAP Community Network</a>.</p>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2015%2F10%2F17%2Ftype-less-se80-editor-code-templates%2F" class="twitter-share-button">Tweet</a></div>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

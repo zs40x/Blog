@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>DesignPatterns &#8211; Stefan Mehnert</title>
+	<atom:link href="/tag/designpatterns/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>#DevLife</description>
+	<lastBuildDate>Thu, 20 Oct 2016 19:00:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.7</generator>
+	<item>
+		<title>Do(&#8216;nt) use the Singleton Design Pattern!?</title>
+		<link>/2016/02/09/dont-use-the-singleton-design-pattern/</link>
+		<pubDate>Tue, 09 Feb 2016 16:00:09 +0000</pubDate>
+		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
+				<category><![CDATA[DesignPatterns]]></category>
+		<category><![CDATA[OO]]></category>
+		<category><![CDATA[Singleton]]></category>
+
+		<guid isPermaLink="false">/?p=99</guid>
+		<description><![CDATA[What is the singleton design pattern and how does it work? The Singleton Design Pattern is described in the legendary book &#8220;Design Patterns&#8221; by the Gang of Four. A Singleton takes itself care of  t&#8217;s instantiation and life cycle. Because the constructor is not public, it is not possible to create an object outside of the class. Therefore it &#8230; <a href="/2016/02/09/dont-use-the-singleton-design-pattern/" class="more-link">Continue reading<span class="screen-reader-text"> "Do(&#8216;nt) use the Singleton Design Pattern!?"</span></a>]]></description>
+				<content:encoded><![CDATA[<p><strong>What is the singleton design pattern and how does it work?</strong><br />
+The Singleton Design Pattern is described in the legendary book <a href="https://en.wikipedia.org/wiki/Design_Patterns" target="_blank">&#8220;Design Patterns&#8221; by the Gang of Four</a>.</p>
+<p>A Singleton takes itself care of  t&#8217;s instantiation and life cycle. Because the constructor is not public, it is not possible to create an object outside of the class.<br />
+Therefore it has a static method (i.e. getInstance) as global access point. It has also a private static attribute of itself, that is only instantiated one time. This way the instance method returns always the same instance.</p>
+<p><strong>When or why could you apply this Design Patterns?<br />
+</strong> A Singleton is used, when you want to make sure, that there’s only one Instance of a class.<span id="more-99"></span></p>
+<p>For example you have a class that communicates with a serial port (COM). A serial port can only be opened once a a time. That means you can only have on Instance of the class that’s controlling the port.</p>
+<p>It’s also used for database or API-access classes to prevent multiple connections or instantiations of the external libraries. Logging, caching or configuration are also possible candidates.</p>
+<p><strong>That sounds fine, but what’s the catch?<br />
+</strong> First of all: It uses a global variable. And as we all learned the hard way, global variables can make the behavior of your code unpredictable. Global state can lead to complex problems, as it can be modified anywhere in your code.</p>
+<p>Also this violates the Single Responsibility Principle: “There should never be more than one reason for a class to change.” – Robert C. Martin<br />
+Instantiation is in my opinion a responsibility, and in medium or large scale code bases a critical.</p>
+<p>Another drawback is tight coupling. Calling the singleton::getInstance() anywhere in your code couples it directly the singleton class.<br />
+Loose coupling is a good practice to develop maintainable and testable code.<br />
+Loose coupling and clear dependencies passed to new instances, for example by using constructor injection, allow the composition of reuse able modules at run time.</p>
+<p>A class using the singleton is hard to test in isolation. And testing in general and also testing a module in isolation is essential for maintainable code.</p>
+<p>To test a class which access the singleton in a method, you must find a way to replace the normally hidden instance with a stub, mock, etc.</p>
+<p>To do this, the singleton class may have a public setInstanceForTesting method, which may not be a good idea.<br />
+Another possibility is creating a subclass with a static set method, that overrides the static instance variable (if it is protected).</p>
+<p>The global state can also become a nightmare when testing your code. Tests fail and you have no idea why, or tests pass that should fail because the implementation is not complete yet.<br />
+You have to be careful when you test code using singletons, that the state of the previous test is removed.<br />
+If you don&#8217;t replace the singleton instance by dependency injection at least clear the static instance or reset it to an initial state &#8211; <em>before and after</em> every test run (setup / tearDown).</p>
+<p><strong>So is the Singleton really so bad, should i never, ever use it?<br />
+</strong>Probably no other design pattern is / was adopted, loved, discussed and hated as much as the singleton.</p>
+<p>No piece of software is the same, and there may be situations when a singleton may be the way to go. See the further reading link collections for more details and example patterns.</p>
+<p><strong>But</strong> &#8211; you must consider all the drawbacks and weigh if it&#8217;s worth to live with them!</p>
+<hr />
+<p>&nbsp;</p>
+<p><strong>Further Reading</strong></p>
+<ul>
+<li><a href="https://sourcemaking.com/design_patterns/singleton" target="_blank">Singleton Design Pattern, SourceMaking.com</a></li>
+<li><a href="http://xunitpatterns.com/Test-Specific%20Subclass.html" target="_blank">Test-Specific Subclass, XUnitPatterns.com</a></li>
+<li><a href="http://xunitpatterns.com/Dependency%20Lookup.html" target="_blank">Dependency Lookup, XUnitPatterns.com</a></li>
+<li><a href="https://sourcemaking.com/design_patterns/null_object" target="_blank">Null Object, SourceMaking.com</a></li>
+<li><a href="http://martinfowler.com/eaaCatalog/registry.html" target="_blank">Registry, MartinFowler.com</a></li>
+</ul>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F02%2F09%2Fdont-use-the-singleton-design-pattern%2F" class="twitter-share-button">Tweet</a></div>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

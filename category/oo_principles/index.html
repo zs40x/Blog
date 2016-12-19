@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>OO_Principles &#8211; Stefan Mehnert</title>
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//platform.twitter.com' />
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Stefan Mehnert &raquo; Feed" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Stefan Mehnert &raquo; OO_Principles Category Feed" href="/category/oo_principles/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/:\/\/www.stefan-mehnert.de\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='dobsondev-shortcodes-css-css'  href='/wp-content/plugins/dobsondev-shortcodes/css/dobsondev-shortcodes.min.css?ver=4.7' type='text/css' media='all' />
+<link rel='stylesheet' id='dobsondev-shortcodes-font-awesome-css'  href='//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css?ver=4.7' type='text/css' media='all' />
+<link rel='stylesheet' id='twentysixteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='/wp-content/themes/twentysixteen/genericons/genericons.css?ver=3.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css'  href='/wp-content/themes/twentysixteen/style.css?ver=4.7' type='text/css' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css'  href='http://://www.stefan-mehnert.de/wp-content/themes/twentysixteen/css/ie.css?ver=20160816' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css'  href='http://://www.stefan-mehnert.de/wp-content/themes/twentysixteen/css/ie8.css?ver=20160816' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css'  href='http://://www.stefan-mehnert.de/wp-content/themes/twentysixteen/css/ie7.css?ver=20160816' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='font-awesome-css'  href='//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css?ver=0.3.7' type='text/css' media='all' />
+<link rel='stylesheet' id='amarkal-css'  href='/wp-content/plugins/mivhak/vendor/askupa-software/amarkal-framework/Assets/css/amarkal.min.css?ver=0.3.7' type='text/css' media='all' />
+<link rel='stylesheet' id='select2-css'  href='/wp-content/plugins/mivhak/vendor/askupa-software/amarkal-framework/Assets/css/select2.min.css?ver=0.3.7' type='text/css' media='all' />
+<link rel='stylesheet' id='mivhak-css'  href='/wp-content/plugins/mivhak/assets/css/mivhak.min.css?ver=1.3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='github-profile-octicons-css'  href='/wp-content/plugins/github-profile-widget/css/octicons/octicons.css?ver=4.7' type='text/css' media='all' />
+<link rel='stylesheet' id='github-profile-widget-styles-css'  href='/wp-content/plugins/github-profile-widget/css/widget.css?ver=4.7' type='text/css' media='all' />
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='/wp-content/plugins/dobsondev-shortcodes/js/dobsondev-shortcodes.min.js?ver=4.7'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='http://://www.stefan-mehnert.de/wp-content/themes/twentysixteen/js/html5.js?ver=3.7.3'></script>
+<![endif]-->
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.7" />
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72116567-1', 'auto');
+  ga('send', 'pageview');
+
+</script><link rel="dns-prefetch" href="//platform.twitter.com">
+<meta name="twitter:widgets:theme" content="dark"><meta name="twitter:widgets:link-color" content="#000000"><meta name="twitter:widgets:border-color" content="#000000"><meta name="twitter:partner" content="tfwp">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="Category: OO_Principles">
+</head>
+
+<body class="archive category category-oo_principles category-21 hfeed">
+<div id="page" class="site">
+	<div class="site-inner">
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+		<header id="masthead" class="site-header" role="banner">
+			<div class="site-header-main">
+				<div class="site-branding">
+					
+											<p class="site-title"><a href="/" rel="home">Stefan Mehnert</a></p>
+											<p class="site-description">#DevLife</p>
+									</div><!-- .site-branding -->
+
+									<button id="menu-toggle" class="menu-toggle">Menu</button>
+
+					<div id="site-header-menu" class="site-header-menu">
+													<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+								<div class="menu-menu-container"><ul id="menu-menu" class="primary-menu"><li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="/impressum/">Impressum</a></li>
+</ul></div>							</nav><!-- .main-navigation -->
+						
+											</div><!-- .site-header-menu -->
+							</div><!-- .site-header-main -->
+
+					</header><!-- .site-header -->
+
+		<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			<header class="page-header">
+				<h1 class="page-title">Category: OO_Principles</h1>			</header><!-- .page-header -->
+
+			
+<article id="post-283" class="post-283 post type-post status-publish format-standard has-post-thumbnail hentry category-c category-oo_principles tag-c tag-oo_principles tag-solidasarock">
+	<header class="entry-header">
+		
+		<h2 class="entry-title"><a href="/2016/06/16/single-responsibility-principle/" rel="bookmark">Single Responsibility Principle</a></h2>	</header><!-- .entry-header -->
+
+	
+	
+	<a class="post-thumbnail" href="/2016/06/16/single-responsibility-principle/" aria-hidden="true">
+		<img width="1024" height="512" src="/wp-content/uploads/2016/06/pablo.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Single Responsibility Principle" srcset="/wp-content/uploads/2016/06/pablo.png 1024w, /wp-content/uploads/2016/06/pablo-300x150.png 300w, /wp-content/uploads/2016/06/pablo-768x384.png 768w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px" />	</a>
+
+	
+	<div class="entry-content">
+		<p>The single responsibility is very simple:</p>
+<blockquote><p>A class should have only one reason to change.</p>
+<pre>Robert C. Martin, <a href="https://drive.google.com/file/d/0ByOwmqah_nuGNHEtcU5OekdDMkk/view">SRP - The single responsibility principle</a></pre>
+</blockquote>
+<p>As an example let&#8217;s look at a sensor class, which should report it&#8217;s status and readings into a text file:<br />
+<script src="https://gist.github.com/zs40x/f9ebde9357d27bbb443e879922f42257.js"></script></p>
+<p>The class sensor has multiple responsibilities: it represents the sensor with it&#8217;s data, knows how an export file content should look like and how  to export it to the filesystem.</p>
+<p>This is clearly a violation of the single responsiblity principle. <a href="/2016/06/16/single-responsibility-principle/#more-283" class="more-link">Continue reading<span class="screen-reader-text"> &#8220;Single Responsibility Principle&#8221;</span></a></p>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F06%2F16%2Fsingle-responsibility-principle%2F" class="twitter-share-button">Tweet</a></div>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="byline"><span class="author vcard"><img alt='' src='http://0.gravatar.com/avatar/c5de2d89e1c9de0b2e4cf46d6ad7016c?s=49&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/c5de2d89e1c9de0b2e4cf46d6ad7016c?s=98&amp;d=mm&amp;r=g 2x' class='avatar avatar-49 photo' height='49' width='49' /><span class="screen-reader-text">Author </span> <a class="url fn n" href="/author/stefanmehnert/">stefanmehnert</a></span></span><span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="/2016/06/16/single-responsibility-principle/" rel="bookmark"><time class="entry-date published" datetime="2016-06-16T17:04:49+00:00">June 16, 2016</time><time class="updated" datetime="2016-06-17T09:45:46+00:00">June 17, 2016</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="/category/c/" rel="category tag">C#</a>, <a href="/category/oo_principles/" rel="category tag">OO_Principles</a></span><span class="tags-links"><span class="screen-reader-text">Tags </span><a href="/tag/c/" rel="tag">C#</a>, <a href="/tag/oo_principles/" rel="tag">OO_Principles</a>, <a href="/tag/solidasarock/" rel="tag">SolidAsARock</a></span>			</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+<article id="post-269" class="post-269 post type-post status-publish format-standard has-post-thumbnail hentry category-c category-oo category-oo_principles category-solid tag-c tag-oo_principles tag-solidasarock">
+	<header class="entry-header">
+		
+		<h2 class="entry-title"><a href="/2016/05/03/open-closed-principle/" rel="bookmark">Open-Closed Principle</a></h2>	</header><!-- .entry-header -->
+
+	
+	
+	<a class="post-thumbnail" href="/2016/05/03/open-closed-principle/" aria-hidden="true">
+		<img width="1024" height="512" src="/wp-content/uploads/2016/05/pablo.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Open-Closed Principle" srcset="/wp-content/uploads/2016/05/pablo.png 1024w, /wp-content/uploads/2016/05/pablo-300x150.png 300w, /wp-content/uploads/2016/05/pablo-768x384.png 768w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px" />	</a>
+
+	
+	<div class="entry-content">
+		<p>Your company sells temperature sensors and software for it for many years. For the last 5 years there we produced only indoor sensors.<br />
+Yesterday your boss came around and told you, that you&#8217;ll now sell also outdoor sensors.<br />
+There is a class that feeds the gui with the average temperature of multiple sensors. You&#8217;re assigned the extend the average temperature class, which look quite messy after your change:</p>
+<script src="https://gist.github.com/zs40x/82e7d2cb920c654178f29cfab8982e76.js"></script>
+<p>Before your change it simply took a List&lt;IndoorTemperatureSensor&gt; and it had only one for loop. But look at this &#8211; feels like we&#8217;re missing something&#8230;.. <a href="/2016/05/03/open-closed-principle/#more-269" class="more-link">Continue reading<span class="screen-reader-text"> &#8220;Open-Closed Principle&#8221;</span></a></p>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F05%2F03%2Fopen-closed-principle%2F" class="twitter-share-button">Tweet</a></div>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="byline"><span class="author vcard"><img alt='' src='http://0.gravatar.com/avatar/c5de2d89e1c9de0b2e4cf46d6ad7016c?s=49&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/c5de2d89e1c9de0b2e4cf46d6ad7016c?s=98&amp;d=mm&amp;r=g 2x' class='avatar avatar-49 photo' height='49' width='49' /><span class="screen-reader-text">Author </span> <a class="url fn n" href="/author/stefanmehnert/">stefanmehnert</a></span></span><span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="/2016/05/03/open-closed-principle/" rel="bookmark"><time class="entry-date published" datetime="2016-05-03T06:14:48+00:00">May 3, 2016</time><time class="updated" datetime="2016-06-16T17:12:19+00:00">June 16, 2016</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="/category/c/" rel="category tag">C#</a>, <a href="/category/oo/" rel="category tag">OO</a>, <a href="/category/oo_principles/" rel="category tag">OO_Principles</a>, <a href="/category/solid/" rel="category tag">SOLID</a></span><span class="tags-links"><span class="screen-reader-text">Tags </span><a href="/tag/c/" rel="tag">C#</a>, <a href="/tag/oo_principles/" rel="tag">OO_Principles</a>, <a href="/tag/solidasarock/" rel="tag">SolidAsARock</a></span>			</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+<article id="post-248" class="post-248 post type-post status-publish format-standard has-post-thumbnail hentry category-oo_principles category-solid tag-c tag-oo_principles tag-solidasarock">
+	<header class="entry-header">
+		
+		<h2 class="entry-title"><a href="/2016/04/23/liskov-substitution-principle/" rel="bookmark">Liskov Substitution Principle</a></h2>	</header><!-- .entry-header -->
+
+	
+	
+	<a class="post-thumbnail" href="/2016/04/23/liskov-substitution-principle/" aria-hidden="true">
+		<img width="1200" height="426" src="/wp-content/uploads/2016/04/banner_RAW_smaller-1200x426.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Liskov Substitution Principle" srcset="/wp-content/uploads/2016/04/banner_RAW_smaller-1200x426.png 1200w, /wp-content/uploads/2016/04/banner_RAW_smaller-300x106.png 300w, /wp-content/uploads/2016/04/banner_RAW_smaller-768x273.png 768w, /wp-content/uploads/2016/04/banner_RAW_smaller-1024x363.png 1024w, /wp-content/uploads/2016/04/banner_RAW_smaller.png 1251w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px" />	</a>
+
+	
+	<div class="entry-content">
+		<p>The Liskov Substitution Principle (LSP) says: &#8220;Let <img class="mwe-math-fallback-image-inline tex" src="https://upload.wikimedia.org/math/0/f/c/0fc322eb39e7f8cfe71f7b568b4fba61.png" alt=" \phi(x) " /> be a property provable about objects <span class="texhtml">x</span> of type <span class="texhtml">T</span>. Then <img class="mwe-math-fallback-image-inline tex" src="https://upload.wikimedia.org/math/7/f/3/7f3d5b0d2ba4e97fdc620ce87c349229.png" alt=" \phi(y) " /> should be true for objects <span class="texhtml">y</span> of type <span class="texhtml">S</span> where <span class="texhtml">S</span> is a subtype of <span class="texhtml">T.&#8221; (<a href="https://en.wikipedia.org/wiki/Liskov_substitution_principle">Wikipedia</a>)</span></p>
+<p>That means: A derived class should by able to be replaced by another object of it&#8217;s base class without errors or modified behavior of the base class. <a href="/2016/04/23/liskov-substitution-principle/#more-248" class="more-link">Continue reading<span class="screen-reader-text"> &#8220;Liskov Substitution Principle&#8221;</span></a></p>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F04%2F23%2Fliskov-substitution-principle%2F" class="twitter-share-button">Tweet</a></div>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="byline"><span class="author vcard"><img alt='' src='http://0.gravatar.com/avatar/c5de2d89e1c9de0b2e4cf46d6ad7016c?s=49&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/c5de2d89e1c9de0b2e4cf46d6ad7016c?s=98&amp;d=mm&amp;r=g 2x' class='avatar avatar-49 photo' height='49' width='49' /><span class="screen-reader-text">Author </span> <a class="url fn n" href="/author/stefanmehnert/">stefanmehnert</a></span></span><span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="/2016/04/23/liskov-substitution-principle/" rel="bookmark"><time class="entry-date published" datetime="2016-04-23T19:50:25+00:00">April 23, 2016</time><time class="updated" datetime="2016-06-16T17:12:33+00:00">June 16, 2016</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="/category/oo_principles/" rel="category tag">OO_Principles</a>, <a href="/category/solid/" rel="category tag">SOLID</a></span><span class="tags-links"><span class="screen-reader-text">Tags </span><a href="/tag/c/" rel="tag">C#</a>, <a href="/tag/oo_principles/" rel="tag">OO_Principles</a>, <a href="/tag/solidasarock/" rel="tag">SolidAsARock</a></span>			</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+<article id="post-175" class="post-175 post type-post status-publish format-standard has-post-thumbnail hentry category-c category-oo category-oo_principles category-solid tag-c tag-oo_principles tag-solidasarock">
+	<header class="entry-header">
+		
+		<h2 class="entry-title"><a href="/2016/03/06/interface-segregation-principle/" rel="bookmark">Interface Segregation Principle</a></h2>	</header><!-- .entry-header -->
+
+	
+	
+	<a class="post-thumbnail" href="/2016/03/06/interface-segregation-principle/" aria-hidden="true">
+		<img width="1024" height="512" src="/wp-content/uploads/2016/03/banner.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Interface Segregation Principle" srcset="/wp-content/uploads/2016/03/banner.png 1024w, /wp-content/uploads/2016/03/banner-300x150.png 300w, /wp-content/uploads/2016/03/banner-768x384.png 768w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px" />	</a>
+
+	
+	<div class="entry-content">
+		<p>The ISP was &#8220;invented&#8221; by Robert C. Martin while consulting for Xerox: <strong>“The interface-segregation principle (ISP) states that no client should be forced to depend on methods it does not use.”*</strong></p>
+<p>I&#8217;ll explain this with an example, let&#8217;s assume we have an Interface SensorDevice that provides a lot of functions:<br />
+<script src="https://gist.github.com/zs40x/bdf0839e083cf6544a2f.js"></script></p>
+<h5><strong>So what&#8217;s the problem with fat interfaces like in the example coding?</strong></h5>
+<p>If clients use interface with methods they don&#8217;t need, they know details that they don&#8217;t care about.<br />
+In the sensor device example you will have code that controls maybe hundreds of different sensors and on the other hand there&#8217;ll be code that reads and handles the readings.<br />
+Device State, control and reading methods are tightly coupled togehter. If there&#8217;s a change in a method signature for example, all &#8220;clients&#8221; are eventually affected by the change &#8211; which is unnecessary.</p>
+<h5>Applying the interface segregation principle</h5>
+<p>To understand the ISP you must understand the difference between the (class-)interface and the object interface. Depending on the language a class can inherit from one or more classes and implement multiple interfaces</p>
+<p>An object that implements multiple interfaces exposes all methods. But you also can access the object with the interface it implement, like IDisposable.<br />
+This allows a very specific access to a subset of the object interface, so that it can be treated in different ways without caring about its details.</p>
+<p>Especially on higher levels of abstraction you will have objects with many methods, but you can group them using interfaces:</p>
+<p><a href="/wp-content/uploads/2016/03/2016-03-06_09-14-35.png" rel="attachment wp-att-182"><img class="alignnone size-full wp-image-182" src="/wp-content/uploads/2016/03/2016-03-06_09-14-35.png" alt="Class diagram - interface segregation principle" width="578" height="288" srcset="/wp-content/uploads/2016/03/2016-03-06_09-14-35.png 578w, /wp-content/uploads/2016/03/2016-03-06_09-14-35-300x149.png 300w" sizes="(max-width: 578px) 85vw, 578px" /></a></p>
+<p>Now you can access the different methods by client-concern using the interfaces:<br />
+<script src="https://gist.github.com/zs40x/78311faa64760daebe4a.js"></script></p>
+<p><code class="dobdev-code-inline"><strong>Console-Output<br />
+06.03.2016 07:17:37 ConsoleLogFakeSensor: enable()<br />
+06.03.2016 07:17:37 ConsoleLogFakeSensor: isEnabledSince()<br />
+06.03.2016 07:17:37 ConsoleLogFakeSensor: disable()<br />
+06.03.2016 07:17:37 ConsoleLogFakeSensor: powerOff()<br />
+Press any key to continue&#8230;<br />
+</strong></code></p>
+<p>This will also be very handy if you want to disable dozens of different devices of different types using the generic interface &#8220;DeviceState&#8221; &#8211; without knowing which type of Device it is.</p>
+<p>The example project is in <a href="https://github.com/zs40x/InterfaceSegregationPrinciple/tree/master" target="_blank">this GitHub repository.</a></p>
+<h5>Conclusion</h5>
+<p>Splitting fat interfaces by client concerns is a powerful tool to build cohesive interfaces. Due to the reduced dependencies the scope of changes is minimised and the loose coupling will payoff in the long term when it comes to extending and maintaining the project. Smaller specific interfaces may also help to communication your intentions.</p>
+<h5>Sources</h5>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Interface_segregation_principle" target="_blank">Wikipedia / Interface Segregation Principle</a></li>
+<li>* Robert C. Martin, Agile Software Development &#8211; Principles Patterns and Practices, Pearson 2014</li>
+</ul>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F03%2F06%2Finterface-segregation-principle%2F" class="twitter-share-button">Tweet</a></div>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="byline"><span class="author vcard"><img alt='' src='http://0.gravatar.com/avatar/c5de2d89e1c9de0b2e4cf46d6ad7016c?s=49&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/c5de2d89e1c9de0b2e4cf46d6ad7016c?s=98&amp;d=mm&amp;r=g 2x' class='avatar avatar-49 photo' height='49' width='49' /><span class="screen-reader-text">Author </span> <a class="url fn n" href="/author/stefanmehnert/">stefanmehnert</a></span></span><span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="/2016/03/06/interface-segregation-principle/" rel="bookmark"><time class="entry-date published updated" datetime="2016-03-06T10:46:52+00:00">March 6, 2016</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="/category/c/" rel="category tag">C#</a>, <a href="/category/oo/" rel="category tag">OO</a>, <a href="/category/oo_principles/" rel="category tag">OO_Principles</a>, <a href="/category/solid/" rel="category tag">SOLID</a></span><span class="tags-links"><span class="screen-reader-text">Tags </span><a href="/tag/c/" rel="tag">C#</a>, <a href="/tag/oo_principles/" rel="tag">OO_Principles</a>, <a href="/tag/solidasarock/" rel="tag">SolidAsARock</a></span>			</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+<article id="post-140" class="post-140 post type-post status-publish format-standard has-post-thumbnail hentry category-c category-oo category-oo_principles category-solid tag-c tag-oo_principles tag-solidasarock">
+	<header class="entry-header">
+		
+		<h2 class="entry-title"><a href="/2016/02/15/dependency-inversion-principe/" rel="bookmark">Dependency Inversion Principle</a></h2>	</header><!-- .entry-header -->
+
+	
+	
+	<a class="post-thumbnail" href="/2016/02/15/dependency-inversion-principe/" aria-hidden="true">
+		<img width="1024" height="512" src="/wp-content/uploads/2016/02/D-I-P.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Dependency Inversion Principle" srcset="/wp-content/uploads/2016/02/D-I-P.png 1024w, /wp-content/uploads/2016/02/D-I-P-300x150.png 300w, /wp-content/uploads/2016/02/D-I-P-768x384.png 768w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px" />	</a>
+
+	
+	<div class="entry-content">
+		<p>The dependency inversion principle states:</p>
+<ul>
+<li>&#8220;High level modules should not depend upon low level modules. Both should depend upon abstractions.&#8221;</li>
+<li>&#8220;Abstractions should not depend upon details. Details should depend upon abstractions.&#8221;</li>
+</ul>
+<p>See <a href="http://mil-oss.org/resources/objectmentor_design-principles-and-design-patterns.pdf" target="_blank">Principles of Object Oriented Class Design</a> by Robert C. Martin (2000) for further details.</p>
+<p><strong>An example Application</strong><br />
+The application sends e-mail notifications to users. The message text is different for regular and premium users.<br />
+The &#8220;BL&#8221; sub-package contains the business logic, it knows how to generate the email (address, subject and message) and how to call the SMTP client. <a href="/2016/02/15/dependency-inversion-principe/#more-140" class="more-link">Continue reading<span class="screen-reader-text"> &#8220;Dependency Inversion Principle&#8221;</span></a></p>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F02%2F15%2Fdependency-inversion-principe%2F" class="twitter-share-button">Tweet</a></div>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="byline"><span class="author vcard"><img alt='' src='http://0.gravatar.com/avatar/c5de2d89e1c9de0b2e4cf46d6ad7016c?s=49&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/c5de2d89e1c9de0b2e4cf46d6ad7016c?s=98&amp;d=mm&amp;r=g 2x' class='avatar avatar-49 photo' height='49' width='49' /><span class="screen-reader-text">Author </span> <a class="url fn n" href="/author/stefanmehnert/">stefanmehnert</a></span></span><span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="/2016/02/15/dependency-inversion-principe/" rel="bookmark"><time class="entry-date published" datetime="2016-02-15T21:24:32+00:00">February 15, 2016</time><time class="updated" datetime="2016-06-16T17:13:53+00:00">June 16, 2016</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="/category/c/" rel="category tag">C#</a>, <a href="/category/oo/" rel="category tag">OO</a>, <a href="/category/oo_principles/" rel="category tag">OO_Principles</a>, <a href="/category/solid/" rel="category tag">SOLID</a></span><span class="tags-links"><span class="screen-reader-text">Tags </span><a href="/tag/c/" rel="tag">C#</a>, <a href="/tag/oo_principles/" rel="tag">OO_Principles</a>, <a href="/tag/solidasarock/" rel="tag">SolidAsARock</a></span>			</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+		</main><!-- .site-main -->
+	</div><!-- .content-area -->
+
+
+	<aside id="secondary" class="sidebar widget-area" role="complementary">
+		<section id="search-2" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+	</label>
+	<button type="submit" class="search-submit"><span class="screen-reader-text">Search</span></button>
+</form>
+</section><section id="categories-2" class="widget widget_categories"><h2 class="widget-title">Categories</h2>		<ul>
+	<li class="cat-item cat-item-24"><a href="/category/c/" >C#</a>
+</li>
+	<li class="cat-item cat-item-19"><a href="/category/designpatterns/" >DesignPatterns</a>
+</li>
+	<li class="cat-item cat-item-26"><a href="/category/featureshowcase/" >FeatureShowcase</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="/category/ios-development/" >iOS Development</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="/category/oo/" >OO</a>
+</li>
+	<li class="cat-item cat-item-21 current-cat"><a href="/category/oo_principles/" >OO_Principles</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="/category/productivity/" >Productivity</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="/category/quoteoftheweek/" >QuoteOfTheWeek</a>
+</li>
+	<li class="cat-item cat-item-20"><a href="/category/solid/" >SOLID</a>
+</li>
+	<li class="cat-item cat-item-28"><a href="/category/swift/" >Swift</a>
+</li>
+		</ul>
+</section><section id="twitter-follow-2" class="widget widget_twitter-follow"><h2 class="widget-title">Follow me on Twitter</h2><div class="twitter-follow"><a href="https://twitter.com/intent/follow?screen_name=stefanmehnert" class="twitter-follow-button" data-show-count="false">Follow @stefanmehnert</a></div></section><section id="github-profile-2" class="widget widget_github-profile"><aside><h2 class="widget-title"></h2><div class="github-widget" id="github-profile-2"><header class="github-widget-header"><img class="github-widget-company-logo" title="GitHub" src="https://assets-cdn.github.com/favicon.ico"/><div class="github-widget-header-text"><a class="github-widget-header-link" target="_blank" href="https://github.com/zs40x" title="View profile">zs40x (Stefan Mehnert)</a></div></header><div class="github-widget-content"><a target="_blank" href="https://github.com/zs40x" title="View profile"><img class="github-profile-pic" src="https://avatars.githubusercontent.com/u/9771969?v=3" style="border-radius: 5px"> <span class="github-names"> <p class="github-name">Stefan Mehnert</p> <span class="github-username">zs40x</span> </span></a><div class="github-block with-icons"><div title="Company"><span	class="octicon octicon-organization"></span>@Polipol </div><div title="Location"><span	class="octicon octicon-location"></span>NRW, Germany</div><div title="Blog"><span class="octicon octicon-link"></span><a href="/" target="_blank">http://://www.stefan-mehnert.de</a></div><div><span class="octicon octicon-clock"></span>Joined on Nov 15, 2014</div></div><div class="github-block with-icons"><div><span class="octicon octicon-repo"></span><a href="https://github.com/zs40x/repositories" target="_blank">24 Public Repositories</a><input type="checkbox" id="gh-repo-t" class="github-repos-toggle"><label for="gh-repo-t" class="github-repos-toggle-la octicon octicon-chevron-down"></label><div class="github-repos"><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/abap-specification" title="zs40x/abap-specification">abap-specification</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/CS_Feature_Showcase" title="zs40x/CS_Feature_Showcase">CS_Feature_Showcase</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/DependencyInversionPrinciple" title="zs40x/DependencyInversionPrinciple">DependencyInversionPrinciple</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/Dojo" title="zs40x/Dojo">Dojo</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/Excercism" title="zs40x/Excercism">Excercism</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/Exercism_Hamming" title="zs40x/Exercism_Hamming">Exercism_Hamming</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/Exercism_Leap" title="zs40x/Exercism_Leap">Exercism_Leap</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/Exercism_rna_transcription" title="zs40x/Exercism_rna_transcription">Exercism_rna_transcription</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/gitignore" title="zs40x/gitignore">gitignore</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/InterfaceSegregationPrinciple" title="zs40x/InterfaceSegregationPrinciple">InterfaceSegregationPrinciple</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/IoC_Container" title="zs40x/IoC_Container">IoC_Container</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/iOS_StackView_Example" title="zs40x/iOS_StackView_Example">iOS_StackView_Example</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/katas-java-minefield" title="zs40x/katas-java-minefield">katas-java-minefield</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/katas-swift-linked_list_2" title="zs40x/katas-swift-linked_list_2">katas-swift-linked_list_2</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/LiskovSubstitutionPrinciple" title="zs40x/LiskovSubstitutionPrinciple">LiskovSubstitutionPrinciple</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/Microscope_Meteor" title="zs40x/Microscope_Meteor">Microscope_Meteor</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/Open_Closed_Principle" title="zs40x/Open_Closed_Principle">Open_Closed_Principle</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/PersonalProductivityAssistant" title="zs40x/PersonalProductivityAssistant">PersonalProductivityAssistant</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/sapUI5_firstMVCTest-1" title="zs40x/sapUI5_firstMVCTest-1">sapUI5_firstMVCTest-1</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/SE80_ABAP_Editor_Settings" title="zs40x/SE80_ABAP_Editor_Settings">SE80_ABAP_Editor_Settings</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/se80_templates" title="zs40x/se80_templates">se80_templates</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/Single_Responsibility_Principle" title="zs40x/Single_Responsibility_Principle">Single_Responsibility_Principle</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/SleepBabySleep" title="zs40x/SleepBabySleep">SleepBabySleep</a></div><div class="github-repo-name"><a target="_blank" href="https://github.com/zs40x/XCodePlayground_BlogSeries" title="zs40x/XCodePlayground_BlogSeries">XCodePlayground_BlogSeries</a></div></div></div><div><span class="octicon octicon-gist"></span><a href="https://gist.github.com/zs40x" target="_blank">28 Public Gists</a></div></div> </div></div></aside></section><section id="meta-2" class="widget widget_meta"><h2 class="widget-title">Meta</h2>			<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+			</section>	</aside><!-- .sidebar .widget-area -->
+
+		</div><!-- .site-content -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+							<nav class="main-navigation" role="navigation" aria-label="Footer Primary Menu">
+					<div class="menu-menu-container"><ul id="menu-menu-1" class="primary-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="/impressum/">Impressum</a></li>
+</ul></div>				</nav><!-- .main-navigation -->
+			
+			
+			<div class="site-info">
+								<span class="site-title"><a href="/" rel="home">Stefan Mehnert</a></span>
+				<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+			</div><!-- .site-info -->
+		</footer><!-- .site-footer -->
+	</div><!-- .site-inner -->
+</div><!-- .site -->
+
+<script type='text/javascript' src='/wp-content/themes/twentysixteen/js/skip-link-focus-fix.js?ver=20160816'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/wp-content/themes/twentysixteen/js/functions.js?ver=20160816'></script>
+<script type='text/javascript' src='/wp-content/plugins/mivhak/vendor/askupa-software/amarkal-framework/Assets/js/select2.min.js?ver=0.3.7'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js?ver=1.2.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mivhak_settings = {"line_numbers":"","auto_assign":"","show_meta":"1","min_lines":"1","default_lang":"","font_size":"12","theme":"xcode","version":"1.3.6","lang_list":{"abap":"ABAP","abc":"ABC","actionscript":"ActionScript","ada":"Ada","apache_conf":"ApacheConf","applescript":"AppleScript","asciidoc":"AsciiDoc","assembly_x86":"Assembly x86","autohotkey":"AutoHotkey","batchfile":"Batch File","c9search":"c9search","c_cpp":"C\/C++","cirru":"cirru","clojure":"Clojure","cobol":"COBOL","coffee":"CoffeeScript","coldfusion":"ColdFusion","csharp":"C#","css":"CSS","curly":"Curly","d":"D","dart":"Dart","diff":"diff","django":"Django","dockerfile":"Dockerfile","dot":"DOT","eiffel":"Eiffel","ejs":"EJS","elixir":"Elixir","elm":"Elm","erlang":"Erlang","forth":"Forth","ftl":"FTL","gcode":"G-Code","gherkin":"Gherkin","gitignore":"gitignore","glsl":"GLSL","gobstones":"gobstones","golang":"Go","groovy":"Groovy","haml":"Haml","handlebars":"Handlebars","haskell":"Haskell","haxe":"Haxe","html":"HTML","html_elixir":"HTML Elixir","html_ruby":"HTML Ruby","ini":"INI","io":"io","jack":"JACK","jade":"Jade","java":"Java","javascript":"JavaScript","json":"JSON","jsoniq":"JSONiq","jsp":"JSP","jsx":"JSX","julia":"Julia","latex":"LaTex","lean":"Lean","less":"Less","liquid":"Liquid","lisp":"Lisp","livescript":"LiveScript","logiql":"LogiQL","lsl":"LSL","lua":"Lua","luapage":"Luapage","lucene":"Lucene","makefile":"Makefile","markdown":"Markdown","mask":"Mask","matlab":"MATLAB","maze":"Maze","mel":"MEL","mipsassembler":"MIPS Assembler","mushcode":"MUSHCode","mysql":"MySQL","nix":"nix","nsis":"NSIS","objectivec":"Objective-C","ocaml":"OCaml","pascal":"Pascal","perl":"Perl","pgsql":"pgSQL","php":"PHP","plain_text":"Plain Text","powershell":"PowerShell","praat":"Praat","prolog":"Prolog","properties":"Properties","protobuf":"Protocol Bufffers","python":"Python","r":"R","razor":"Razor","rdoc":"RDoc","rhtml":"rhtml","rst":"reStructuredText","ruby":"Ruby","rust":"Rust","sass":"Sass","scad":"SCAD","scala":"Scala","scheme":"Scheme","scss":"SCSS","sh":"sh","sjs":"SJS","smarty":"Smarty","snippets":"Snippets","soy_template":"Soy Template","space":"Space","sql":"SQL","sqlserver":"SQLServer","stylus":"Stylus","svg":"SVG","swift":"Swift","swig":"Swig","tcl":"Tcl","tex":"Tex","text":"Text","textile":"Textile","toml":"Toml","twig":"Twig","typescript":"TypeScript","vala":"Vala","vbscript":"VBScript","velocity":"Velocity","verilog":"Verilog","vhdl":"VHDL","wollok":"Wollok","xml":"XML","xquery":"XQuery","yaml":"YAML"},"i18n":["line","lines","Copy this code to clipboard","Open this code in a new window","Wrap lines","Show code","About"]};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/wp-content/plugins/mivhak/assets/js/mivhak.min.js?ver=1.3.6'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+window.twttr=(function(w){t=w.twttr||{};t._e=[];t.ready=function(f){t._e.push(f);};return t;}(window));
+/* ]]> */
+</script>
+<script type="text/javascript" id="twitter-wjs" async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.7'></script>
+        <script>if( typeof QTags !== 'undefined' ){QTags.addButton( 'pre', 'pre', '<pre>', '</pre>\n', 'p', '', 105 );}</script>
+    <script> jQuery(function($){ $(".widget_meta a[href='http://://www.stefan-mehnert.de/comments/feed/']").parent().remove(); }); </script></body>
+</html>

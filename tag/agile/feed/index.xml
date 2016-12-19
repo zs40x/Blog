@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Agile &#8211; Stefan Mehnert</title>
+	<atom:link href="/tag/agile/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>#DevLife</description>
+	<lastBuildDate>Thu, 20 Oct 2016 19:00:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.7</generator>
+	<item>
+		<title>They don&#8217;t know what they want!</title>
+		<link>/2016/10/11/they-dont-know-what-they-want/</link>
+		<pubDate>Tue, 11 Oct 2016 19:17:24 +0000</pubDate>
+		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
+				<category><![CDATA[Productivity]]></category>
+		<category><![CDATA[Agile]]></category>
+
+		<guid isPermaLink="false">/?p=372</guid>
+		<description><![CDATA[Developing software can be frustrating. In a recent discussion with a junior developer she said, that it&#8217;s not easy to develop software. In long hours of hard work the result is built as previously discussed and it works. But the customer says, that&#8217;s good, but not exactly what we need. I remember that feeling, It&#8217;s disappointing. Short before &#8230; <a href="/2016/10/11/they-dont-know-what-they-want/" class="more-link">Continue reading<span class="screen-reader-text"> "They don&#8217;t know what they want!"</span></a>]]></description>
+				<content:encoded><![CDATA[<p>Developing software can be frustrating. In a recent discussion with a junior developer she said, that it&#8217;s not easy to develop software. In long hours of hard work the result is built as previously discussed and it works. But the customer says, that&#8217;s good, but not exactly what we need.</p>
+<p>I remember that feeling, It&#8217;s disappointing. Short before the deadline the customer want&#8217;s something different. Often huge changes to the codebase are necessary to meet the new requirements. The codebase you were so proud of before starts to rot and more and more bugs sneak into the code.</p>
+<p>Why haven&#8217;t they said upfront what they really want?</p>
+<p>Maybe they said what want but you didn&#8217;t understand it well enough. Or maybe they just learned what they really need after seeing your product the first time. Many problems are so complex, that&#8217;s not easy to plan and communicate everything upfront. And also, life goes on &#8211; markets and requirements change.</p>
+<p>Your cannot change the facts above. As hard as you try and the more you plan upfront, you&#8217;ll need more time for a solution and it will have the same problems.</p>
+<p>Try to start small and involve your customers as early as possible. Try to provide value as soon as possible. Start with a small subset of all the features that the customer wants. Show him the result, and in many cases they are happy to have an incomplete solution early than waiting a long time to get a (maybe) complete one.</p>
+<p>This way, by involving your customer, you&#8217;ll get early feedback. Early changes are easier and cheaper. You&#8217;ll also discuss the details of the feature that should be developed next and the customer can re-prioritise continuously. There will by features the customer said &#8220;we&#8217;ll need this later, I&#8217;m sure&#8221;, but then skipped over and over again &#8211; or dropped.</p>
+<p>The customer want&#8217;s working software, as soon as possible. It&#8217;s our job to deliver it. This requires planning, effective communication and high-quality (tested) code. Design for change, but build only what&#8217;s necessary.</p>
+<p>You don&#8217;t have to use scrum to be agile, learn about the agile principles &amp; patterns. Change your perspective on the current development process.</p>
+<p>Have a look at the &#8220;<a href="http://agilemanifesto.org/principles.html" target="_blank">Principles of the agile manifesto</a>&#8220;.</p>
+<p>&#8220;Agile&#8221; software development is not the solution for all your problems. But the insights you&#8217;ll gain will lead you to a better process. Don&#8217;t be the slave of a process, use a continuously reviewed process as a tool.</p>
+<p>&nbsp;</p>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F10%2F11%2Fthey-dont-know-what-they-want%2F" class="twitter-share-button">Tweet</a></div>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

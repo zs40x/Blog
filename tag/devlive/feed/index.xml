@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>DevLive &#8211; Stefan Mehnert</title>
+	<atom:link href="/tag/devlive/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>#DevLife</description>
+	<lastBuildDate>Thu, 20 Oct 2016 19:00:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.7</generator>
+	<item>
+		<title>From idea to Apple App Store</title>
+		<link>/2016/10/20/from-an-idea-to-the-apple-app-store/</link>
+		<pubDate>Thu, 20 Oct 2016 18:55:06 +0000</pubDate>
+		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
+				<category><![CDATA[iOS Development]]></category>
+		<category><![CDATA[Swift]]></category>
+		<category><![CDATA[DevLive]]></category>
+		<category><![CDATA[iOS]]></category>
+		<category><![CDATA[XCode]]></category>
+
+		<guid isPermaLink="false">/?p=383</guid>
+		<description><![CDATA[I think it&#8217;s important as a developer to constantly challenge yourself. This means jumping in cold water and learn new languages and developing on other platforms. I was interested in iOS development since a long time, but I did&#8217;t like objective C. Because swift was just released when I started playing around with app development, I &#8230; <a href="/2016/10/20/from-an-idea-to-the-apple-app-store/" class="more-link">Continue reading<span class="screen-reader-text"> "From idea to Apple App Store"</span></a>]]></description>
+				<content:encoded><![CDATA[<p>I think it&#8217;s important as a developer to constantly challenge yourself. This means jumping in cold water and learn new languages and developing on other platforms.<br />
+I was interested in iOS development since a long time, but I did&#8217;t like objective C. Because swift was just released when I started playing around with app development, I concentrated my learning on swift. It&#8217;s a modern language and constantly evolving.</p>
+<p>After doodling around with <a href="/2015/12/03/xcode-playground-part-1-diagrams/">playgrounds</a> and building <a href="/2016/02/02/xcode-playground-part-iv-spritekit-2d-game-engine/">SpriteKit 2D games </a>from tutorials I decided to learn more about app development. My goal is to build a &#8220;Personal productivity&#8221; app, which helps to records, measure and optimise my time. I started developing the app in the mid of June 2016 with many question signs above my head. CoreData and especially AutoLayout were absolutely new to me and it took some time and effort get proficient skills.</p>
+<h4>A parallel project</h4>
+<p>One month after starting the personal productivity app tried to &#8220;Shh&#8230;&#8221; my baby to sleep. So I thought there must be an app for that. I downloaded  it, but it just played about 15 minutes without a (expensive) in-app-purchase. Because I had some first experience with audio from the SpriteKit development I spontaneously decided to build a simple app for myself. A simple app thats plays continuously a &#8220;Shhh&#8230;&#8221; sound.</p>
+<p>A simple prototype with continuous playback was done in about half an hour. But I continued to add features like a more sophisticated UICollectionView layout (and an internal playlist for it), a configureable playback duration, a recording function, and so on.<br />
+Because I had to join the Apple developer program to use shared containers for the other app I decided to deliver this app to the app store on the beginning of October.</p>
+<h4>What I&#8217;ve learned</h4>
+<p>During the development phase which was primarily from the end of August to the begin of October I hit many walls. When you&#8217;ve experience and a good skill set for multiple years in another platform you forget this feeling. Getting started is always hard, but if you push the walls again and again you get moving and reach your goals.</p>
+<p>I learned a much about AutoLayout and StackViews. When I just started out  I used &#8220;git checkout -f&#8221; many, many times because I totally ruined the layout with bad constraints or randomly changed &#8220;hugging priorities&#8221; &amp; &#8220;compression resistance&#8221;. But after a while things things started to make sense. I&#8217;m far off being a AutoLayout expert but I&#8217;m quite used to it and will get a working layout without hours of fiddling around.<br />
+I <a href="/2016/07/14/ios-stack-views/" target="_blank">heavily used StackViews</a>, which made things much easier &#8211; I&#8217;m glad I started AppDevelopment after they were available.</p>
+<p>Because I store static sounds and recorded sounds in the AppContainer together with 2 pList files (static &amp; recorded sounds) I learned how iOS stores data.</p>
+<p>I used Xcode Unit-Testing (XcTest) for the playlist logic and also the BackgoundAudioPlayer. This parts of the app contain much of logic, so It&#8217;s good to have a safety net around them. The ViewControllers are not covered with test&#8217;s, this may be something to learn at a later point of time.<br />
+The PPA app contains a coded <a href="/2016/08/06/xcode-ios-ui-testing/" target="_blank">UI test</a>, which were not easy to develop. <a href="/2016/08/21/record-ui-tests-in-xcode/" target="_blank">I used the recording function</a> to learn how to control the ui. They are very brittle, but give a good overall feedback. They take about 2 minutes to run, I usually prefer shorter feedback cycles.</p>
+<p>The most exiting part was the audio API &#8220;AV Audio&#8221; itself. Playing a sound is very simple, but playing background audio for a configureable time and recording audio requires a a deeper understanding of the API. For a overall good user experience iOS manages audio playback in sessions. With audio sessions you configure wether you playback and / or record audio, in foreground, background or mixing in with other concurrent playing sounds.</p>
+<p>What&#8217;s very different to what I&#8217;ve worked before was muli-threading in iOS. As many other API&#8217;s &#8220;Grand Central Dispatch&#8221; was a very C like API but very powerful. Performance is very important in mobile apps, I early encountered performance problems while scrolling the UI ViewController. When I started working with async queues I learned more about &#8220;<a href="https://www.raywenderlich.com/134411/arc-memory-management-swift" target="_blank">ARC and memory management</a>&#8221; to prevent memory leaks.</p>
+<h4>Migration to Swift 3</h4>
+<p>During development I downloaded a few times an XCode 8 beta version and tried the swift 3 migration. As soon as I had the golden master version (the last before production) I migrated the coding to swift 3.</p>
+<p>As apple promised the conversion assistant touch nearly every file. There were also many manual changes necessary. Due tue the &#8220;<a href="/2016/06/30/swift-api-design-guidelines/">Swift API Design Guidlines</a>&#8221; the coding looked really beautiful. As a developer that has not really developed with objective C many API&#8217;s usage and names were very C like and horrible to use or read before (NS*, CoreGraphics, GCD, &#8230;).</p>
+<p>Luckily my codebase wasn&#8217;t that huge, because a swift 3 migration requires a lot of work &#8211; and can break things.</p>
+<h4>Handoff to applE &#8211; The Review</h4>
+<p>Every app that is in the apple app store listed, is previously reviewed by apple. They have many guidelines about how apps should be developed and what&#8217;s allowed or not. After many testing and reading the guidelines and checklists I submitted the app for an external testing (testflight) review and in about 24h I was allowed to release the app for external testflight testers.</p>
+<p>I didn&#8217;t expected it, but the final App Store review was successful on the first submit again in about 24h the app was &#8220;ready for sale&#8221;, after a few hours it was available on the app store. I was sure that I missed something small that would lead to a rejection. A re-review after a minimal app and description change took again about 24h.</p>
+<h4>What the git!</h4>
+<p>As a side effect I heavily used git as version control system (which is <a href="https://github.com/zs40x/SleepBabySleep" target="_blank">available at GitHub</a>). I used it already before, but not that much. For this project I tried to commit small changes and for larger I used branches. It worked very well and I finally got some deeper understanding of merging and rebasing. And I learned that it&#8217;s quite painful if you wait to long until you merge branches again <img src="https://s.w.org/images/core/emoji/2.2.1/72x72/1f609.png" alt="😉" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>I&#8217;m still learning more about more advanced topic&#8217;s. I worked with SVN and Microsoft Team Foundation Server before, but git is my absolute favourite. It&#8217;s so simple and lightweight, but can solve really complex problems.</p>
+<p>I recommend reading the free online available book &#8220;<a href="https://git-scm.com/book/en/v2" target="_blank">Pro Git</a>&#8220;.</p>
+<h4>And now?</h4>
+<p>It started with many problems that lead to more problems. But by the time  it became fun to develop with Xcode and swift. <a href="https://www.raywenderlich.com/" target="_blank">Raywenderlich.com</a> tutorials, videos and sample code were a great help that saved my a lot time reading all the apple documentations.</p>
+<p>After playing around with the analysis tools I found a situation that could lead to a race condition. This alone wasn&#8217;t worth a re-review and update.  I&#8217;ll wait a few weeks for crash reports or any feedback and then submit an update for a review.</p>
+<p>In the meantime I continue the development of the initial project. I added a widget (today extension), that can access the app&#8217;s core data database, which is now in a <a href="https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html" target="_blank">shared container</a>. To use the app myself in the near future I&#8217;m working currently on a &#8220;CloudKit&#8221; sync (to prevent data loss).</p>
+<p>I&#8217;ll definitively continue developing iOS apps. Not to become a 1€ app or in-app purchase millionaire, just for fun.<br />
+The fact that <a href="http://www.apple.com/pr/library/2016/05/05Apple-and-SAP-Partner-to-Revolutionize-Work-on-iPhone-and-iPad.html" target="_blank">Apple and SAP have a partnership</a> shows that there is a market for native enterprise applications &#8211; even if SAP has a modern powerful web UI technology. Looks like SAP developments becomes more and more technically interesting with modern ABAP, JavaScript and Swift <img src="https://s.w.org/images/core/emoji/2.2.1/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<h4>The iOS Projects on Github</h4>
+<p>Apple App Store &#8211; <a href="https://itunes.apple.com/us/app/baby-shhh...-play-record-sleep/id1155116600?ls=1&amp;mt=8">Baby Shhh&#8230; (US App Store)</a></p>
+<p>Git &#8211; <a href="https://github.com/zs40x/SleepBabySleep" target="_blank">SleepBabySleep / Baby Shh&#8230;</a></p>
+<p>Git &#8211; <a href="https://github.com/zs40x/PersonalProductivityAssistant" target="_blank">PersonalProductivityAssistant / PPA</a></p>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F10%2F20%2Ffrom-an-idea-to-the-apple-app-store%2F" class="twitter-share-button">Tweet</a></div>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>Are you a developer or do you just write code?</title>
+		<link>/2016/08/11/are-you-a-developer-or-do-you-just-write-code/</link>
+		<pubDate>Thu, 11 Aug 2016 18:09:47 +0000</pubDate>
+		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
+				<category><![CDATA[Productivity]]></category>
+		<category><![CDATA[DevLive]]></category>
+		<category><![CDATA[Testing]]></category>
+
+		<guid isPermaLink="false">/?p=337</guid>
+		<description><![CDATA[I am now about 10 years as self taught developer in business, and over the last years I learned the one thing: A good developer must know much more then just how write code! When you just start out, the technology and the code itself are the most important thing. Learning a programming language and really master it &#8230; <a href="/2016/08/11/are-you-a-developer-or-do-you-just-write-code/" class="more-link">Continue reading<span class="screen-reader-text"> "Are you a developer or do you just write code?"</span></a>]]></description>
+				<content:encoded><![CDATA[<p>I am now about 10 years as self taught developer in business, and over the last years I learned the one thing: A good developer must know much more then just how write code!</p>
+<p>When you just start out, the technology and the code itself are the most important thing. Learning a programming language and really master it by understanding complex concepts is really hard.<br />
+As a beginner, you know the frustration of compiler errors, crashing applications and weird problems of all kind. So often you stood before a mountain of problems and after some time and many tries &#8211; you will reach the top of the mountain. You jump up from your chair dancing and shouting Yes! Yes! finally! I got it!<br />
+This is a rewarding and motivates you to go on. In the best case you continue reading technical books and try to learn another language. You go on and solve more and more and more complex problems and projects. You hack the hell out of your editor and work long, long hours &#8211; you&#8217;re on the way to become an intermediate programmer. Some developers stop here. They don&#8217;t learn new things &#8211; only if they have to, and some even can&#8217;t program a fizz buzz game without google.</p>
+<p>No matter of what kind you are, something strange happens with your projects &#8211; over and over again: A shiny new project begins on a green field with blue sky. As the development continues it start&#8217;s to rain and the ground becomes a bit muddy &#8211; no problem. Things just slow down a bit.<br />
+But then, yeah, then comes the day. The day of the meeting with the customer when you demonstrate the application and he says ok &#8211; this is good, but not that, what we exactly need! We would like things to go better this way, and by the way we also need this, and that&#8230; and you start to become stressed and angry. Why have they changed their mind? A few weeks and month ago we agreed on doing things as we&#8217;ve implemented them? Life goes on, requirements (and the business) change.<br />
+The time is running up and the way I developed the application, it will become extremely complicated to change it the meet the new requirements&#8230;<br />
+Time&#8217;s ticking and you start to hack around. The muddy field has become a stormy desert with lava rivers. You just want to survive.  After long days, nights and maybe weekends you feel burned out and are just happy that the project is over. Every requested additional feature is blocked &#8220;because changes are too complex&#8221; or &#8220;too dangerous&#8221;. Ongoing bugfixes and happy hours in the debugger are normal.</p>
+<p>And again, some developers just accept this as the way it is. It&#8217;s always been like this in software development &#8211; so what. But others, especially those who continue to read and learn may become sceptical. This can&#8217;t be the way how software is developed!</p>
+<p>So you&#8217;ll learn how to test the code. This is again a very, very hard thing. It sound&#8217;s simple, but testing your software and in best case adopting test driven development is hard, really hard. To test your code you have to make it testable. You are forced to learn how you decouple classes and how to apply the <a href="/category/solid/" target="_blank">SOLID principles</a>. Writing good test&#8217;s that don&#8217;t act like a house of cards and getting a feeling of how to test what &#8211; and what not &#8211; requires experience which you&#8217;ll gain only be doing it over and over again.</p>
+<p>Also at some point you may stumble over agile software development. When you&#8217;ll try to adopt it, you&#8217;ll see that software development is not just about us &#8211; the developers. The agile way of development is absolutely different then the way you&#8217;ve done it before. Maybe you started with none or some conception or weeks / months of requirement capturing and planning.<br />
+As an agile developer the development lifecycle becomes faster. You strive to get working, high quality software to your customer. Good code quality and a safety net of test&#8217;s allow you to add features, that the customer wants in a steady pace. You&#8217;ll see the debugger only occasionally and yes, there are bugs, but much less. You automate what&#8217;s possible and build short feedback loops (<a href="https://www.amazon.de/gp/product/0321336380/ref=as_li_tl?ie=UTF8&amp;camp=1638&amp;creative=6742&amp;creativeASIN=0321336380&amp;linkCode=as2&amp;tag=stefanmehnert-21" rel="nofollow">Continuous Integration: Improving Software Quality and Reducing Risk (Martin Fowler Signature Books)</a><img style="border: none !important; margin: 0px !important;" src="http://ir-de.amazon-adsystem.com/e/ir?t=stefanmehnert-21&amp;l=as2&amp;o=3&amp;a=0321336380" alt="" width="1" height="1" border="0" /><br />
+and <a href="https://www.amazon.de/gp/product/0321601912/ref=as_li_tl?ie=UTF8&amp;camp=1638&amp;creative=6742&amp;creativeASIN=0321601912&amp;linkCode=as2&amp;tag=stefanmehnert-21" rel="nofollow">Continuous Delivery: Reliable Software Releases Through Build, Test, and Deployment Automation (Addison-Wesley Signature)</a><img style="border: none !important; margin: 0px !important;" src="http://ir-de.amazon-adsystem.com/e/ir?t=stefanmehnert-21&amp;l=as2&amp;o=3&amp;a=0321601912" alt="" width="1" height="1" border="0" />).</p>
+<p>When you work agile another thing is also changing: You talk much more often with your project team, the stakeholder and / or the customer. Instead of reading large specification documents you learn what and why to implement something by talking with the customer. You have to learn to be come an effective communicator.</p>
+<p>And also you&#8217;ll notice that you need to organise your work. Different types of work like business projects, internal projects, operational change and unplanned work. Phone-Calls, Mails, IM&#8217;s and other distractions all over the day.  Learn to manage your <a href="/2015/10/19/stop-multitasking/">time</a>, energy and the work. I personally use the <a href="/2015/10/19/stop-multitasking/">Pomodoro Technique and Kanban</a>.</p>
+<p>Another thing you have to learn about is yourself: How your brain works and how you learn effectively. Andy Hunt wrote a great book about it: <a href="https://www.amazon.de/gp/product/1934356050/ref=as_li_tl?ie=UTF8&amp;camp=1638&amp;creative=6742&amp;creativeASIN=1934356050&amp;linkCode=as2&amp;tag=stefanmehnert-21" rel="nofollow">Pragmatic Thinking and Learning: Refactor Your Wetware (Pragmatic Programmers)</a><img style="border: none !important; margin: 0px !important;" src="http://ir-de.amazon-adsystem.com/e/ir?t=stefanmehnert-21&amp;l=as2&amp;o=3&amp;a=1934356050" alt="" width="1" height="1" border="0" /></p>
+<p>Our business is changing so fast, that everybody who don&#8217;t do this on a frequent base is falling behind and is risking to become totally outdated.<br />
+Don&#8217;t stick only to your everyday business, read and learn also about other languages and technologies.</p>
+<p>A professional developer is curious and always learning. He is used to uncertainty and fear and comes over it by breaking tasks into small pieces just starts working in them. He makes changes also in very small steps. He knows about procrastination and about the imposter syndrome. He is aware, that clean and tested code is extremely important, because it makes software maintainable. And maintainability is in my opinion the most important aspect, more important then performance.</p>
+<p>Those are some of the things, that I would say to myself if I could travel back in time. That would have made many things easier&#8230;. because this is not possible I&#8217;ll have to continue to learn from my failures. I want to stay a passionate developer!</p>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F08%2F11%2Fare-you-a-developer-or-do-you-just-write-code%2F" class="twitter-share-button">Tweet</a></div>
+]]></content:encoded>
+			</item>
+	</channel>
+</rss>

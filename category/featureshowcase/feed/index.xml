@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>FeatureShowcase &#8211; Stefan Mehnert</title>
+	<atom:link href="/category/featureshowcase/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>#DevLife</description>
+	<lastBuildDate>Thu, 20 Oct 2016 19:00:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.7</generator>
+	<item>
+		<title>C# features &#8211; yield return</title>
+		<link>/2016/04/18/c-features-yield-return/</link>
+		<pubDate>Mon, 18 Apr 2016 15:00:54 +0000</pubDate>
+		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
+				<category><![CDATA[C#]]></category>
+		<category><![CDATA[FeatureShowcase]]></category>
+
+		<guid isPermaLink="false">/?p=230</guid>
+		<description><![CDATA[In C# we use the iterator pattern to iterate over collections like Dictionary, Queue, ArrayList, List and so on. This collections all implement the IEnumerable interface. For many cases this is a much more convenient way to group objects then using regular arrays. When you only want to iterate over a subset of a collection, you &#8230; <a href="/2016/04/18/c-features-yield-return/" class="more-link">Continue reading<span class="screen-reader-text"> "C# features &#8211; yield return"</span></a>]]></description>
+				<content:encoded><![CDATA[<p>In C# we use the <a href="http://csharpindepth.com/Articles/Chapter11/StreamingAndIterators.aspx" target="_blank">iterator pattern</a> to iterate over collections like Dictionary, Queue, ArrayList, List and so on. This collections all implement the <a href="https://msdn.microsoft.com/en-us/library/system.collections.ienumerable(v=vs.110).aspx" target="_blank">IEnumerable interface</a>. For many cases this is a much more convenient way to group objects then using regular arrays.<span id="more-230"></span></p>
+<p>When you only want to iterate over a subset of a collection, you may use <a href="https://msdn.microsoft.com/en-us/library/bb397937.aspx" target="_blank">linq to objects to query it</a>, or helper methods that return an IEnumerable instance that contain only the object subset.</p>
+<p>If a method returns an IEnumerable, it can return multiple objects by using the yield return statement.</p>
+<p>Lets&#8217;s look at an Example:</p>
+<script src="https://gist.github.com/zs40x/0997d27757aac8f541106ef38147e9fc.js"></script>
+<blockquote><p>1<br />
+2<br />
+4<br />
+6<br />
+8<br />
+10</p></blockquote>
+<p>The second example returns a filtered List of objects:</p>
+<script src="https://gist.github.com/zs40x/f1fc2c724a2c2ea973ef855e18135d15.js"></script>
+<blockquote><p>Dan: 20<br />
+Mitchell: 25</p></blockquote>
+<p>And yes, the same result can be archived with an simple linq statement:</p>
+<blockquote><p>persons<br />
+.Where( person =&gt; person.Age &gt;= 18 )<br />
+.ToList()<br />
+.ForEach( person =&gt; Console.WriteLine(person) );</p></blockquote>
+<p>If you&#8217;re interested how the C# compiler handles this, have a look at John Skeet&#8217;s article &#8220;<a href="http://csharpindepth.com/Articles/Chapter6/IteratorBlockImplementation.aspx" target="_blank">Iterator block implementation details: auto-generated state machines</a>&#8220;.</p>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F04%2F18%2Fc-features-yield-return%2F" class="twitter-share-button">Tweet</a></div>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>C# features: null coalesce &#038; conditional operator</title>
+		<link>/2016/04/10/c-features-null-coalesce-conditional-operator/</link>
+		<pubDate>Sun, 10 Apr 2016 07:44:54 +0000</pubDate>
+		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
+				<category><![CDATA[C#]]></category>
+		<category><![CDATA[FeatureShowcase]]></category>
+
+		<guid isPermaLink="false">/?p=218</guid>
+		<description><![CDATA[In C# we have nullable types and references which can be null. When we access them in a null state, a NullReferenceException is flying towards us. There are cases, when the null object pattern may reduce null checks, but there still remain many places in your code where you have to implement them. Let&#8217;s have a look at two C# &#8230; <a href="/2016/04/10/c-features-null-coalesce-conditional-operator/" class="more-link">Continue reading<span class="screen-reader-text"> "C# features: null coalesce &#038; conditional operator"</span></a>]]></description>
+				<content:encoded><![CDATA[<p>In C# we have <a href="https://msdn.microsoft.com/en-us/library/b3h38hb0.aspx" target="_blank">nullable types</a> and references which can be null. When we access them in a null state, a NullReferenceException is flying towards us.</p>
+<p>There are cases, when the <a href="https://en.wikipedia.org/wiki/Null_Object_pattern#C.23" target="_blank">null object pattern</a> may reduce null checks, but there still remain many places in your code where you have to implement them.</p>
+<p>Let&#8217;s have a look at two C# features for null checking.<span id="more-218"></span></p>
+<h4><strong>Null coalesce operator</strong></h4>
+<p>When you handle variables that may be null, you often have to check if they are null and if they are, use a default value.<br />
+To make this task as simple as possible C# has the <a href="https://msdn.microsoft.com/en-us/library/ms173224(v=vs.100).aspx" target="_blank">null coalescing operator ??</a>, which works similar to a <a href="https://msdn.microsoft.com/en-us/library/ty67wk28(v=vs.100).aspx" target="_blank">ternary / conditional operator</a> with an == null condition.</p>
+<script src="https://gist.github.com/zs40x/7eabaef8985559290cbf4ffc6b9fe37d.js"></script>
+<h4><strong>NULL conditional OPERATORs (C# 6)</strong></h4>
+<p>The two new operators ?. and ?[ make null checking easier and eliminate boilerplate code. The ? means that the element on the right is only accessed when it&#8217;s not null. ?. is used for references and ?[ for arrays.</p>
+<p>Let&#8217;s look at an example:</p>
+<script src="https://gist.github.com/zs40x/1f58484e12199ccf41c245b07244c03d.js"></script>
+<h4><strong>Conclusion</strong></h4>
+<p>Our code should be as simple and as expressive as possible. C# has 2 convenient features that help us to archive this goal.</p>
+<p>I definitely recommend to try this features to see yourself how this cleans your code- for example LINQ, EF, WebRequests and so on.</p>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F04%2F10%2Fc-features-null-coalesce-conditional-operator%2F" class="twitter-share-button">Tweet</a></div>
+]]></content:encoded>
+			</item>
+		<item>
+		<title>C# features: auto-implemented properties</title>
+		<link>/2016/04/04/c-features-auto-implemented-properties/</link>
+		<pubDate>Mon, 04 Apr 2016 04:45:24 +0000</pubDate>
+		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
+				<category><![CDATA[C#]]></category>
+		<category><![CDATA[FeatureShowcase]]></category>
+
+		<guid isPermaLink="false">/?p=196</guid>
+		<description><![CDATA[Properties in C# are used to hide implementation details to the outside. Fields (variables) should normally not be exposed (public). It&#8217;s recommended to use properties instead, wich have get and set &#8220;accessors&#8221;. From the outside the properties are accessed like fields, but the compiler generates hidden methods. For example 2 the compiler creates a hidden backing &#8230; <a href="/2016/04/04/c-features-auto-implemented-properties/" class="more-link">Continue reading<span class="screen-reader-text"> "C# features: auto-implemented properties"</span></a>]]></description>
+				<content:encoded><![CDATA[<p>Properties in C# are used to hide implementation details to the outside. Fields (variables) should normally not be exposed (public).</p>
+<p>It&#8217;s recommended to use properties instead, wich have get and set &#8220;accessors&#8221;. From the outside the properties are accessed like fields, but the compiler generates hidden methods.</p>
+<p><a href="/wp-content/uploads/2016/04/man_vs_auto.png" rel="attachment wp-att-208"><img class="alignnone wp-image-208" src="/wp-content/uploads/2016/04/man_vs_auto.png" alt="man_vs_auto" width="402" height="393" srcset="/wp-content/uploads/2016/04/man_vs_auto.png 822w, /wp-content/uploads/2016/04/man_vs_auto-300x293.png 300w, /wp-content/uploads/2016/04/man_vs_auto-768x751.png 768w" sizes="(max-width: 402px) 85vw, 402px" /></a><a href="/wp-content/uploads/2016/04/20160303_Leder_Layout_Reichweitenvorschau.png" rel="attachment wp-att-207"><br />
+</a></p>
+<p><span id="more-196"></span>For example 2 the compiler creates a hidden backing field which is used for the get and set accessors (C# 3). Without the boilerplate code it&#8217;s simple and clean.</p>
+<p>In the VS editor you can type prop and use the template, press tab to jump between the type and name.</p>
+<div style="width: 840px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
+<video class="wp-video-shortcode" id="video-196-1" width="840" height="525" preload="metadata" controls="controls"><source type="video/mp4" src="/wp-content/uploads/2016/04/prop.mp4?_=1" /><a href="/wp-content/uploads/2016/04/prop.mp4">/wp-content/uploads/2016/04/prop.mp4</a></video></div>
+<p>Properties can be initialized and it&#8217;s also possible to make them immutable (C#), which makes them thread-safe and predictable:</p>
+<p><a href="/wp-content/uploads/2016/04/init_immutable.png" rel="attachment wp-att-209"><img class="alignnone size-large wp-image-209" src="/wp-content/uploads/2016/04/init_immutable-852x1024.png" alt="init_immutab" width="840" height="1010" srcset="/wp-content/uploads/2016/04/init_immutable-852x1024.png 852w, /wp-content/uploads/2016/04/init_immutable-250x300.png 250w, /wp-content/uploads/2016/04/init_immutable-768x923.png 768w, /wp-content/uploads/2016/04/init_immutable-1200x1443.png 1200w, /wp-content/uploads/2016/04/init_immutable.png 1266w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" /></a></p>
+<p>Output:<br />
+<code class="dobdev-code-inline"><strong>40<br />
+10</strong></code></p>
+<p><strong>Conclusion</strong><br />
+Properties are simple and powerful and should be used to expose data. The encapsulation has also positive side effects, like being able to log changes or to break in the get and set accessors with the debugger.</p>
+<p>There are exceptions when accessing a field directly may be a better. For example extremely memory and performance optimized code (graphics, etc). But normally the minimal overhead is negligible.</p>
+<p><strong>Example project<br />
+</strong><a href="https://github.com/zs40x/CS_Feature_Showcase/tree/master/02_autoprops" target="_blank">Heres&#8217;s an example project</a> that uses different types of properties (and it&#8217;s <a href="https://github.com/zs40x/CS_Feature_Showcase/tree/master/02_autoprops.tests" target="_blank">test project</a>).</p>
+
+<div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F04%2F04%2Fc-features-auto-implemented-properties%2F" class="twitter-share-button">Tweet</a></div>
+]]></content:encoded>
+	<enclosure url="/wp-content/uploads/2016/04/prop.mp4" length="584418" type="video/mp4" />
+		</item>
+	</channel>
+</rss>
