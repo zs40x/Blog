@@ -9,7 +9,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Stefan Mehnert &lsaquo; Log In</title>
 	<link rel='dns-prefetch' href='//s.w.org' />
-<link rel='stylesheet' href='/wp-admin/load-styles.php?c=0&amp;dir=ltr&amp;load%5B%5D=dashicons,buttons,forms,l10n,login&amp;ver=4.7' type='text/css' media='all' />
+<link rel='stylesheet' href='/Blog/wp-admin/load-styles.php?c=0&amp;dir=ltr&amp;load%5B%5D=dashicons,buttons,forms,l10n,login&amp;ver=4.7' type='text/css' media='all' />
 <meta name='robots' content='noindex,follow' />
 	<meta name="viewport" content="width=device-width" />
 		</head>
@@ -17,7 +17,7 @@
 		<div id="login">
 		<h1><a href="https://wordpress.org/" title="Powered by WordPress" tabindex="-1">Stefan Mehnert</a></h1>
 	
-<form name="loginform" id="loginform" action="/wp-login.php" method="post">
+<form name="loginform" id="loginform" action="/Blog/wp-login.php" method="post">
 	<p>
 		<label for="user_login">Username or Email Address<br />
 		<input type="text" name="log" id="user_login" class="input" value="" size="20" /></label>
@@ -29,13 +29,13 @@
 		<p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever"  /> Remember Me</label></p>
 	<p class="submit">
 		<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Log In" />
-		<input type="hidden" name="redirect_to" value="http://://www.stefan-mehnert.de/wp-admin/" />
+		<input type="hidden" name="redirect_to" value="/wp-admin/" />
 		<input type="hidden" name="testcookie" value="1" />
 	</p>
 </form>
 
 <p id="nav">
-	<a href="/wp-login.php?action=lostpassword">Lost your password?</a>
+	<a href="/Blog/wp-login.php?action=lostpassword">Lost your password?</a>
 </p>
 
 <script type="text/javascript">
@@ -52,7 +52,7 @@ wp_attempt_focus();
 if(typeof wpOnload=='function')wpOnload();
 </script>
 
-	<p id="backtoblog"><a href="/">&larr; Back to Stefan Mehnert</a></p>
+	<p id="backtoblog"><a href="/Blog/">&larr; Back to Stefan Mehnert</a></p>
 	
 	</div>
 

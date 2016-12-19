@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Testing &#8211; Stefan Mehnert</title>
-	<atom:link href="/tag/testing/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="/Blog/tag/testing/feed/" rel="self" type="application/rss+xml" />
+	<link>/Blog/</link>
 	<description>#DevLife</description>
 	<lastBuildDate>Thu, 20 Oct 2016 19:00:55 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.7</generator>
 	<item>
 		<title>Record UI tests in Xcode</title>
-		<link>/2016/08/21/record-ui-tests-in-xcode/</link>
+		<link>/Blog/2016/08/21/record-ui-tests-in-xcode/</link>
 		<pubDate>Sun, 21 Aug 2016 05:09:36 +0000</pubDate>
 		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
 				<category><![CDATA[iOS Development]]></category>
@@ -28,39 +28,39 @@
 		<category><![CDATA[Testing]]></category>
 		<category><![CDATA[XCode]]></category>
 
-		<guid isPermaLink="false">/?p=358</guid>
-		<description><![CDATA[In a previous article I gave a short introduction into UI testing with Xcode. It works fine, but sometimes it&#8217;s a bit complicated to learn how to interact with the ui elements. This video shows by example how the recording feature helps with this problem. Demo: Record UI interaction How to record UI tests To start the ui test &#8230; <a href="/2016/08/21/record-ui-tests-in-xcode/" class="more-link">Continue reading<span class="screen-reader-text"> "Record UI tests in Xcode"</span></a>]]></description>
-				<content:encoded><![CDATA[<p>In a previous article I gave a short introduction into <a href="/2016/08/06/xcode-ios-ui-testing/">UI testing with Xcode</a>. It works fine, but sometimes it&#8217;s a bit complicated to learn how to interact with the ui elements. This video shows by example how the recording feature helps with this problem.</p>
+		<guid isPermaLink="false">/Blog/?p=358</guid>
+		<description><![CDATA[In a previous article I gave a short introduction into UI testing with Xcode. It works fine, but sometimes it&#8217;s a bit complicated to learn how to interact with the ui elements. This video shows by example how the recording feature helps with this problem. Demo: Record UI interaction How to record UI tests To start the ui test &#8230; <a href="/Blog/2016/08/21/record-ui-tests-in-xcode/" class="more-link">Continue reading<span class="screen-reader-text"> "Record UI tests in Xcode"</span></a>]]></description>
+				<content:encoded><![CDATA[<p>In a previous article I gave a short introduction into <a href="/Blog/2016/08/06/xcode-ios-ui-testing/">UI testing with Xcode</a>. It works fine, but sometimes it&#8217;s a bit complicated to learn how to interact with the ui elements. This video shows by example how the recording feature helps with this problem.</p>
 <h3>Demo: Record UI interaction</h3>
 <p><div style="width: 840px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
-<video class="wp-video-shortcode" id="video-358-1" width="840" height="525" preload="metadata" controls="controls"><source type="video/mp4" src="/wp-content/uploads/2016/08/Record_UI_tests_in_XCode.mp4?_=1" /><a href="/wp-content/uploads/2016/08/Record_UI_tests_in_XCode.mp4">/wp-content/uploads/2016/08/Record_UI_tests_in_XCode.mp4</a></video></div><br />
+<video class="wp-video-shortcode" id="video-358-1" width="840" height="525" preload="metadata" controls="controls"><source type="video/mp4" src="/Blog/wp-content/uploads/2016/08/Record_UI_tests_in_XCode.mp4?_=1" /><a href="/Blog/wp-content/uploads/2016/08/Record_UI_tests_in_XCode.mp4">/Blog/wp-content/uploads/2016/08/Record_UI_tests_in_XCode.mp4</a></video></div><br />
 <span id="more-358"></span></p>
 <h3>How to record UI tests</h3>
 <p>To start the ui test recording press the red button in the toolbar below the editor. The app starts and every interaction will be added as code into the current function.</p>
-<p><img class="alignnone wp-image-361 size-full" src="/wp-content/uploads/2016/08/Button.png" alt="Button" width="438" height="140" srcset="/wp-content/uploads/2016/08/Button.png 438w, /wp-content/uploads/2016/08/Button-300x96.png 300w" sizes="(max-width: 438px) 85vw, 438px" /></p>
-<p><img class="alignnone wp-image-360 size-full" src="/wp-content/uploads/2016/08/Stop_Recording.png" alt="Stop_Recording" width="841" height="293" srcset="/wp-content/uploads/2016/08/Stop_Recording.png 841w, /wp-content/uploads/2016/08/Stop_Recording-300x105.png 300w, /wp-content/uploads/2016/08/Stop_Recording-768x268.png 768w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" /></p>
+<p><img class="alignnone wp-image-361 size-full" src="/Blog/wp-content/uploads/2016/08/Button.png" alt="Button" width="438" height="140" srcset="/Blog/wp-content/uploads/2016/08/Button.png 438w, /Blog/wp-content/uploads/2016/08/Button-300x96.png 300w" sizes="(max-width: 438px) 85vw, 438px" /></p>
+<p><img class="alignnone wp-image-360 size-full" src="/Blog/wp-content/uploads/2016/08/Stop_Recording.png" alt="Stop_Recording" width="841" height="293" srcset="/Blog/wp-content/uploads/2016/08/Stop_Recording.png 841w, /Blog/wp-content/uploads/2016/08/Stop_Recording-300x105.png 300w, /Blog/wp-content/uploads/2016/08/Stop_Recording-768x268.png 768w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" /></p>
 <p>The generated code should be refactored and cleaned up. Test code, especially ui test code must stay maintainable, because it will break on ui changes that will occur. Remove duplication and make it more readable just like your production code.</p>
 <p>Be aware, that the recording does not detect all interactions correctly. So it&#8217;s better to record in small steps and see if the generated code does what you expect.<br />
 If not it&#8217;s usually easier to modify the generated code than searching how to access (a more complex) element without a starting point. I haven&#8217;t found an official documentation, but there&#8217;s  a good <a href="http://masilotti.com/xctest-documentation/" target="_blank">reference</a> and <a href="http://masilotti.com/ui-testing-cheat-sheet/" target="_blank">cheat sheet</a> on masilotti.com that can help.</p>
 <h3>Conclusion</h3>
 <p>The recording feature is not a wizard, that does all the work for you &#8211; It&#8217;s just an assistant. The generated code is a good starting point for a coded UI test, to understand how to get a value or a state of an element.</p>
-<p>See more: <a href="/2016/08/06/xcode-ios-ui-testing/">Xcode iOS UI testing</a>.</p>
+<p>See more: <a href="/Blog/2016/08/06/xcode-ios-ui-testing/">Xcode iOS UI testing</a>.</p>
 
 <div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F08%2F21%2Frecord-ui-tests-in-xcode%2F" class="twitter-share-button">Tweet</a></div>
 ]]></content:encoded>
-	<enclosure url="/wp-content/uploads/2016/08/Record_UI_tests_in_XCode.mp4" length="54143405" type="video/mp4" />
+	<enclosure url="/Blog/wp-content/uploads/2016/08/Record_UI_tests_in_XCode.mp4" length="54143405" type="video/mp4" />
 		</item>
 		<item>
 		<title>Are you a developer or do you just write code?</title>
-		<link>/2016/08/11/are-you-a-developer-or-do-you-just-write-code/</link>
+		<link>/Blog/2016/08/11/are-you-a-developer-or-do-you-just-write-code/</link>
 		<pubDate>Thu, 11 Aug 2016 18:09:47 +0000</pubDate>
 		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
 				<category><![CDATA[Productivity]]></category>
 		<category><![CDATA[DevLive]]></category>
 		<category><![CDATA[Testing]]></category>
 
-		<guid isPermaLink="false">/?p=337</guid>
-		<description><![CDATA[I am now about 10 years as self taught developer in business, and over the last years I learned the one thing: A good developer must know much more then just how write code! When you just start out, the technology and the code itself are the most important thing. Learning a programming language and really master it &#8230; <a href="/2016/08/11/are-you-a-developer-or-do-you-just-write-code/" class="more-link">Continue reading<span class="screen-reader-text"> "Are you a developer or do you just write code?"</span></a>]]></description>
+		<guid isPermaLink="false">/Blog/?p=337</guid>
+		<description><![CDATA[I am now about 10 years as self taught developer in business, and over the last years I learned the one thing: A good developer must know much more then just how write code! When you just start out, the technology and the code itself are the most important thing. Learning a programming language and really master it &#8230; <a href="/Blog/2016/08/11/are-you-a-developer-or-do-you-just-write-code/" class="more-link">Continue reading<span class="screen-reader-text"> "Are you a developer or do you just write code?"</span></a>]]></description>
 				<content:encoded><![CDATA[<p>I am now about 10 years as self taught developer in business, and over the last years I learned the one thing: A good developer must know much more then just how write code!</p>
 <p>When you just start out, the technology and the code itself are the most important thing. Learning a programming language and really master it by understanding complex concepts is really hard.<br />
 As a beginner, you know the frustration of compiler errors, crashing applications and weird problems of all kind. So often you stood before a mountain of problems and after some time and many tries &#8211; you will reach the top of the mountain. You jump up from your chair dancing and shouting Yes! Yes! finally! I got it!<br />
@@ -70,12 +70,12 @@ But then, yeah, then comes the day. The day of the meeting with the customer whe
 The time is running up and the way I developed the application, it will become extremely complicated to change it the meet the new requirements&#8230;<br />
 Time&#8217;s ticking and you start to hack around. The muddy field has become a stormy desert with lava rivers. You just want to survive.  After long days, nights and maybe weekends you feel burned out and are just happy that the project is over. Every requested additional feature is blocked &#8220;because changes are too complex&#8221; or &#8220;too dangerous&#8221;. Ongoing bugfixes and happy hours in the debugger are normal.</p>
 <p>And again, some developers just accept this as the way it is. It&#8217;s always been like this in software development &#8211; so what. But others, especially those who continue to read and learn may become sceptical. This can&#8217;t be the way how software is developed!</p>
-<p>So you&#8217;ll learn how to test the code. This is again a very, very hard thing. It sound&#8217;s simple, but testing your software and in best case adopting test driven development is hard, really hard. To test your code you have to make it testable. You are forced to learn how you decouple classes and how to apply the <a href="/category/solid/" target="_blank">SOLID principles</a>. Writing good test&#8217;s that don&#8217;t act like a house of cards and getting a feeling of how to test what &#8211; and what not &#8211; requires experience which you&#8217;ll gain only be doing it over and over again.</p>
+<p>So you&#8217;ll learn how to test the code. This is again a very, very hard thing. It sound&#8217;s simple, but testing your software and in best case adopting test driven development is hard, really hard. To test your code you have to make it testable. You are forced to learn how you decouple classes and how to apply the <a href="/Blog/category/solid/" target="_blank">SOLID principles</a>. Writing good test&#8217;s that don&#8217;t act like a house of cards and getting a feeling of how to test what &#8211; and what not &#8211; requires experience which you&#8217;ll gain only be doing it over and over again.</p>
 <p>Also at some point you may stumble over agile software development. When you&#8217;ll try to adopt it, you&#8217;ll see that software development is not just about us &#8211; the developers. The agile way of development is absolutely different then the way you&#8217;ve done it before. Maybe you started with none or some conception or weeks / months of requirement capturing and planning.<br />
 As an agile developer the development lifecycle becomes faster. You strive to get working, high quality software to your customer. Good code quality and a safety net of test&#8217;s allow you to add features, that the customer wants in a steady pace. You&#8217;ll see the debugger only occasionally and yes, there are bugs, but much less. You automate what&#8217;s possible and build short feedback loops (<a href="https://www.amazon.de/gp/product/0321336380/ref=as_li_tl?ie=UTF8&amp;camp=1638&amp;creative=6742&amp;creativeASIN=0321336380&amp;linkCode=as2&amp;tag=stefanmehnert-21" rel="nofollow">Continuous Integration: Improving Software Quality and Reducing Risk (Martin Fowler Signature Books)</a><img style="border: none !important; margin: 0px !important;" src="http://ir-de.amazon-adsystem.com/e/ir?t=stefanmehnert-21&amp;l=as2&amp;o=3&amp;a=0321336380" alt="" width="1" height="1" border="0" /><br />
 and <a href="https://www.amazon.de/gp/product/0321601912/ref=as_li_tl?ie=UTF8&amp;camp=1638&amp;creative=6742&amp;creativeASIN=0321601912&amp;linkCode=as2&amp;tag=stefanmehnert-21" rel="nofollow">Continuous Delivery: Reliable Software Releases Through Build, Test, and Deployment Automation (Addison-Wesley Signature)</a><img style="border: none !important; margin: 0px !important;" src="http://ir-de.amazon-adsystem.com/e/ir?t=stefanmehnert-21&amp;l=as2&amp;o=3&amp;a=0321601912" alt="" width="1" height="1" border="0" />).</p>
 <p>When you work agile another thing is also changing: You talk much more often with your project team, the stakeholder and / or the customer. Instead of reading large specification documents you learn what and why to implement something by talking with the customer. You have to learn to be come an effective communicator.</p>
-<p>And also you&#8217;ll notice that you need to organise your work. Different types of work like business projects, internal projects, operational change and unplanned work. Phone-Calls, Mails, IM&#8217;s and other distractions all over the day.  Learn to manage your <a href="/2015/10/19/stop-multitasking/">time</a>, energy and the work. I personally use the <a href="/2015/10/19/stop-multitasking/">Pomodoro Technique and Kanban</a>.</p>
+<p>And also you&#8217;ll notice that you need to organise your work. Different types of work like business projects, internal projects, operational change and unplanned work. Phone-Calls, Mails, IM&#8217;s and other distractions all over the day.  Learn to manage your <a href="/Blog/2015/10/19/stop-multitasking/">time</a>, energy and the work. I personally use the <a href="/Blog/2015/10/19/stop-multitasking/">Pomodoro Technique and Kanban</a>.</p>
 <p>Another thing you have to learn about is yourself: How your brain works and how you learn effectively. Andy Hunt wrote a great book about it: <a href="https://www.amazon.de/gp/product/1934356050/ref=as_li_tl?ie=UTF8&amp;camp=1638&amp;creative=6742&amp;creativeASIN=1934356050&amp;linkCode=as2&amp;tag=stefanmehnert-21" rel="nofollow">Pragmatic Thinking and Learning: Refactor Your Wetware (Pragmatic Programmers)</a><img style="border: none !important; margin: 0px !important;" src="http://ir-de.amazon-adsystem.com/e/ir?t=stefanmehnert-21&amp;l=as2&amp;o=3&amp;a=1934356050" alt="" width="1" height="1" border="0" /></p>
 <p>Our business is changing so fast, that everybody who don&#8217;t do this on a frequent base is falling behind and is risking to become totally outdated.<br />
 Don&#8217;t stick only to your everyday business, read and learn also about other languages and technologies.</p>
@@ -87,7 +87,7 @@ Don&#8217;t stick only to your everyday business, read and learn also about othe
 			</item>
 		<item>
 		<title>XCode iOS UI testing</title>
-		<link>/2016/08/06/xcode-ios-ui-testing/</link>
+		<link>/Blog/2016/08/06/xcode-ios-ui-testing/</link>
 		<pubDate>Sat, 06 Aug 2016 11:40:47 +0000</pubDate>
 		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
 				<category><![CDATA[iOS Development]]></category>
@@ -96,8 +96,8 @@ Don&#8217;t stick only to your everyday business, read and learn also about othe
 		<category><![CDATA[Testing]]></category>
 		<category><![CDATA[XCode]]></category>
 
-		<guid isPermaLink="false">/?p=312</guid>
-		<description><![CDATA[As Martin Flowler described in his article TestPyramid, the UI should be the highest (and not the only) layer of the tests.  They are a safety net and errors detected on this layer can point to missing test&#8217;s on a lower layer. Automated UI test&#8217;s tend to be brittle, because every change in the UI can result in failing &#8230; <a href="/2016/08/06/xcode-ios-ui-testing/" class="more-link">Continue reading<span class="screen-reader-text"> "XCode iOS UI testing"</span></a>]]></description>
+		<guid isPermaLink="false">/Blog/?p=312</guid>
+		<description><![CDATA[As Martin Flowler described in his article TestPyramid, the UI should be the highest (and not the only) layer of the tests.  They are a safety net and errors detected on this layer can point to missing test&#8217;s on a lower layer. Automated UI test&#8217;s tend to be brittle, because every change in the UI can result in failing &#8230; <a href="/Blog/2016/08/06/xcode-ios-ui-testing/" class="more-link">Continue reading<span class="screen-reader-text"> "XCode iOS UI testing"</span></a>]]></description>
 				<content:encoded><![CDATA[<p>As Martin Flowler described in his article <a href="http://martinfowler.com/bliki/TestPyramid.html" target="_blank">TestPyramid</a>, the UI should be the highest (and not the only) layer of the tests.  They are a safety net and errors detected on this layer can point to missing test&#8217;s on a lower layer. Automated UI test&#8217;s tend to be brittle, because every change in the UI can result in failing test&#8217;s.</p>
 <p>Since version 7 XCode supports UI tests, with test classes deriving from XCTestCase:</p>
 <ul>
@@ -191,13 +191,13 @@ Don&#8217;t stick only to your everyday business, read and learn also about othe
     XCTAssert(!getTableStaticTextElement(changedActivityName).exists)
 }</pre>
 <p>This is how it looks like, when it runs in the debugger:</p>
-<div style="width: 376px;" class="wp-video"><video class="wp-video-shortcode" id="video-312-2" width="376" height="689" preload="metadata" controls="controls"><source type="video/mp4" src="/wp-content/uploads/2016/08/2016-08-06_13-31-33.mp4?_=2" /><a href="/wp-content/uploads/2016/08/2016-08-06_13-31-33.mp4">/wp-content/uploads/2016/08/2016-08-06_13-31-33.mp4</a></video></div>
+<div style="width: 376px;" class="wp-video"><video class="wp-video-shortcode" id="video-312-2" width="376" height="689" preload="metadata" controls="controls"><source type="video/mp4" src="/Blog/wp-content/uploads/2016/08/2016-08-06_13-31-33.mp4?_=2" /><a href="/Blog/wp-content/uploads/2016/08/2016-08-06_13-31-33.mp4">/Blog/wp-content/uploads/2016/08/2016-08-06_13-31-33.mp4</a></video></div>
 <p>You can find the full test in the latest version of my learning app PersonalProductivityAssistant <a href="https://github.com/zs40x/PersonalProductivityAssistant/blob/master/PersonalProductivityAssistantUITests/PersonalProductivityAssistantUITests.swift" target="_blank">@github</a>.</p>
-<p>Learn more about <a href="/2016/08/21/record-ui-tests-in-xcode/">recording UI tests</a>.</p>
+<p>Learn more about <a href="/Blog/2016/08/21/record-ui-tests-in-xcode/">recording UI tests</a>.</p>
 
 <div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F08%2F06%2Fxcode-ios-ui-testing%2F" class="twitter-share-button">Tweet</a></div>
 ]]></content:encoded>
-	<enclosure url="/wp-content/uploads/2016/08/2016-08-06_13-31-33.mp4" length="2642349" type="video/mp4" />
+	<enclosure url="/Blog/wp-content/uploads/2016/08/2016-08-06_13-31-33.mp4" length="2642349" type="video/mp4" />
 		</item>
 	</channel>
 </rss>

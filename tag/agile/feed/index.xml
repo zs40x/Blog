@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Agile &#8211; Stefan Mehnert</title>
-	<atom:link href="/tag/agile/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="/Blog/tag/agile/feed/" rel="self" type="application/rss+xml" />
+	<link>/Blog/</link>
 	<description>#DevLife</description>
 	<lastBuildDate>Thu, 20 Oct 2016 19:00:55 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,14 +19,14 @@
 	<generator>https://wordpress.org/?v=4.7</generator>
 	<item>
 		<title>They don&#8217;t know what they want!</title>
-		<link>/2016/10/11/they-dont-know-what-they-want/</link>
+		<link>/Blog/2016/10/11/they-dont-know-what-they-want/</link>
 		<pubDate>Tue, 11 Oct 2016 19:17:24 +0000</pubDate>
 		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
 				<category><![CDATA[Productivity]]></category>
 		<category><![CDATA[Agile]]></category>
 
-		<guid isPermaLink="false">/?p=372</guid>
-		<description><![CDATA[Developing software can be frustrating. In a recent discussion with a junior developer she said, that it&#8217;s not easy to develop software. In long hours of hard work the result is built as previously discussed and it works. But the customer says, that&#8217;s good, but not exactly what we need. I remember that feeling, It&#8217;s disappointing. Short before &#8230; <a href="/2016/10/11/they-dont-know-what-they-want/" class="more-link">Continue reading<span class="screen-reader-text"> "They don&#8217;t know what they want!"</span></a>]]></description>
+		<guid isPermaLink="false">/Blog/?p=372</guid>
+		<description><![CDATA[Developing software can be frustrating. In a recent discussion with a junior developer she said, that it&#8217;s not easy to develop software. In long hours of hard work the result is built as previously discussed and it works. But the customer says, that&#8217;s good, but not exactly what we need. I remember that feeling, It&#8217;s disappointing. Short before &#8230; <a href="/Blog/2016/10/11/they-dont-know-what-they-want/" class="more-link">Continue reading<span class="screen-reader-text"> "They don&#8217;t know what they want!"</span></a>]]></description>
 				<content:encoded><![CDATA[<p>Developing software can be frustrating. In a recent discussion with a junior developer she said, that it&#8217;s not easy to develop software. In long hours of hard work the result is built as previously discussed and it works. But the customer says, that&#8217;s good, but not exactly what we need.</p>
 <p>I remember that feeling, It&#8217;s disappointing. Short before the deadline the customer want&#8217;s something different. Often huge changes to the codebase are necessary to meet the new requirements. The codebase you were so proud of before starts to rot and more and more bugs sneak into the code.</p>
 <p>Why haven&#8217;t they said upfront what they really want?</p>

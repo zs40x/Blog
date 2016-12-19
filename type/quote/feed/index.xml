@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Quote &#8211; Stefan Mehnert</title>
-	<atom:link href="/type/quote/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="/Blog/type/quote/feed/" rel="self" type="application/rss+xml" />
+	<link>/Blog/</link>
 	<description>#DevLife</description>
 	<lastBuildDate>Thu, 20 Oct 2016 19:00:55 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,12 +19,12 @@
 	<generator>https://wordpress.org/?v=4.7</generator>
 	<item>
 		<title>QuoteOfTheWeek #06-2016</title>
-		<link>/2016/02/14/quoteoftheweek-06-2016/</link>
+		<link>/Blog/2016/02/14/quoteoftheweek-06-2016/</link>
 		<pubDate>Sun, 14 Feb 2016 06:05:46 +0000</pubDate>
 		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
 				<category><![CDATA[QuoteOfTheWeek]]></category>
 
-		<guid isPermaLink="false">/?p=142</guid>
+		<guid isPermaLink="false">/Blog/?p=142</guid>
 		<description><![CDATA[“Measuring programming progress by lines of code is like measuring aircraft building progress by weight.” (Bill Gates)]]></description>
 				<content:encoded><![CDATA[<p>“Measuring programming progress by lines of code is like measuring aircraft building progress by weight.”<cite><br />
 (Bill Gates)</cite></p>
@@ -34,14 +34,14 @@
 			</item>
 		<item>
 		<title>C++</title>
-		<link>/2016/01/26/cpp/</link>
+		<link>/Blog/2016/01/26/cpp/</link>
 		<pubDate>Tue, 26 Jan 2016 14:00:28 +0000</pubDate>
 		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
 				<category><![CDATA[QuoteOfTheWeek]]></category>
 
-		<guid isPermaLink="false">/?p=79</guid>
+		<guid isPermaLink="false">/Blog/?p=79</guid>
 		<description><![CDATA[Bjarne Stroustrup invented C++]]></description>
-				<content:encoded><![CDATA[<p><a href="/wp-content/uploads/2016/01/quote_1.png" rel="attachment wp-att-80"><img class="alignnone size-full wp-image-80" src="/wp-content/uploads/2016/01/quote_1.png" alt="quote_1" width="1024" height="512" srcset="/wp-content/uploads/2016/01/quote_1.png 1024w, /wp-content/uploads/2016/01/quote_1-300x150.png 300w, /wp-content/uploads/2016/01/quote_1-768x384.png 768w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" /></a></p>
+				<content:encoded><![CDATA[<p><a href="/Blog/wp-content/uploads/2016/01/quote_1.png" rel="attachment wp-att-80"><img class="alignnone size-full wp-image-80" src="/Blog/wp-content/uploads/2016/01/quote_1.png" alt="quote_1" width="1024" height="512" srcset="/Blog/wp-content/uploads/2016/01/quote_1.png 1024w, /Blog/wp-content/uploads/2016/01/quote_1-300x150.png 300w, /Blog/wp-content/uploads/2016/01/quote_1-768x384.png 768w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" /></a></p>
 <p><a href="https://en.wikipedia.org/wiki/Bjarne_Stroustrup" target="_blank">Bjarne Stroustrup invented C++</a></p>
 
 <div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F01%2F26%2Fcpp%2F" class="twitter-share-button">Tweet</a></div>

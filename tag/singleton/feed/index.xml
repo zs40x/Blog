@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Singleton &#8211; Stefan Mehnert</title>
-	<atom:link href="/tag/singleton/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="/Blog/tag/singleton/feed/" rel="self" type="application/rss+xml" />
+	<link>/Blog/</link>
 	<description>#DevLife</description>
 	<lastBuildDate>Thu, 20 Oct 2016 19:00:55 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,15 +19,15 @@
 	<generator>https://wordpress.org/?v=4.7</generator>
 	<item>
 		<title>Do(&#8216;nt) use the Singleton Design Pattern!?</title>
-		<link>/2016/02/09/dont-use-the-singleton-design-pattern/</link>
+		<link>/Blog/2016/02/09/dont-use-the-singleton-design-pattern/</link>
 		<pubDate>Tue, 09 Feb 2016 16:00:09 +0000</pubDate>
 		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
 				<category><![CDATA[DesignPatterns]]></category>
 		<category><![CDATA[OO]]></category>
 		<category><![CDATA[Singleton]]></category>
 
-		<guid isPermaLink="false">/?p=99</guid>
-		<description><![CDATA[What is the singleton design pattern and how does it work? The Singleton Design Pattern is described in the legendary book &#8220;Design Patterns&#8221; by the Gang of Four. A Singleton takes itself care of  t&#8217;s instantiation and life cycle. Because the constructor is not public, it is not possible to create an object outside of the class. Therefore it &#8230; <a href="/2016/02/09/dont-use-the-singleton-design-pattern/" class="more-link">Continue reading<span class="screen-reader-text"> "Do(&#8216;nt) use the Singleton Design Pattern!?"</span></a>]]></description>
+		<guid isPermaLink="false">/Blog/?p=99</guid>
+		<description><![CDATA[What is the singleton design pattern and how does it work? The Singleton Design Pattern is described in the legendary book &#8220;Design Patterns&#8221; by the Gang of Four. A Singleton takes itself care of  t&#8217;s instantiation and life cycle. Because the constructor is not public, it is not possible to create an object outside of the class. Therefore it &#8230; <a href="/Blog/2016/02/09/dont-use-the-singleton-design-pattern/" class="more-link">Continue reading<span class="screen-reader-text"> "Do(&#8216;nt) use the Singleton Design Pattern!?"</span></a>]]></description>
 				<content:encoded><![CDATA[<p><strong>What is the singleton design pattern and how does it work?</strong><br />
 The Singleton Design Pattern is described in the legendary book <a href="https://en.wikipedia.org/wiki/Design_Patterns" target="_blank">&#8220;Design Patterns&#8221; by the Gang of Four</a>.</p>
 <p>A Singleton takes itself care of  t&#8217;s instantiation and life cycle. Because the constructor is not public, it is not possible to create an object outside of the class.<br />
