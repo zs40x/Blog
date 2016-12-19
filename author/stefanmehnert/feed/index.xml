@@ -9,8 +9,8 @@
 
 <channel>
 	<title>stefanmehnert &#8211; Stefan Mehnert</title>
-	<atom:link href="/Blog/author/stefanmehnert/feed/" rel="self" type="application/rss+xml" />
-	<link>/Blog/</link>
+	<atom:link href="/author/stefanmehnert/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>#DevLife</description>
 	<lastBuildDate>Thu, 20 Oct 2016 19:00:55 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,7 +19,7 @@
 	<generator>https://wordpress.org/?v=4.7</generator>
 	<item>
 		<title>From idea to Apple App Store</title>
-		<link>/Blog/2016/10/20/from-an-idea-to-the-apple-app-store/</link>
+		<link>/2016/10/20/from-an-idea-to-the-apple-app-store/</link>
 		<pubDate>Thu, 20 Oct 2016 18:55:06 +0000</pubDate>
 		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
 				<category><![CDATA[iOS Development]]></category>
@@ -28,11 +28,11 @@
 		<category><![CDATA[iOS]]></category>
 		<category><![CDATA[XCode]]></category>
 
-		<guid isPermaLink="false">/Blog/?p=383</guid>
-		<description><![CDATA[I think it&#8217;s important as a developer to constantly challenge yourself. This means jumping in cold water and learn new languages and developing on other platforms. I was interested in iOS development since a long time, but I did&#8217;t like objective C. Because swift was just released when I started playing around with app development, I &#8230; <a href="/Blog/2016/10/20/from-an-idea-to-the-apple-app-store/" class="more-link">Continue reading<span class="screen-reader-text"> "From idea to Apple App Store"</span></a>]]></description>
+		<guid isPermaLink="false">/?p=383</guid>
+		<description><![CDATA[I think it&#8217;s important as a developer to constantly challenge yourself. This means jumping in cold water and learn new languages and developing on other platforms. I was interested in iOS development since a long time, but I did&#8217;t like objective C. Because swift was just released when I started playing around with app development, I &#8230; <a href="/2016/10/20/from-an-idea-to-the-apple-app-store/" class="more-link">Continue reading<span class="screen-reader-text"> "From idea to Apple App Store"</span></a>]]></description>
 				<content:encoded><![CDATA[<p>I think it&#8217;s important as a developer to constantly challenge yourself. This means jumping in cold water and learn new languages and developing on other platforms.<br />
 I was interested in iOS development since a long time, but I did&#8217;t like objective C. Because swift was just released when I started playing around with app development, I concentrated my learning on swift. It&#8217;s a modern language and constantly evolving.</p>
-<p>After doodling around with <a href="/Blog/2015/12/03/xcode-playground-part-1-diagrams/">playgrounds</a> and building <a href="/Blog/2016/02/02/xcode-playground-part-iv-spritekit-2d-game-engine/">SpriteKit 2D games </a>from tutorials I decided to learn more about app development. My goal is to build a &#8220;Personal productivity&#8221; app, which helps to records, measure and optimise my time. I started developing the app in the mid of June 2016 with many question signs above my head. CoreData and especially AutoLayout were absolutely new to me and it took some time and effort get proficient skills.</p>
+<p>After doodling around with <a href="/2015/12/03/xcode-playground-part-1-diagrams/">playgrounds</a> and building <a href="/2016/02/02/xcode-playground-part-iv-spritekit-2d-game-engine/">SpriteKit 2D games </a>from tutorials I decided to learn more about app development. My goal is to build a &#8220;Personal productivity&#8221; app, which helps to records, measure and optimise my time. I started developing the app in the mid of June 2016 with many question signs above my head. CoreData and especially AutoLayout were absolutely new to me and it took some time and effort get proficient skills.</p>
 <h4>A parallel project</h4>
 <p>One month after starting the personal productivity app tried to &#8220;Shh&#8230;&#8221; my baby to sleep. So I thought there must be an app for that. I downloaded  it, but it just played about 15 minutes without a (expensive) in-app-purchase. Because I had some first experience with audio from the SpriteKit development I spontaneously decided to build a simple app for myself. A simple app thats plays continuously a &#8220;Shhh&#8230;&#8221; sound.</p>
 <p>A simple prototype with continuous playback was done in about half an hour. But I continued to add features like a more sophisticated UICollectionView layout (and an internal playlist for it), a configureable playback duration, a recording function, and so on.<br />
@@ -40,15 +40,15 @@ Because I had to join the Apple developer program to use shared containers for t
 <h4>What I&#8217;ve learned</h4>
 <p>During the development phase which was primarily from the end of August to the begin of October I hit many walls. When you&#8217;ve experience and a good skill set for multiple years in another platform you forget this feeling. Getting started is always hard, but if you push the walls again and again you get moving and reach your goals.</p>
 <p>I learned a much about AutoLayout and StackViews. When I just started out  I used &#8220;git checkout -f&#8221; many, many times because I totally ruined the layout with bad constraints or randomly changed &#8220;hugging priorities&#8221; &amp; &#8220;compression resistance&#8221;. But after a while things things started to make sense. I&#8217;m far off being a AutoLayout expert but I&#8217;m quite used to it and will get a working layout without hours of fiddling around.<br />
-I <a href="/Blog/2016/07/14/ios-stack-views/" target="_blank">heavily used StackViews</a>, which made things much easier &#8211; I&#8217;m glad I started AppDevelopment after they were available.</p>
+I <a href="/2016/07/14/ios-stack-views/" target="_blank">heavily used StackViews</a>, which made things much easier &#8211; I&#8217;m glad I started AppDevelopment after they were available.</p>
 <p>Because I store static sounds and recorded sounds in the AppContainer together with 2 pList files (static &amp; recorded sounds) I learned how iOS stores data.</p>
 <p>I used Xcode Unit-Testing (XcTest) for the playlist logic and also the BackgoundAudioPlayer. This parts of the app contain much of logic, so It&#8217;s good to have a safety net around them. The ViewControllers are not covered with test&#8217;s, this may be something to learn at a later point of time.<br />
-The PPA app contains a coded <a href="/Blog/2016/08/06/xcode-ios-ui-testing/" target="_blank">UI test</a>, which were not easy to develop. <a href="/Blog/2016/08/21/record-ui-tests-in-xcode/" target="_blank">I used the recording function</a> to learn how to control the ui. They are very brittle, but give a good overall feedback. They take about 2 minutes to run, I usually prefer shorter feedback cycles.</p>
+The PPA app contains a coded <a href="/2016/08/06/xcode-ios-ui-testing/" target="_blank">UI test</a>, which were not easy to develop. <a href="/2016/08/21/record-ui-tests-in-xcode/" target="_blank">I used the recording function</a> to learn how to control the ui. They are very brittle, but give a good overall feedback. They take about 2 minutes to run, I usually prefer shorter feedback cycles.</p>
 <p>The most exiting part was the audio API &#8220;AV Audio&#8221; itself. Playing a sound is very simple, but playing background audio for a configureable time and recording audio requires a a deeper understanding of the API. For a overall good user experience iOS manages audio playback in sessions. With audio sessions you configure wether you playback and / or record audio, in foreground, background or mixing in with other concurrent playing sounds.</p>
 <p>What&#8217;s very different to what I&#8217;ve worked before was muli-threading in iOS. As many other API&#8217;s &#8220;Grand Central Dispatch&#8221; was a very C like API but very powerful. Performance is very important in mobile apps, I early encountered performance problems while scrolling the UI ViewController. When I started working with async queues I learned more about &#8220;<a href="https://www.raywenderlich.com/134411/arc-memory-management-swift" target="_blank">ARC and memory management</a>&#8221; to prevent memory leaks.</p>
 <h4>Migration to Swift 3</h4>
 <p>During development I downloaded a few times an XCode 8 beta version and tried the swift 3 migration. As soon as I had the golden master version (the last before production) I migrated the coding to swift 3.</p>
-<p>As apple promised the conversion assistant touch nearly every file. There were also many manual changes necessary. Due tue the &#8220;<a href="/Blog/2016/06/30/swift-api-design-guidelines/">Swift API Design Guidlines</a>&#8221; the coding looked really beautiful. As a developer that has not really developed with objective C many API&#8217;s usage and names were very C like and horrible to use or read before (NS*, CoreGraphics, GCD, &#8230;).</p>
+<p>As apple promised the conversion assistant touch nearly every file. There were also many manual changes necessary. Due tue the &#8220;<a href="/2016/06/30/swift-api-design-guidelines/">Swift API Design Guidlines</a>&#8221; the coding looked really beautiful. As a developer that has not really developed with objective C many API&#8217;s usage and names were very C like and horrible to use or read before (NS*, CoreGraphics, GCD, &#8230;).</p>
 <p>Luckily my codebase wasn&#8217;t that huge, because a swift 3 migration requires a lot of work &#8211; and can break things.</p>
 <h4>Handoff to applE &#8211; The Review</h4>
 <p>Every app that is in the apple app store listed, is previously reviewed by apple. They have many guidelines about how apps should be developed and what&#8217;s allowed or not. After many testing and reading the guidelines and checklists I submitted the app for an external testing (testflight) review and in about 24h I was allowed to release the app for external testflight testers.</p>
@@ -73,14 +73,14 @@ The fact that <a href="http://www.apple.com/pr/library/2016/05/05Apple-and-SAP-
 			</item>
 		<item>
 		<title>They don&#8217;t know what they want!</title>
-		<link>/Blog/2016/10/11/they-dont-know-what-they-want/</link>
+		<link>/2016/10/11/they-dont-know-what-they-want/</link>
 		<pubDate>Tue, 11 Oct 2016 19:17:24 +0000</pubDate>
 		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
 				<category><![CDATA[Productivity]]></category>
 		<category><![CDATA[Agile]]></category>
 
-		<guid isPermaLink="false">/Blog/?p=372</guid>
-		<description><![CDATA[Developing software can be frustrating. In a recent discussion with a junior developer she said, that it&#8217;s not easy to develop software. In long hours of hard work the result is built as previously discussed and it works. But the customer says, that&#8217;s good, but not exactly what we need. I remember that feeling, It&#8217;s disappointing. Short before &#8230; <a href="/Blog/2016/10/11/they-dont-know-what-they-want/" class="more-link">Continue reading<span class="screen-reader-text"> "They don&#8217;t know what they want!"</span></a>]]></description>
+		<guid isPermaLink="false">/?p=372</guid>
+		<description><![CDATA[Developing software can be frustrating. In a recent discussion with a junior developer she said, that it&#8217;s not easy to develop software. In long hours of hard work the result is built as previously discussed and it works. But the customer says, that&#8217;s good, but not exactly what we need. I remember that feeling, It&#8217;s disappointing. Short before &#8230; <a href="/2016/10/11/they-dont-know-what-they-want/" class="more-link">Continue reading<span class="screen-reader-text"> "They don&#8217;t know what they want!"</span></a>]]></description>
 				<content:encoded><![CDATA[<p>Developing software can be frustrating. In a recent discussion with a junior developer she said, that it&#8217;s not easy to develop software. In long hours of hard work the result is built as previously discussed and it works. But the customer says, that&#8217;s good, but not exactly what we need.</p>
 <p>I remember that feeling, It&#8217;s disappointing. Short before the deadline the customer want&#8217;s something different. Often huge changes to the codebase are necessary to meet the new requirements. The codebase you were so proud of before starts to rot and more and more bugs sneak into the code.</p>
 <p>Why haven&#8217;t they said upfront what they really want?</p>
@@ -99,7 +99,7 @@ The fact that <a href="http://www.apple.com/pr/library/2016/05/05Apple-and-SAP-
 			</item>
 		<item>
 		<title>Record UI tests in Xcode</title>
-		<link>/Blog/2016/08/21/record-ui-tests-in-xcode/</link>
+		<link>/2016/08/21/record-ui-tests-in-xcode/</link>
 		<pubDate>Sun, 21 Aug 2016 05:09:36 +0000</pubDate>
 		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
 				<category><![CDATA[iOS Development]]></category>
@@ -108,39 +108,39 @@ The fact that <a href="http://www.apple.com/pr/library/2016/05/05Apple-and-SAP-
 		<category><![CDATA[Testing]]></category>
 		<category><![CDATA[XCode]]></category>
 
-		<guid isPermaLink="false">/Blog/?p=358</guid>
-		<description><![CDATA[In a previous article I gave a short introduction into UI testing with Xcode. It works fine, but sometimes it&#8217;s a bit complicated to learn how to interact with the ui elements. This video shows by example how the recording feature helps with this problem. Demo: Record UI interaction How to record UI tests To start the ui test &#8230; <a href="/Blog/2016/08/21/record-ui-tests-in-xcode/" class="more-link">Continue reading<span class="screen-reader-text"> "Record UI tests in Xcode"</span></a>]]></description>
-				<content:encoded><![CDATA[<p>In a previous article I gave a short introduction into <a href="/Blog/2016/08/06/xcode-ios-ui-testing/">UI testing with Xcode</a>. It works fine, but sometimes it&#8217;s a bit complicated to learn how to interact with the ui elements. This video shows by example how the recording feature helps with this problem.</p>
+		<guid isPermaLink="false">/?p=358</guid>
+		<description><![CDATA[In a previous article I gave a short introduction into UI testing with Xcode. It works fine, but sometimes it&#8217;s a bit complicated to learn how to interact with the ui elements. This video shows by example how the recording feature helps with this problem. Demo: Record UI interaction How to record UI tests To start the ui test &#8230; <a href="/2016/08/21/record-ui-tests-in-xcode/" class="more-link">Continue reading<span class="screen-reader-text"> "Record UI tests in Xcode"</span></a>]]></description>
+				<content:encoded><![CDATA[<p>In a previous article I gave a short introduction into <a href="/2016/08/06/xcode-ios-ui-testing/">UI testing with Xcode</a>. It works fine, but sometimes it&#8217;s a bit complicated to learn how to interact with the ui elements. This video shows by example how the recording feature helps with this problem.</p>
 <h3>Demo: Record UI interaction</h3>
 <p><div style="width: 840px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
-<video class="wp-video-shortcode" id="video-358-1" width="840" height="525" preload="metadata" controls="controls"><source type="video/mp4" src="/Blog/wp-content/uploads/2016/08/Record_UI_tests_in_XCode.mp4?_=1" /><a href="/Blog/wp-content/uploads/2016/08/Record_UI_tests_in_XCode.mp4">/Blog/wp-content/uploads/2016/08/Record_UI_tests_in_XCode.mp4</a></video></div><br />
+<video class="wp-video-shortcode" id="video-358-1" width="840" height="525" preload="metadata" controls="controls"><source type="video/mp4" src="/wp-content/uploads/2016/08/Record_UI_tests_in_XCode.mp4?_=1" /><a href="/wp-content/uploads/2016/08/Record_UI_tests_in_XCode.mp4">/wp-content/uploads/2016/08/Record_UI_tests_in_XCode.mp4</a></video></div><br />
 <span id="more-358"></span></p>
 <h3>How to record UI tests</h3>
 <p>To start the ui test recording press the red button in the toolbar below the editor. The app starts and every interaction will be added as code into the current function.</p>
-<p><img class="alignnone wp-image-361 size-full" src="/Blog/wp-content/uploads/2016/08/Button.png" alt="Button" width="438" height="140" srcset="/Blog/wp-content/uploads/2016/08/Button.png 438w, /Blog/wp-content/uploads/2016/08/Button-300x96.png 300w" sizes="(max-width: 438px) 85vw, 438px" /></p>
-<p><img class="alignnone wp-image-360 size-full" src="/Blog/wp-content/uploads/2016/08/Stop_Recording.png" alt="Stop_Recording" width="841" height="293" srcset="/Blog/wp-content/uploads/2016/08/Stop_Recording.png 841w, /Blog/wp-content/uploads/2016/08/Stop_Recording-300x105.png 300w, /Blog/wp-content/uploads/2016/08/Stop_Recording-768x268.png 768w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" /></p>
+<p><img class="alignnone wp-image-361 size-full" src="/wp-content/uploads/2016/08/Button.png" alt="Button" width="438" height="140" srcset="/wp-content/uploads/2016/08/Button.png 438w, /wp-content/uploads/2016/08/Button-300x96.png 300w" sizes="(max-width: 438px) 85vw, 438px" /></p>
+<p><img class="alignnone wp-image-360 size-full" src="/wp-content/uploads/2016/08/Stop_Recording.png" alt="Stop_Recording" width="841" height="293" srcset="/wp-content/uploads/2016/08/Stop_Recording.png 841w, /wp-content/uploads/2016/08/Stop_Recording-300x105.png 300w, /wp-content/uploads/2016/08/Stop_Recording-768x268.png 768w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" /></p>
 <p>The generated code should be refactored and cleaned up. Test code, especially ui test code must stay maintainable, because it will break on ui changes that will occur. Remove duplication and make it more readable just like your production code.</p>
 <p>Be aware, that the recording does not detect all interactions correctly. So it&#8217;s better to record in small steps and see if the generated code does what you expect.<br />
 If not it&#8217;s usually easier to modify the generated code than searching how to access (a more complex) element without a starting point. I haven&#8217;t found an official documentation, but there&#8217;s  a good <a href="http://masilotti.com/xctest-documentation/" target="_blank">reference</a> and <a href="http://masilotti.com/ui-testing-cheat-sheet/" target="_blank">cheat sheet</a> on masilotti.com that can help.</p>
 <h3>Conclusion</h3>
 <p>The recording feature is not a wizard, that does all the work for you &#8211; It&#8217;s just an assistant. The generated code is a good starting point for a coded UI test, to understand how to get a value or a state of an element.</p>
-<p>See more: <a href="/Blog/2016/08/06/xcode-ios-ui-testing/">Xcode iOS UI testing</a>.</p>
+<p>See more: <a href="/2016/08/06/xcode-ios-ui-testing/">Xcode iOS UI testing</a>.</p>
 
 <div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F08%2F21%2Frecord-ui-tests-in-xcode%2F" class="twitter-share-button">Tweet</a></div>
 ]]></content:encoded>
-	<enclosure url="/Blog/wp-content/uploads/2016/08/Record_UI_tests_in_XCode.mp4" length="54143405" type="video/mp4" />
+	<enclosure url="/wp-content/uploads/2016/08/Record_UI_tests_in_XCode.mp4" length="54143405" type="video/mp4" />
 		</item>
 		<item>
 		<title>Are you a developer or do you just write code?</title>
-		<link>/Blog/2016/08/11/are-you-a-developer-or-do-you-just-write-code/</link>
+		<link>/2016/08/11/are-you-a-developer-or-do-you-just-write-code/</link>
 		<pubDate>Thu, 11 Aug 2016 18:09:47 +0000</pubDate>
 		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
 				<category><![CDATA[Productivity]]></category>
 		<category><![CDATA[DevLive]]></category>
 		<category><![CDATA[Testing]]></category>
 
-		<guid isPermaLink="false">/Blog/?p=337</guid>
-		<description><![CDATA[I am now about 10 years as self taught developer in business, and over the last years I learned the one thing: A good developer must know much more then just how write code! When you just start out, the technology and the code itself are the most important thing. Learning a programming language and really master it &#8230; <a href="/Blog/2016/08/11/are-you-a-developer-or-do-you-just-write-code/" class="more-link">Continue reading<span class="screen-reader-text"> "Are you a developer or do you just write code?"</span></a>]]></description>
+		<guid isPermaLink="false">/?p=337</guid>
+		<description><![CDATA[I am now about 10 years as self taught developer in business, and over the last years I learned the one thing: A good developer must know much more then just how write code! When you just start out, the technology and the code itself are the most important thing. Learning a programming language and really master it &#8230; <a href="/2016/08/11/are-you-a-developer-or-do-you-just-write-code/" class="more-link">Continue reading<span class="screen-reader-text"> "Are you a developer or do you just write code?"</span></a>]]></description>
 				<content:encoded><![CDATA[<p>I am now about 10 years as self taught developer in business, and over the last years I learned the one thing: A good developer must know much more then just how write code!</p>
 <p>When you just start out, the technology and the code itself are the most important thing. Learning a programming language and really master it by understanding complex concepts is really hard.<br />
 As a beginner, you know the frustration of compiler errors, crashing applications and weird problems of all kind. So often you stood before a mountain of problems and after some time and many tries &#8211; you will reach the top of the mountain. You jump up from your chair dancing and shouting Yes! Yes! finally! I got it!<br />
@@ -150,12 +150,12 @@ But then, yeah, then comes the day. The day of the meeting with the customer whe
 The time is running up and the way I developed the application, it will become extremely complicated to change it the meet the new requirements&#8230;<br />
 Time&#8217;s ticking and you start to hack around. The muddy field has become a stormy desert with lava rivers. You just want to survive.  After long days, nights and maybe weekends you feel burned out and are just happy that the project is over. Every requested additional feature is blocked &#8220;because changes are too complex&#8221; or &#8220;too dangerous&#8221;. Ongoing bugfixes and happy hours in the debugger are normal.</p>
 <p>And again, some developers just accept this as the way it is. It&#8217;s always been like this in software development &#8211; so what. But others, especially those who continue to read and learn may become sceptical. This can&#8217;t be the way how software is developed!</p>
-<p>So you&#8217;ll learn how to test the code. This is again a very, very hard thing. It sound&#8217;s simple, but testing your software and in best case adopting test driven development is hard, really hard. To test your code you have to make it testable. You are forced to learn how you decouple classes and how to apply the <a href="/Blog/category/solid/" target="_blank">SOLID principles</a>. Writing good test&#8217;s that don&#8217;t act like a house of cards and getting a feeling of how to test what &#8211; and what not &#8211; requires experience which you&#8217;ll gain only be doing it over and over again.</p>
+<p>So you&#8217;ll learn how to test the code. This is again a very, very hard thing. It sound&#8217;s simple, but testing your software and in best case adopting test driven development is hard, really hard. To test your code you have to make it testable. You are forced to learn how you decouple classes and how to apply the <a href="/category/solid/" target="_blank">SOLID principles</a>. Writing good test&#8217;s that don&#8217;t act like a house of cards and getting a feeling of how to test what &#8211; and what not &#8211; requires experience which you&#8217;ll gain only be doing it over and over again.</p>
 <p>Also at some point you may stumble over agile software development. When you&#8217;ll try to adopt it, you&#8217;ll see that software development is not just about us &#8211; the developers. The agile way of development is absolutely different then the way you&#8217;ve done it before. Maybe you started with none or some conception or weeks / months of requirement capturing and planning.<br />
 As an agile developer the development lifecycle becomes faster. You strive to get working, high quality software to your customer. Good code quality and a safety net of test&#8217;s allow you to add features, that the customer wants in a steady pace. You&#8217;ll see the debugger only occasionally and yes, there are bugs, but much less. You automate what&#8217;s possible and build short feedback loops (<a href="https://www.amazon.de/gp/product/0321336380/ref=as_li_tl?ie=UTF8&amp;camp=1638&amp;creative=6742&amp;creativeASIN=0321336380&amp;linkCode=as2&amp;tag=stefanmehnert-21" rel="nofollow">Continuous Integration: Improving Software Quality and Reducing Risk (Martin Fowler Signature Books)</a><img style="border: none !important; margin: 0px !important;" src="http://ir-de.amazon-adsystem.com/e/ir?t=stefanmehnert-21&amp;l=as2&amp;o=3&amp;a=0321336380" alt="" width="1" height="1" border="0" /><br />
 and <a href="https://www.amazon.de/gp/product/0321601912/ref=as_li_tl?ie=UTF8&amp;camp=1638&amp;creative=6742&amp;creativeASIN=0321601912&amp;linkCode=as2&amp;tag=stefanmehnert-21" rel="nofollow">Continuous Delivery: Reliable Software Releases Through Build, Test, and Deployment Automation (Addison-Wesley Signature)</a><img style="border: none !important; margin: 0px !important;" src="http://ir-de.amazon-adsystem.com/e/ir?t=stefanmehnert-21&amp;l=as2&amp;o=3&amp;a=0321601912" alt="" width="1" height="1" border="0" />).</p>
 <p>When you work agile another thing is also changing: You talk much more often with your project team, the stakeholder and / or the customer. Instead of reading large specification documents you learn what and why to implement something by talking with the customer. You have to learn to be come an effective communicator.</p>
-<p>And also you&#8217;ll notice that you need to organise your work. Different types of work like business projects, internal projects, operational change and unplanned work. Phone-Calls, Mails, IM&#8217;s and other distractions all over the day.  Learn to manage your <a href="/Blog/2015/10/19/stop-multitasking/">time</a>, energy and the work. I personally use the <a href="/Blog/2015/10/19/stop-multitasking/">Pomodoro Technique and Kanban</a>.</p>
+<p>And also you&#8217;ll notice that you need to organise your work. Different types of work like business projects, internal projects, operational change and unplanned work. Phone-Calls, Mails, IM&#8217;s and other distractions all over the day.  Learn to manage your <a href="/2015/10/19/stop-multitasking/">time</a>, energy and the work. I personally use the <a href="/2015/10/19/stop-multitasking/">Pomodoro Technique and Kanban</a>.</p>
 <p>Another thing you have to learn about is yourself: How your brain works and how you learn effectively. Andy Hunt wrote a great book about it: <a href="https://www.amazon.de/gp/product/1934356050/ref=as_li_tl?ie=UTF8&amp;camp=1638&amp;creative=6742&amp;creativeASIN=1934356050&amp;linkCode=as2&amp;tag=stefanmehnert-21" rel="nofollow">Pragmatic Thinking and Learning: Refactor Your Wetware (Pragmatic Programmers)</a><img style="border: none !important; margin: 0px !important;" src="http://ir-de.amazon-adsystem.com/e/ir?t=stefanmehnert-21&amp;l=as2&amp;o=3&amp;a=1934356050" alt="" width="1" height="1" border="0" /></p>
 <p>Our business is changing so fast, that everybody who don&#8217;t do this on a frequent base is falling behind and is risking to become totally outdated.<br />
 Don&#8217;t stick only to your everyday business, read and learn also about other languages and technologies.</p>
@@ -167,7 +167,7 @@ Don&#8217;t stick only to your everyday business, read and learn also about othe
 			</item>
 		<item>
 		<title>XCode iOS UI testing</title>
-		<link>/Blog/2016/08/06/xcode-ios-ui-testing/</link>
+		<link>/2016/08/06/xcode-ios-ui-testing/</link>
 		<pubDate>Sat, 06 Aug 2016 11:40:47 +0000</pubDate>
 		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
 				<category><![CDATA[iOS Development]]></category>
@@ -176,8 +176,8 @@ Don&#8217;t stick only to your everyday business, read and learn also about othe
 		<category><![CDATA[Testing]]></category>
 		<category><![CDATA[XCode]]></category>
 
-		<guid isPermaLink="false">/Blog/?p=312</guid>
-		<description><![CDATA[As Martin Flowler described in his article TestPyramid, the UI should be the highest (and not the only) layer of the tests.  They are a safety net and errors detected on this layer can point to missing test&#8217;s on a lower layer. Automated UI test&#8217;s tend to be brittle, because every change in the UI can result in failing &#8230; <a href="/Blog/2016/08/06/xcode-ios-ui-testing/" class="more-link">Continue reading<span class="screen-reader-text"> "XCode iOS UI testing"</span></a>]]></description>
+		<guid isPermaLink="false">/?p=312</guid>
+		<description><![CDATA[As Martin Flowler described in his article TestPyramid, the UI should be the highest (and not the only) layer of the tests.  They are a safety net and errors detected on this layer can point to missing test&#8217;s on a lower layer. Automated UI test&#8217;s tend to be brittle, because every change in the UI can result in failing &#8230; <a href="/2016/08/06/xcode-ios-ui-testing/" class="more-link">Continue reading<span class="screen-reader-text"> "XCode iOS UI testing"</span></a>]]></description>
 				<content:encoded><![CDATA[<p>As Martin Flowler described in his article <a href="http://martinfowler.com/bliki/TestPyramid.html" target="_blank">TestPyramid</a>, the UI should be the highest (and not the only) layer of the tests.  They are a safety net and errors detected on this layer can point to missing test&#8217;s on a lower layer. Automated UI test&#8217;s tend to be brittle, because every change in the UI can result in failing test&#8217;s.</p>
 <p>Since version 7 XCode supports UI tests, with test classes deriving from XCTestCase:</p>
 <ul>
@@ -271,48 +271,48 @@ Don&#8217;t stick only to your everyday business, read and learn also about othe
     XCTAssert(!getTableStaticTextElement(changedActivityName).exists)
 }</pre>
 <p>This is how it looks like, when it runs in the debugger:</p>
-<div style="width: 376px;" class="wp-video"><video class="wp-video-shortcode" id="video-312-2" width="376" height="689" preload="metadata" controls="controls"><source type="video/mp4" src="/Blog/wp-content/uploads/2016/08/2016-08-06_13-31-33.mp4?_=2" /><a href="/Blog/wp-content/uploads/2016/08/2016-08-06_13-31-33.mp4">/Blog/wp-content/uploads/2016/08/2016-08-06_13-31-33.mp4</a></video></div>
+<div style="width: 376px;" class="wp-video"><video class="wp-video-shortcode" id="video-312-2" width="376" height="689" preload="metadata" controls="controls"><source type="video/mp4" src="/wp-content/uploads/2016/08/2016-08-06_13-31-33.mp4?_=2" /><a href="/wp-content/uploads/2016/08/2016-08-06_13-31-33.mp4">/wp-content/uploads/2016/08/2016-08-06_13-31-33.mp4</a></video></div>
 <p>You can find the full test in the latest version of my learning app PersonalProductivityAssistant <a href="https://github.com/zs40x/PersonalProductivityAssistant/blob/master/PersonalProductivityAssistantUITests/PersonalProductivityAssistantUITests.swift" target="_blank">@github</a>.</p>
-<p>Learn more about <a href="/Blog/2016/08/21/record-ui-tests-in-xcode/">recording UI tests</a>.</p>
+<p>Learn more about <a href="/2016/08/21/record-ui-tests-in-xcode/">recording UI tests</a>.</p>
 
 <div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F08%2F06%2Fxcode-ios-ui-testing%2F" class="twitter-share-button">Tweet</a></div>
 ]]></content:encoded>
-	<enclosure url="/Blog/wp-content/uploads/2016/08/2016-08-06_13-31-33.mp4" length="2642349" type="video/mp4" />
+	<enclosure url="/wp-content/uploads/2016/08/2016-08-06_13-31-33.mp4" length="2642349" type="video/mp4" />
 		</item>
 		<item>
 		<title>iOS Stack Views</title>
-		<link>/Blog/2016/07/14/ios-stack-views/</link>
+		<link>/2016/07/14/ios-stack-views/</link>
 		<pubDate>Thu, 14 Jul 2016 04:00:40 +0000</pubDate>
 		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
 				<category><![CDATA[iOS Development]]></category>
 		<category><![CDATA[Swift]]></category>
 		<category><![CDATA[iOS]]></category>
 
-		<guid isPermaLink="false">/Blog/?p=319</guid>
-		<description><![CDATA[Building layout&#8217;s for mobile apps is complex because of the many different device screen sizes available. In iOS development it makes a huge difference if you test your app with an iPhone 4, 5 or 6. So instead of drawing a fixed layout, we place controls and describe the layout with constraints (distances between controls, distance to margin, &#8230; <a href="/Blog/2016/07/14/ios-stack-views/" class="more-link">Continue reading<span class="screen-reader-text"> "iOS Stack Views"</span></a>]]></description>
+		<guid isPermaLink="false">/?p=319</guid>
+		<description><![CDATA[Building layout&#8217;s for mobile apps is complex because of the many different device screen sizes available. In iOS development it makes a huge difference if you test your app with an iPhone 4, 5 or 6. So instead of drawing a fixed layout, we place controls and describe the layout with constraints (distances between controls, distance to margin, &#8230; <a href="/2016/07/14/ios-stack-views/" class="more-link">Continue reading<span class="screen-reader-text"> "iOS Stack Views"</span></a>]]></description>
 				<content:encoded><![CDATA[<p>Building layout&#8217;s for mobile apps is complex because of the many different device screen sizes available. In iOS development it makes a huge difference if you test your app with an iPhone 4, 5 or 6.</p>
 <p>So instead of drawing a fixed layout, we place controls and describe the layout with constraints (distances between controls, distance to margin, equal widths&#8230;).<br />
 Autolayout constraints are tricky, and in iOS 9 Apple introduced the Stack View to simply building app layouts.</p>
 <p>If you know HTML, you&#8217;ll be immediately familiar tho the concept. Stack Views are like simple tables with row, cells and layout options.</p>
 <p>In our sample app we use multiple nested horizontal and vertical stack views to build the layout.</p>
-<p><a href="/Blog/wp-content/uploads/2016/07/Stackview_Illustrated.png"><img class="alignnone size-full wp-image-322" src="/Blog/wp-content/uploads/2016/07/Stackview_Illustrated.png" alt="Stackview_Illustrated" width="644" height="649" srcset="/Blog/wp-content/uploads/2016/07/Stackview_Illustrated.png 644w, /Blog/wp-content/uploads/2016/07/Stackview_Illustrated-150x150.png 150w, /Blog/wp-content/uploads/2016/07/Stackview_Illustrated-298x300.png 298w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 61vw, (max-width: 1362px) 45vw, 600px" /></a></p>
+<p><a href="/wp-content/uploads/2016/07/Stackview_Illustrated.png"><img class="alignnone size-full wp-image-322" src="/wp-content/uploads/2016/07/Stackview_Illustrated.png" alt="Stackview_Illustrated" width="644" height="649" srcset="/wp-content/uploads/2016/07/Stackview_Illustrated.png 644w, /wp-content/uploads/2016/07/Stackview_Illustrated-150x150.png 150w, /wp-content/uploads/2016/07/Stackview_Illustrated-298x300.png 298w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 61vw, (max-width: 1362px) 45vw, 600px" /></a></p>
 <h4>Demo</h4>
-<div style="width: 840px;" class="wp-video"><video class="wp-video-shortcode" id="video-319-3" width="840" height="525" preload="metadata" controls="controls"><source type="video/mp4" src="/Blog/wp-content/uploads/2016/07/Demo_Full.mp4?_=3" /><a href="/Blog/wp-content/uploads/2016/07/Demo_Full.mp4">/Blog/wp-content/uploads/2016/07/Demo_Full.mp4</a></video></div>
+<div style="width: 840px;" class="wp-video"><video class="wp-video-shortcode" id="video-319-3" width="840" height="525" preload="metadata" controls="controls"><source type="video/mp4" src="/wp-content/uploads/2016/07/Demo_Full.mp4?_=3" /><a href="/wp-content/uploads/2016/07/Demo_Full.mp4">/wp-content/uploads/2016/07/Demo_Full.mp4</a></video></div>
 
 <div class="twitter-share"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.stefan-mehnert.de%2F2016%2F07%2F14%2Fios-stack-views%2F" class="twitter-share-button">Tweet</a></div>
 ]]></content:encoded>
-	<enclosure url="/Blog/wp-content/uploads/2016/07/Demo_Full.mp4" length="29201572" type="video/mp4" />
+	<enclosure url="/wp-content/uploads/2016/07/Demo_Full.mp4" length="29201572" type="video/mp4" />
 		</item>
 		<item>
 		<title>Swift API Design Guidelines</title>
-		<link>/Blog/2016/06/30/swift-api-design-guidelines/</link>
+		<link>/2016/06/30/swift-api-design-guidelines/</link>
 		<pubDate>Thu, 30 Jun 2016 20:17:29 +0000</pubDate>
 		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
 				<category><![CDATA[iOS Development]]></category>
 		<category><![CDATA[Swift]]></category>
 
-		<guid isPermaLink="false">/Blog/?p=313</guid>
-		<description><![CDATA[I recently watched the WWDC &#8217;16 Session &#8220;Swift 3 API Design Guidelines&#8221; and I&#8217;m amazed about about apples direction with Swift. I started playing around with Swift when it was announced at WWDC 14, and since then lot&#8217;s of things have changed. Swift, which is now open source, is constantly evolving and version 3 brings &#8230; <a href="/Blog/2016/06/30/swift-api-design-guidelines/" class="more-link">Continue reading<span class="screen-reader-text"> "Swift API Design Guidelines"</span></a>]]></description>
+		<guid isPermaLink="false">/?p=313</guid>
+		<description><![CDATA[I recently watched the WWDC &#8217;16 Session &#8220;Swift 3 API Design Guidelines&#8221; and I&#8217;m amazed about about apples direction with Swift. I started playing around with Swift when it was announced at WWDC 14, and since then lot&#8217;s of things have changed. Swift, which is now open source, is constantly evolving and version 3 brings &#8230; <a href="/2016/06/30/swift-api-design-guidelines/" class="more-link">Continue reading<span class="screen-reader-text"> "Swift API Design Guidelines"</span></a>]]></description>
 				<content:encoded><![CDATA[<p>I recently watched the WWDC &#8217;16 Session &#8220;<a href="https://developer.apple.com/videos/play/wwdc2016/403/" target="_blank">Swift 3 API Design Guidelines</a>&#8221; and I&#8217;m amazed about about apples direction with Swift.<br />
 I started playing around with Swift when it was announced at WWDC 14, and since then lot&#8217;s of things have changed. Swift, which is now open source, is constantly evolving and version 3 brings major changes.</p>
 <p>The <a href="https://swift.org/documentation/api-design-guidelines/" target="_blank">API Design Guidelines</a> are still under development, but they&#8217;re worth studying. I love clear and focused code that can be read like a story.</p>
@@ -327,15 +327,15 @@ Most current API&#8217;s like Cocoa which were originally developed for Objecti
 			</item>
 		<item>
 		<title>Single Responsibility Principle</title>
-		<link>/Blog/2016/06/16/single-responsibility-principle/</link>
+		<link>/2016/06/16/single-responsibility-principle/</link>
 		<pubDate>Thu, 16 Jun 2016 15:04:49 +0000</pubDate>
 		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
 				<category><![CDATA[C#]]></category>
 		<category><![CDATA[OO_Principles]]></category>
 		<category><![CDATA[SolidAsARock]]></category>
 
-		<guid isPermaLink="false">/Blog/?p=283</guid>
-		<description><![CDATA[The single responsibility is very simple: A class should have only one reason to change. Robert C. Martin, SRP - The single responsibility principle As an example let&#8217;s look at a sensor class, which should report it&#8217;s status and readings into a text file: The class sensor has multiple responsibilities: it represents the sensor with it&#8217;s data, &#8230; <a href="/Blog/2016/06/16/single-responsibility-principle/" class="more-link">Continue reading<span class="screen-reader-text"> "Single Responsibility Principle"</span></a>]]></description>
+		<guid isPermaLink="false">/?p=283</guid>
+		<description><![CDATA[The single responsibility is very simple: A class should have only one reason to change. Robert C. Martin, SRP - The single responsibility principle As an example let&#8217;s look at a sensor class, which should report it&#8217;s status and readings into a text file: The class sensor has multiple responsibilities: it represents the sensor with it&#8217;s data, &#8230; <a href="/2016/06/16/single-responsibility-principle/" class="more-link">Continue reading<span class="screen-reader-text"> "Single Responsibility Principle"</span></a>]]></description>
 				<content:encoded><![CDATA[<p>The single responsibility is very simple:</p>
 <blockquote><p>A class should have only one reason to change.</p>
 <pre>Robert C. Martin, <a href="https://drive.google.com/file/d/0ByOwmqah_nuGNHEtcU5OekdDMkk/view">SRP - The single responsibility principle</a></pre>
@@ -349,7 +349,7 @@ There are different reasons to change the class. Maybe a change of the report fi
 Because everything is coupled thightly together in a single class it&#8217;s not possible to extend or test the class.</p>
 <p>Let&#8217;s look at a refactored version, which has 3 classes:</p>
 <script src="https://gist.github.com/zs40x/6fa07cfe187dd2843ebdc82c852a31b4.js"></script>
-<p><a href="/Blog/wp-content/uploads/2016/06/ClassDiagram.png"><img class="alignnone size-full wp-image-292" src="/Blog/wp-content/uploads/2016/06/ClassDiagram.png" alt="ClassDiagram" width="501" height="401" srcset="/Blog/wp-content/uploads/2016/06/ClassDiagram.png 501w, /Blog/wp-content/uploads/2016/06/ClassDiagram-300x240.png 300w" sizes="(max-width: 501px) 85vw, 501px" /></a></p>
+<p><a href="/wp-content/uploads/2016/06/ClassDiagram.png"><img class="alignnone size-full wp-image-292" src="/wp-content/uploads/2016/06/ClassDiagram.png" alt="ClassDiagram" width="501" height="401" srcset="/wp-content/uploads/2016/06/ClassDiagram.png 501w, /wp-content/uploads/2016/06/ClassDiagram-300x240.png 300w" sizes="(max-width: 501px) 85vw, 501px" /></a></p>
 <p>Sensor with it&#8217;s data is the primary object. The report generator implements an interface, which allows the add different report generators  later. The filesystem access is encapsuled in another class.</p>
 <p>This refactoring has the side-effect that we can unit-test the report generator:<br />
 <script src="https://gist.github.com/zs40x/914c47adf0ed98764e74d408fd05fe58.js"></script></p>
@@ -360,7 +360,7 @@ Not really, it generates the content of the file and delegates the file system o
 <p><strong>Let&#8217;s refactor again!</strong><br />
 Okay, we&#8217;ve noticed that the report generator does more then one thing. We&#8217;re also only able to test it with a mock instance of IFilesystem. So there must be another way to solve this problem.</p>
 <p>I refactored the next solution and pushed the filesystem logic one layer. This way we encapsulate what varies &#8211; the content of the reports. The file handling itself is the same for all formats.<br />
-<a href="/Blog/wp-content/uploads/2016/06/ClassDiagram_2.png"><img class="alignnone size-full wp-image-296" src="/Blog/wp-content/uploads/2016/06/ClassDiagram_2.png" alt="ClassDiagram_2" width="588" height="538" srcset="/Blog/wp-content/uploads/2016/06/ClassDiagram_2.png 588w, /Blog/wp-content/uploads/2016/06/ClassDiagram_2-300x274.png 300w" sizes="(max-width: 588px) 85vw, 588px" /></a><script src="https://gist.github.com/zs40x/8b501f28675fc73589a3d5be8fd0df18.js"></script></p>
+<a href="/wp-content/uploads/2016/06/ClassDiagram_2.png"><img class="alignnone size-full wp-image-296" src="/wp-content/uploads/2016/06/ClassDiagram_2.png" alt="ClassDiagram_2" width="588" height="538" srcset="/wp-content/uploads/2016/06/ClassDiagram_2.png 588w, /wp-content/uploads/2016/06/ClassDiagram_2-300x274.png 300w" sizes="(max-width: 588px) 85vw, 588px" /></a><script src="https://gist.github.com/zs40x/8b501f28675fc73589a3d5be8fd0df18.js"></script></p>
 <p>This version has even more, but smaller classes. This is required a bit of wiring at the startup of the application.<br />
 <script src="https://gist.github.com/zs40x/9dfa020e313de3b076c32071d82da09e.js"></script></p>
 <p><strong>Conclusion<br />
@@ -374,7 +374,7 @@ To make the wiring of the instances less painful you may use the <a href="https:
 			</item>
 		<item>
 		<title>Open-Closed Principle</title>
-		<link>/Blog/2016/05/03/open-closed-principle/</link>
+		<link>/2016/05/03/open-closed-principle/</link>
 		<pubDate>Tue, 03 May 2016 04:14:48 +0000</pubDate>
 		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
 				<category><![CDATA[C#]]></category>
@@ -383,8 +383,8 @@ To make the wiring of the instances less painful you may use the <a href="https:
 		<category><![CDATA[SOLID]]></category>
 		<category><![CDATA[SolidAsARock]]></category>
 
-		<guid isPermaLink="false">/Blog/?p=269</guid>
-		<description><![CDATA[Your company sells temperature sensors and software for it for many years. For the last 5 years there we produced only indoor sensors. Yesterday your boss came around and told you, that you&#8217;ll now sell also outdoor sensors. There is a class that feeds the gui with the average temperature of multiple sensors. You&#8217;re assigned the extend &#8230; <a href="/Blog/2016/05/03/open-closed-principle/" class="more-link">Continue reading<span class="screen-reader-text"> "Open-Closed Principle"</span></a>]]></description>
+		<guid isPermaLink="false">/?p=269</guid>
+		<description><![CDATA[Your company sells temperature sensors and software for it for many years. For the last 5 years there we produced only indoor sensors. Yesterday your boss came around and told you, that you&#8217;ll now sell also outdoor sensors. There is a class that feeds the gui with the average temperature of multiple sensors. You&#8217;re assigned the extend &#8230; <a href="/2016/05/03/open-closed-principle/" class="more-link">Continue reading<span class="screen-reader-text"> "Open-Closed Principle"</span></a>]]></description>
 				<content:encoded><![CDATA[<p>Your company sells temperature sensors and software for it for many years. For the last 5 years there we produced only indoor sensors.<br />
 Yesterday your boss came around and told you, that you&#8217;ll now sell also outdoor sensors.<br />
 There is a class that feeds the gui with the average temperature of multiple sensors. You&#8217;re assigned the extend the average temperature class, which look quite messy after your change:</p>
@@ -405,7 +405,7 @@ There is a class that feeds the gui with the average temperature of multiple sen
 <p>That sounds odd, how can we build something that is closed for modification, but open for extension?</p>
 <p>Abstraction is the key!</p>
 <p>Because the AvgTemperatureReader is wired against the implementation &#8220;IndoorTemperatueSensor&#8221; we had to modify it to make work with our new outdoor sensor implementation.</p>
-<p><a href="/Blog/wp-content/uploads/2016/04/valid_uml.png"><img class="alignnone size-large wp-image-275" src="/Blog/wp-content/uploads/2016/04/valid_uml-1024x670.png" alt="OCP Valid Example UML" width="840" height="550" srcset="/Blog/wp-content/uploads/2016/04/valid_uml-1024x670.png 1024w, /Blog/wp-content/uploads/2016/04/valid_uml-300x196.png 300w, /Blog/wp-content/uploads/2016/04/valid_uml-768x503.png 768w, /Blog/wp-content/uploads/2016/04/valid_uml.png 1146w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" /></a></p>
+<p><a href="/wp-content/uploads/2016/04/valid_uml.png"><img class="alignnone size-large wp-image-275" src="/wp-content/uploads/2016/04/valid_uml-1024x670.png" alt="OCP Valid Example UML" width="840" height="550" srcset="/wp-content/uploads/2016/04/valid_uml-1024x670.png 1024w, /wp-content/uploads/2016/04/valid_uml-300x196.png 300w, /wp-content/uploads/2016/04/valid_uml-768x503.png 768w, /wp-content/uploads/2016/04/valid_uml.png 1146w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" /></a></p>
 <p>The refactored solution uses an interface that provides access to the last read temperature. The abstract class removes code that would be duplicated in both sensor classes.</p>
 <p>Look how simple the implementation of the AvgTemperatureReader looks like again:<br />
 <script src="https://gist.github.com/zs40x/dbf24f4ec547a7c91e6bac824ffad724.js"></script></p>
@@ -418,7 +418,7 @@ There is a class that feeds the gui with the average temperature of multiple sen
 			</item>
 		<item>
 		<title>Liskov Substitution Principle</title>
-		<link>/Blog/2016/04/23/liskov-substitution-principle/</link>
+		<link>/2016/04/23/liskov-substitution-principle/</link>
 		<pubDate>Sat, 23 Apr 2016 17:50:25 +0000</pubDate>
 		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
 				<category><![CDATA[OO_Principles]]></category>
@@ -426,13 +426,13 @@ There is a class that feeds the gui with the average temperature of multiple sen
 		<category><![CDATA[C#]]></category>
 		<category><![CDATA[SolidAsARock]]></category>
 
-		<guid isPermaLink="false">/Blog/?p=248</guid>
-		<description><![CDATA[The Liskov Substitution Principle (LSP) says: &#8220;Let be a property provable about objects x of type T. Then should be true for objects y of type S where S is a subtype of T.&#8221; (Wikipedia) That means: A derived class should by able to be replaced by another object of it&#8217;s base class without errors or &#8230; <a href="/Blog/2016/04/23/liskov-substitution-principle/" class="more-link">Continue reading<span class="screen-reader-text"> "Liskov Substitution Principle"</span></a>]]></description>
+		<guid isPermaLink="false">/?p=248</guid>
+		<description><![CDATA[The Liskov Substitution Principle (LSP) says: &#8220;Let be a property provable about objects x of type T. Then should be true for objects y of type S where S is a subtype of T.&#8221; (Wikipedia) That means: A derived class should by able to be replaced by another object of it&#8217;s base class without errors or &#8230; <a href="/2016/04/23/liskov-substitution-principle/" class="more-link">Continue reading<span class="screen-reader-text"> "Liskov Substitution Principle"</span></a>]]></description>
 				<content:encoded><![CDATA[<p>The Liskov Substitution Principle (LSP) says: &#8220;Let <img class="mwe-math-fallback-image-inline tex" src="https://upload.wikimedia.org/math/0/f/c/0fc322eb39e7f8cfe71f7b568b4fba61.png" alt=" \phi(x) " /> be a property provable about objects <span class="texhtml">x</span> of type <span class="texhtml">T</span>. Then <img class="mwe-math-fallback-image-inline tex" src="https://upload.wikimedia.org/math/7/f/3/7f3d5b0d2ba4e97fdc620ce87c349229.png" alt=" \phi(y) " /> should be true for objects <span class="texhtml">y</span> of type <span class="texhtml">S</span> where <span class="texhtml">S</span> is a subtype of <span class="texhtml">T.&#8221; (<a href="https://en.wikipedia.org/wiki/Liskov_substitution_principle">Wikipedia</a>)</span></p>
 <p>That means: A derived class should by able to be replaced by another object of it&#8217;s base class without errors or modified behavior of the base class.<span id="more-248"></span></p>
 <h4>What&#8217;s the problem?</h4>
 <p>We tend to model the real world into classes. This is in general a good practice, but it has pitfalls.</p>
-<p>Let&#8217;s look at an example: A square is an rectangle, so we model it as a subclass of rectangle, so we can handle a square like a rectangle and reuse it&#8217;s area property.<a href="/Blog/wp-content/uploads/2016/04/uml_violation.png"><img class="alignnone size-full wp-image-250" src="/Blog/wp-content/uploads/2016/04/uml_violation.png" alt="lcp_uml_violation" width="446" height="236" srcset="/Blog/wp-content/uploads/2016/04/uml_violation.png 446w, /Blog/wp-content/uploads/2016/04/uml_violation-300x159.png 300w" sizes="(max-width: 446px) 85vw, 446px" /></a></p>
+<p>Let&#8217;s look at an example: A square is an rectangle, so we model it as a subclass of rectangle, so we can handle a square like a rectangle and reuse it&#8217;s area property.<a href="/wp-content/uploads/2016/04/uml_violation.png"><img class="alignnone size-full wp-image-250" src="/wp-content/uploads/2016/04/uml_violation.png" alt="lcp_uml_violation" width="446" height="236" srcset="/wp-content/uploads/2016/04/uml_violation.png 446w, /wp-content/uploads/2016/04/uml_violation-300x159.png 300w" sizes="(max-width: 446px) 85vw, 446px" /></a></p>
 <script src="https://gist.github.com/zs40x/8ffa7f9cf2ca1a8335672c52e352198b.js"></script>
 <p>Ok, let&#8217;s have a look at the test&#8217;s:</p>
 <script src="https://gist.github.com/zs40x/c88a62c11d3fbfaae999579abbc95b16.js"></script>
@@ -441,7 +441,7 @@ There is a class that feeds the gui with the average temperature of multiple sen
 <p>As we&#8217;ve learned, rectangle and square are somehow related, but their (implementation) details are different. To encapsulate what varies and to provide a generic interface we introduce an abstract Shape class.</p>
 <p>Both implementations have immutable properties and implement the abstract &#8220;Area&#8221; property get accessor. Because a square is only initialised with the side length, Area works always as expected.<br />
 This way we also could add additional shapes like a circle, which would be instantiated with a radius.</p>
-<p><a href="/Blog/wp-content/uploads/2016/04/uml_valid-1.png"><img class="alignnone size-full wp-image-255" src="/Blog/wp-content/uploads/2016/04/uml_valid-1.png" alt="uml_valid" width="370" height="403" srcset="/Blog/wp-content/uploads/2016/04/uml_valid-1.png 370w, /Blog/wp-content/uploads/2016/04/uml_valid-1-275x300.png 275w" sizes="(max-width: 370px) 85vw, 370px" /></a></p>
+<p><a href="/wp-content/uploads/2016/04/uml_valid-1.png"><img class="alignnone size-full wp-image-255" src="/wp-content/uploads/2016/04/uml_valid-1.png" alt="uml_valid" width="370" height="403" srcset="/wp-content/uploads/2016/04/uml_valid-1.png 370w, /wp-content/uploads/2016/04/uml_valid-1-275x300.png 275w" sizes="(max-width: 370px) 85vw, 370px" /></a></p>
 <p>You find the full example project in <a href="https://github.com/zs40x/LiskovSubstitutionPrinciple.git" target="_blank">my GitHub repository</a>.</p>
 <h4>Conclusion</h4>
 <p>Inheritance can lead to very complex and hard to maintain code. Today we use inheritance rarely (<a href="https://www.thoughtworks.com/de/insights/blog/composition-vs-inheritance-how-choose" target="_blank">Favour composition over inheritance</a>), but when &#8211; we should have the LSP in mind.</p>

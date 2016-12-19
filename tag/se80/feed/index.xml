@@ -9,8 +9,8 @@
 
 <channel>
 	<title>#SE80 &#8211; Stefan Mehnert</title>
-	<atom:link href="/Blog/tag/se80/feed/" rel="self" type="application/rss+xml" />
-	<link>/Blog/</link>
+	<atom:link href="/tag/se80/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description>#DevLife</description>
 	<lastBuildDate>Thu, 20 Oct 2016 19:00:55 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -19,18 +19,18 @@
 	<generator>https://wordpress.org/?v=4.7</generator>
 	<item>
 		<title>Type less &#8211; SE80 Editor Code Templates</title>
-		<link>/Blog/2015/10/17/type-less-se80-editor-code-templates/</link>
+		<link>/2015/10/17/type-less-se80-editor-code-templates/</link>
 		<pubDate>Sat, 17 Oct 2015 19:37:41 +0000</pubDate>
 		<dc:creator><![CDATA[stefanmehnert]]></dc:creator>
 				<category><![CDATA[Productivity]]></category>
 		<category><![CDATA[#ABAP]]></category>
 		<category><![CDATA[#SE80]]></category>
 
-		<guid isPermaLink="false">/Blog/?p=11</guid>
-		<description><![CDATA[The &#8220;new&#8221; Editor has a few nice features that make it a bit less painful to use. I use them to prevent unnecessary typing of repetitively used Code-Blocks and to generate local Classes (Test, Exception and so on). You can find a Collection of my Templates in a GitHub Repository. Over the time I&#8217;ll add further, so if you &#8230; <a href="/Blog/2015/10/17/type-less-se80-editor-code-templates/" class="more-link">Continue reading<span class="screen-reader-text"> "Type less &#8211; SE80 Editor Code Templates"</span></a>]]></description>
+		<guid isPermaLink="false">/?p=11</guid>
+		<description><![CDATA[The &#8220;new&#8221; Editor has a few nice features that make it a bit less painful to use. I use them to prevent unnecessary typing of repetitively used Code-Blocks and to generate local Classes (Test, Exception and so on). You can find a Collection of my Templates in a GitHub Repository. Over the time I&#8217;ll add further, so if you &#8230; <a href="/2015/10/17/type-less-se80-editor-code-templates/" class="more-link">Continue reading<span class="screen-reader-text"> "Type less &#8211; SE80 Editor Code Templates"</span></a>]]></description>
 				<content:encoded><![CDATA[<p>The &#8220;new&#8221; Editor has a few nice features that make it a bit less painful to use. I use them to prevent unnecessary typing of repetitively used Code-Blocks and to generate local Classes (Test, Exception and so on).</p>
 <p>You can find a Collection of my Templates in a <span class="mceItemHiddenSpellWord">GitHub</span> Repository. Over the time I&#8217;ll add further, so if you are interested, you may watch that Repository.</p>
-<p><a href="https://github.com/zs40x/se80_templates" target="_blank"><img class="wp-image-16 alignleft" src="/Blog/wp-content/uploads/2015/10/code-300x264.png" alt="SE80 Code Template" width="236" height="208" srcset="/Blog/wp-content/uploads/2015/10/code-300x264.png 300w, /Blog/wp-content/uploads/2015/10/code.png 802w" sizes="(max-width: 236px) 85vw, 236px" /></a>I you like to contribute please feel free to send a pull request!</p>
+<p><a href="https://github.com/zs40x/se80_templates" target="_blank"><img class="wp-image-16 alignleft" src="/wp-content/uploads/2015/10/code-300x264.png" alt="SE80 Code Template" width="236" height="208" srcset="/wp-content/uploads/2015/10/code-300x264.png 300w, /wp-content/uploads/2015/10/code.png 802w" sizes="(max-width: 236px) 85vw, 236px" /></a>I you like to contribute please feel free to send a pull request!</p>
 <p>Here&#8217;s the Repository: <a href="https://github.com/zs40x/se80_templates"><span class="mceItemHidden"><span class="mceItemHiddenSpellWord">https</span>://<span class="mceItemHiddenSpellWord">github</span>.com/zs40x/se80_templates</span></a></p>
 <p>This article @<a href="http://scn.sap.com/community/abap/blog/2015/10/17/type-less--se80-editor-code-templates">SAP Community Network</a>.</p>
 
